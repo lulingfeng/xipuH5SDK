@@ -1,0 +1,4 @@
+#Mon Aug 26 16:05:50 CST 2019
+base.0=/Users/eagle/Documents/workspace/android_studio/company/xph5/app/build/intermediates/transforms/dexMerger/release/0
+path.0=classes.dex
+renamed.0=classes.dex

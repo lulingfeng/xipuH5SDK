@@ -1,0 +1,9 @@
+
+Qsquid:S1118":Add a private constructor to hide the implicit public one.(½”æÈ
+usquid:S00117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´›Ÿ™øÿÿÿÿ8é„ËìË-
+osquid:S00117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÆ’[8é„ËìË-
+usquid:S3776#"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(¡¨ê¨ÿÿÿÿÿ8é„ËìË-
+?squid:S1148^"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+dsquid:S1192>"FDefine a constant instead of duplicating this literal "false" 4 times.(£Ì ¡8—›˜îË-
+usquid:S00117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óê®ôüÿÿÿÿ8é„ËìË-
+usquid:S00117A"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å«ˆ’ıÿÿÿÿ8é„ËìË-

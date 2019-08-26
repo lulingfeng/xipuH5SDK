@@ -1,0 +1,6 @@
+
+:squid:S11480"#Use a logger to log this exception.(òçøì
+]squid:UnusedPrivateMethod"3Remove this unused private "getProcessName" method.(²ÚÆÔüÿÿÿÿ
+<squid:S1181("%Catch Exception instead of Throwable.(ëß‹™
+Fsquid:S2093!"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+:squid:S1148)"#Use a logger to log this exception.(Óùóÿ

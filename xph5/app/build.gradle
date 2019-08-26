@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        applicationId "com.zhangyue.ylyhe"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters 'armeabi','armeabi-v7a','armeabi-v8a'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+//    repositories {
+//        flatDir {
+//            dirs 'libs'   // aar目录
+//        }
+//    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', "*.aar"])
+    implementation 'com.android.support:support-v4:26.1.0'
+//    compile(name: 'applog-release', ext: 'aar')
+//    compile(name: 'alipaySdk-20170309', ext: 'jar')
+//    compile(name: 'bugly_crash_release', ext: 'jar')
+//    compile(name: 'libammsdk', ext: 'jar')
+//    compile(name: 'soutil_20171228', ext: 'jar')
+//    compile(name: 'tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025', ext: 'jar')
+}

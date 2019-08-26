@@ -1,0 +1,4 @@
+#Sat Aug 24 11:33:38 CST 2019
+base.0=/Users/eagle/Documents/workspace/android_studio/company/lyydl_jrtt/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

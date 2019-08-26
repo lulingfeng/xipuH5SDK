@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/dlcs_jrtt/app/libs/alipaySdk-20170309.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2ce6c8d7e908b41b0c93c56169bec0de994d7a3d">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dlcs_jrtt/app/build/intermediates/pre-dexed/debug/alipaySdk-20170309_f20caec7bf6f7018d2789c83f4118fd6e0c9f814.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/cjdl_jrtt/app/libs/libammsdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e8db000948e58e4ef6b7a1a54e92e7040e7037d5">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/cjdl_jrtt/app/build/intermediates/pre-dexed/release/libammsdk_ae73c9a31c9833cacd51433a1256c70ea18245be.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/dlcs_jrtt/app/libs/libammsdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e8db000948e58e4ef6b7a1a54e92e7040e7037d5">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dlcs_jrtt/app/build/intermediates/pre-dexed/debug/libammsdk_76c0885b60eb365151d64385b7b01c5540f97385.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/cqcbb_jrtt/app/libs/alipaySdk-20170309.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2ce6c8d7e908b41b0c93c56169bec0de994d7a3d">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/cqcbb_jrtt/app/build/intermediates/pre-dexed/release/alipaySdk-20170309_b4f5f592a082e7b71bcf4f0fcedaf256d0512485.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/libs/libammsdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e8db000948e58e4ef6b7a1a54e92e7040e7037d5">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/libammsdk_cf36e5cb200e322e6578c365878556b133c9a56b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/sczb_jrtt_yw/app/libs/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c166ff080c709e6225979156d12dcdc669226413">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/sczb_jrtt_yw/app/build/intermediates/pre-dexed/release/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025_227823fbce95e2ca6017d000c604f4e67a59f77f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/cbzs_jrtt_yw/app/libs/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c166ff080c709e6225979156d12dcdc669226413">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/cbzs_jrtt_yw/app/build/intermediates/pre-dexed/release/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025_b72113381173b7e1bbd420bc00f50aa74ee61f96.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/dllh_jrtt/app/libs/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c166ff080c709e6225979156d12dcdc669226413">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dllh_jrtt/app/build/intermediates/pre-dexed/release/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025_01ebecbfb67001cc501444a7072d7b0a6db043e1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/.android/build-cache/7dad926de93a419dc70dbeab086c87afdfebdab6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6f4138a4e065826cb044d49faea4cfd7191773d1">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/classes_e10a0e2484aa5ca99131eb9b48b61413557bcf99.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/lyydlzf_jrtt/app/libs/alipaySdk-20170309.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2ce6c8d7e908b41b0c93c56169bec0de994d7a3d">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/lyydlzf_jrtt/app/build/intermediates/pre-dexed/release/alipaySdk-20170309_da819fb5e7b44a5d96090cca9f2ff5a0954383e6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/cbzs_jrtt_yw/app/libs/soutil_20171228.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7646595c22840c3622f292971162d03494a46618">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/cbzs_jrtt_yw/app/build/intermediates/pre-dexed/release/soutil_20171228_01cb879ea971044bee73ff3e356d379e47c9a100.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/cjdl_jrtt/app/libs/alipaySdk-20170309.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2ce6c8d7e908b41b0c93c56169bec0de994d7a3d">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/cjdl_jrtt/app/build/intermediates/pre-dexed/release/alipaySdk-20170309_7450bcade3d7d8e4fd9880f195a6bb15bf8f0963.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/.android/build-cache/a099ea435c4323a00fb9913417d5af3de889c9a6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f97cf85b0fe70d37a705111dafa6b1b418ea1650">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/classes_c832ddfedd7e47137157f001605de7d776fccaec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/cbzs_jrtt_yw/app/libs/libammsdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e8db000948e58e4ef6b7a1a54e92e7040e7037d5">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/cbzs_jrtt_yw/app/build/intermediates/pre-dexed/release/libammsdk_acc9e1d6f1412b3e4a8642e335c73c49e356196b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/26.1.0/814258103cf26a15fcc26ecce35f5b7d24b73f8/support-annotations-26.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/support-annotations-26.1.0_19da4d8b99910c37fca87d9db4c34fcf610ae741.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/libs/bugly_crash_release.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="11a294f511cf1e23f525c87ca4cc1d92c9f3d6a2">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/bugly_crash_release_6dee10f50ed7269ba4b7557b7c37de449459f0f3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0/a2d487452376193fc8c103dd2b9bd5f2b1b44563/common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/common-1.0.0_001946d66a438581ef0580be933c6c60206af0a0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/.android/build-cache/70a0ab447626951aa68b310e716a242e365d130e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/classes_5059903e76426b54eccf25960f48f9d5c2908605.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/cqcbb_jrtt/app/libs/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c166ff080c709e6225979156d12dcdc669226413">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/cqcbb_jrtt/app/build/intermediates/pre-dexed/release/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025_a9b997765accdbd5a2282ae62e2ffbb2ddf43b43.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/.android/build-cache/7858cdff85f15b12cfc92242fdf4b9e80cc94939/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/classes_e9678f84acbb28f1578c71565dbd601023f89d21.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/libs/alipaySdk-20170309.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2ce6c8d7e908b41b0c93c56169bec0de994d7a3d">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/alipaySdk-20170309_518d294fe5300fa2b4c328729c0f96161a57a7a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/lyydlzf_jrtt/app/libs/libammsdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e8db000948e58e4ef6b7a1a54e92e7040e7037d5">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/lyydlzf_jrtt/app/build/intermediates/pre-dexed/release/libammsdk_bf0a5e232afce5170b2d5050d4aab381952ac423.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/dlcs_jrtt/app/libs/soutil_20171228.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7646595c22840c3622f292971162d03494a46618">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dlcs_jrtt/app/build/intermediates/pre-dexed/debug/soutil_20171228_554781ef2f3774b021af7d0c683b0690e3a05f5b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/.android/build-cache/b56693625f91ac2e778e694a04481a6e7e03e95b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="508f50705b4fde51a16259f29c854201a3044516">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/classes_1d2f26e9eb5a86b802cb18cb23d001eb358936b8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/dllh_jrtt/app/libs/soutil_20171228.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7646595c22840c3622f292971162d03494a46618">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dllh_jrtt/app/build/intermediates/pre-dexed/release/soutil_20171228_8352b06badcb8db05c3bb66621bd69b91b2b6897.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/cjdl_jrtt/app/libs/bugly_crash_release.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="11a294f511cf1e23f525c87ca4cc1d92c9f3d6a2">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/cjdl_jrtt/app/build/intermediates/pre-dexed/release/bugly_crash_release_91250f403d90d9f2a58bf570b1e36701f1e9bce3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0/e414a4cb28434e25c4f6aa71426eb20cf4874ae9/common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/common-1.0.0_bfd38c20ae363acb23fc8975ec33cc19917f2a73.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/dlcs_jrtt/app/libs/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c166ff080c709e6225979156d12dcdc669226413">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dlcs_jrtt/app/build/intermediates/pre-dexed/debug/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025_449b68eb960a6f56d45a82db9d7a639cb7d9843d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/lyydlzf_jrtt/app/libs/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c166ff080c709e6225979156d12dcdc669226413">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/lyydlzf_jrtt/app/build/intermediates/pre-dexed/release/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025_8e6e024f310b858101c1ad5de431a5867f1ed1bf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/dllh_jrtt/app/libs/bugly_crash_release.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="11a294f511cf1e23f525c87ca4cc1d92c9f3d6a2">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dllh_jrtt/app/build/intermediates/pre-dexed/release/bugly_crash_release_375d91da50b6955eecd5aceb153180cf1d7d0d78.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/sczb_jrtt_yw/app/libs/soutil_20171228.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7646595c22840c3622f292971162d03494a46618">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/sczb_jrtt_yw/app/build/intermediates/pre-dexed/release/soutil_20171228_b329c0e227e584fe833698efac0f085f55d5f618.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/dllh_jrtt/app/libs/alipaySdk-20170309.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2ce6c8d7e908b41b0c93c56169bec0de994d7a3d">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dllh_jrtt/app/build/intermediates/pre-dexed/release/alipaySdk-20170309_bf187a137483aba3e55eb69cbf02839a63b73407.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/cjdl_jrtt/app/libs/soutil_20171228.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7646595c22840c3622f292971162d03494a46618">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/cjdl_jrtt/app/build/intermediates/pre-dexed/release/soutil_20171228_34087d6ce1e8420b7858386b21581988ba085156.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/.android/build-cache/faa5225e77ecd6c7800cd0f9069f4b6f2a7b5043/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/classes_e4ba2fd5dec066803e93859719a64b659e6dc437.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/dllh_jrtt/app/libs/libammsdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e8db000948e58e4ef6b7a1a54e92e7040e7037d5">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dllh_jrtt/app/build/intermediates/pre-dexed/release/libammsdk_d9fda95e5101a6912f9ef6f14c5b46f0ff6e3195.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/.android/build-cache/a506404ccb993384b803a2fbc779245b8e9c3be3/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/classes_8549526499ee9b7e85cb4fff2e57d28b9e9c3877.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/libs/soutil_20171228.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7646595c22840c3622f292971162d03494a46618">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/soutil_20171228_3c9e6906b40b9953b053f2ab060812488190fee4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/.android/build-cache/c494429167333df00f99412459958f9a9960c32b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/classes_9507602f6795ee0db5958fb4de543d112cec2abe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/cbzs_jrtt_yw/app/libs/bugly_crash_release.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="11a294f511cf1e23f525c87ca4cc1d92c9f3d6a2">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/cbzs_jrtt_yw/app/build/intermediates/pre-dexed/release/bugly_crash_release_0d404da5ea8a80df9f0ff89adac0902e63122bde.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/cjdl_jrtt/app/libs/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c166ff080c709e6225979156d12dcdc669226413">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/cjdl_jrtt/app/build/intermediates/pre-dexed/release/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025_ef61c3e6761d8bf96513c3f5b506e4d8f3a9dcff.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/cbzs_jrtt_yw/app/libs/alipaySdk-20170309.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2ce6c8d7e908b41b0c93c56169bec0de994d7a3d">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/cbzs_jrtt_yw/app/build/intermediates/pre-dexed/release/alipaySdk-20170309_24c98ce268bb509177be6f0b440c660c16a7d8f5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/libs/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c166ff080c709e6225979156d12dcdc669226413">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025_5a974fedf8c1ef1970a15983716f3603a26f5598.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/.android/build-cache/65b987171c77dafcf3c9276a72fb75a6df83d1ad/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4a6753b046191750103165b206865eb6287b278f">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/classes_35879f9275123bfa9b743907f315ae81e1c2bbca.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/cqcbb_jrtt/app/libs/libammsdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e8db000948e58e4ef6b7a1a54e92e7040e7037d5">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/cqcbb_jrtt/app/build/intermediates/pre-dexed/release/libammsdk_cd7fd9634a8494b36180af71c45f056f8060c697.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/.android/build-cache/1dcbeb10bd867c0a1bc8856c5368edc3bc65c806/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="40392f30a601db5675cdf18192aab013d6fee6ec">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/classes_1975aee584ca63831c5afa758ed5179d95bf0126.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/dlcs_jrtt/app/libs/bugly_crash_release.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="11a294f511cf1e23f525c87ca4cc1d92c9f3d6a2">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dlcs_jrtt/app/build/intermediates/pre-dexed/debug/bugly_crash_release_8f6229f08542565e4c1a078558ca7ead622f45fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/cqcbb_jrtt/app/libs/soutil_20171228.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7646595c22840c3622f292971162d03494a46618">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/cqcbb_jrtt/app/build/intermediates/pre-dexed/release/soutil_20171228_7e033d4e05f243e891ea2356d1675a14f2c1e60c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/lyydlzf_jrtt/app/libs/bugly_crash_release.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="11a294f511cf1e23f525c87ca4cc1d92c9f3d6a2">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/lyydlzf_jrtt/app/build/intermediates/pre-dexed/release/bugly_crash_release_d69ddd70e3308295219f55166295d0cc230b06d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/cqcbb_jrtt/app/libs/bugly_crash_release.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="11a294f511cf1e23f525c87ca4cc1d92c9f3d6a2">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/cqcbb_jrtt/app/build/intermediates/pre-dexed/release/bugly_crash_release_feadc301a601ecd6f9bdcc41f2c190ee716e556a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/sczb_jrtt_yw/app/libs/libammsdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e8db000948e58e4ef6b7a1a54e92e7040e7037d5">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/sczb_jrtt_yw/app/build/intermediates/pre-dexed/release/libammsdk_17f8fc7451a7c93a0ba2121d44cc9c0a6ef6318c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/lyydlzf_jrtt/app/libs/soutil_20171228.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7646595c22840c3622f292971162d03494a46618">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/lyydlzf_jrtt/app/build/intermediates/pre-dexed/release/soutil_20171228_7ac3bf2ad28dd62550fc48ea2b2e3efc1543ebde.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/.android/build-cache/433d1b379970e58ab8823d46906a2a3188c0345b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4a6753b046191750103165b206865eb6287b278f">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dllh_jrtt/app/build/intermediates/pre-dexed/release/classes_39abb5ee3b8798df59942c8f7f47c707195b0384.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/.android/build-cache/40992cb83567160c2ac1ff65b4c4374d7b4f67c3/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f428e2fbc9ed0b297e3a3f420e51e6982f66822d">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/dhn1cqwljqb_jrtt/app/build/intermediates/pre-dexed/debug/classes_c376282595dad6e74560bad1ea2164b1157af1d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/sczb_jrtt_yw/app/libs/bugly_crash_release.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="11a294f511cf1e23f525c87ca4cc1d92c9f3d6a2">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/sczb_jrtt_yw/app/build/intermediates/pre-dexed/release/bugly_crash_release_5ba730d0505e62b60ada51dc045b721fc359db77.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/eagle/Documents/workspace/android_studio/company/sczb_jrtt_yw/app/libs/alipaySdk-20170309.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2ce6c8d7e908b41b0c93c56169bec0de994d7a3d">
+        <dex dex="/Users/eagle/Documents/workspace/android_studio/company/sczb_jrtt_yw/app/build/intermediates/pre-dexed/release/alipaySdk-20170309_af3bbf3e0aa6388e96d9cdc1616ea9360a1985b7.jar" />
+    </item>
+
+</items>

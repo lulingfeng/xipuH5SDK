@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhangyue.ylyhe">
+
+    <!-- 允许网络连接 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取网络信息状态，如当前的网络连接是否有效 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 改变网络状态如是否能联网 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 允许读写存储卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问Wi-Fi网络状态信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许NFC通讯 -->
+    <uses-permission android:name="android.permission.NFC" />
+    <!-- 过滤所有你设备不支持的应用 -->
+    <uses-feature android:name="android.hardware.nfc.hce" />
+    <!-- 银联 -->
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    <!-- 允许使用振动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 允许程序可以读取设备外部存储空间 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.zhangyue.ylyhe.H5Application"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/H5AppTheme">
+        <activity
+            android:name="com.zhangyue.ylyhe.ui.SplashActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.zhangyue.ylyhe.ui.BrowserActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"></activity>
+
+        <activity
+            android:name="com.zhangyue.ylyhe.ui.PermissionsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/H5AppTheme.Permissions" />
+        <!-- 喜扑游戏 客户端id -->
+        <meta-data
+            android:name="xp_appid"
+            android:value="d3706308d6c62d898f06d260065024fc" />
+        <!-- 喜扑游戏 今日头条统计SDK appname -->
+        <meta-data
+            android:name="xp_jrtt_appname"
+            android:value="一恋永恒1" />
+        <!-- 喜扑游戏 今日头条统计SDK channel -->
+        <meta-data
+            android:name="xp_jrtt_channel"
+            android:value="ylyhe" />
+        <!-- 喜扑游戏 今日头条统计SDK aid -->
+        <meta-data
+            android:name="xp_jrtt_aid"
+            android:value="166643" />
+        <!-- 喜扑游戏 推啊 advertkey -->
+        <meta-data
+            android:name="xp_tuia_advertkey"
+            android:value="763EF716C4sdasd1F253AB457CC3B5" />
+    </application>
+
+</manifest>

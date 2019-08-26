@@ -1,0 +1,40 @@
+
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ä€î˜8öÙ”íË-
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(Ãñ8öÙ”íË-
+‚"squid:ClassVariableVisibilityCheck5"TMake GAME_URL a static final constant or non-public and provide accessors if needed.(ğ¿Û¨
+vsquid:ModifiersOrderCheck("EReorder the modifiers to comply with the Java Language Specification.(ß±ÿÀÿÿÿÿÿ8öÙ”íË-
+qsquid:S30087"URename this field "SP_CHANNEL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊşêÙúÿÿÿÿ
+qsquid:ModifiersOrderCheck,"EReorder the modifiers to comply with the Java Language Specification.(ÍŸ†ñ8öÙ”íË-
+jsquid:ModifiersOrderCheck
+"EReorder the modifiers to comply with the Java Language Specification.(­¦ˆ§
+Hsquid:S14446"1Make this "public static SDK_SP_NAME" field final(ûÃ„Á
+usquid:S3008"XRename this field "GAME_BASE_URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£¿ó8öÙ”íË-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ó¥Å“şÿÿÿÿ8µ“Ì-
+Lsquid:S14447"0Make this "public static SP_CHANNEL" field final(ÊşêÙúÿÿÿÿ
+qsquid:ModifiersOrderCheck."EReorder the modifiers to comply with the Java Language Specification.(ÎÉı»8öÙ”íË-
+jsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ùÎÉæ
+"squid:ClassVariableVisibilityCheck"YMake GAME_BASE_URL a static final constant or non-public and provide accessors if needed.(£¿ó8öÙ”íË-
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ÏœÅ8öÙ”íË-
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(Èñ¦Ï8öÙ”íË-
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ë¯¿˜8öÙ”íË-
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(‚§ÿºùÿÿÿÿ
+vsquid:ModifiersOrderCheck*"EReorder the modifiers to comply with the Java Language Specification.(­— úÿÿÿÿ8öÙ”íË-
+qsquid:ModifiersOrderCheck-"EReorder the modifiers to comply with the Java Language Specification.(‹Æ—8öÙ”íË-
+jsquid:S30085"SRename this field "GAME_URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ¿Û¨
+…"squid:ClassVariableVisibilityCheck6"WMake SDK_SP_NAME a static final constant or non-public and provide accessors if needed.(ûÃ„Á
+Psquid:S1444"3Make this "public static GAME_BASE_URL" field final(£¿ó8öÙ”íË-
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(íà×Èÿÿÿÿÿ
+vsquid:ModifiersOrderCheck2"EReorder the modifiers to comply with the Java Language Specification.(»ûøÿÿÿÿ8öÙ”íË-
+msquid:S30086"VRename this field "SDK_SP_NAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÃ„Á
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(àÄı·ùÿÿÿÿ
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(êÅ›Äøÿÿÿÿ8µ“Ì-
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(úà«”8öÙ”íË-
+qsquid:ModifiersOrderCheck0"EReorder the modifiers to comply with the Java Language Specification.(ÚÏ¦®8öÙ”íË-
+‰"squid:ClassVariableVisibilityCheck7"VMake SP_CHANNEL a static final constant or non-public and provide accessors if needed.(ÊşêÙúÿÿÿÿ
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(îÓß½øÿÿÿÿ
+vsquid:ModifiersOrderCheck!"EReorder the modifiers to comply with the Java Language Specification.(Íø•şÿÿÿÿÿ8öÙ”íË-
+vsquid:ModifiersOrderCheck4"EReorder the modifiers to comply with the Java Language Specification.(Á±ÿÿÿÿÿ8öÙ”íË-
+Esquid:S14445".Make this "public static GAME_URL" field final(ğ¿Û¨
+vsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ï¼ÌÓøÿÿÿÿ8öÙ”íË-
+vsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ÊëæÌúÿÿÿÿ8öÙ”íË-
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ÏÅÍùÿÿÿÿ
