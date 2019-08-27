@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/eagle/Documents/workspace/android_studio/company/xph5/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "/Users/eagle/Documents/GitLab/sdk/xipuh5_android/xph5/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
                     "source": "/Users/eagle/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/e190c2701c47a4c6246bf35494b1a04d/res/values-v24/values-v24.xml",

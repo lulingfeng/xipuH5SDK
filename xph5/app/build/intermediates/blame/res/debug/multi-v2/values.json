@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/eagle/Documents/workspace/android_studio/company/xph5/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/eagle/Documents/GitLab/sdk/xipuh5_android/xph5/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/Users/eagle/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/f88fe94bf00ec6e364fbfddf81311329/res/values/values.xml",
@@ -23,22 +23,20 @@
                     }
                 },
                 {
-                    "source": "/Users/eagle/Documents/workspace/android_studio/company/xph5/app/src/main/res/values/styles.xml",
+                    "source": "/Users/eagle/Documents/GitLab/sdk/xipuh5_android/xph5/app/src/main/res/values/dimens.xml",
                     "from": {
-                        "startLines": "2,15,9,4",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "17,597,270,85",
-                        "endLines": "2,17,14,7",
-                        "endColumns": "66,12,12,12",
-                        "endOffsets": "79,718,592,264"
+                        "startLines": "5,7,6,3,2,4",
+                        "startColumns": "0,0,0,0,0,0",
+                        "startOffsets": "126,201,162,56,13,91",
+                        "endColumns": "35,38,38,34,42,34",
+                        "endOffsets": "161,239,200,90,55,125"
                     },
                     "to": {
-                        "startLines": "80,81,84,90",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "4573,4633,4759,5086",
-                        "endLines": "80,83,89,93",
-                        "endColumns": "59,12,12,12",
-                        "endOffsets": "4628,4754,5081,5265"
+                        "startLines": "34,35,36,37,38,39",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "2053,2093,2136,2179,2218,2265",
+                        "endColumns": "39,42,42,38,46,38",
+                        "endOffsets": "2088,2131,2174,2213,2260,2299"
                     }
                 },
                 {
@@ -59,7 +57,7 @@
                     }
                 },
                 {
-                    "source": "/Users/eagle/Documents/workspace/android_studio/company/xph5/app/src/main/res/values/strings.xml",
+                    "source": "/Users/eagle/Documents/GitLab/sdk/xipuh5_android/xph5/app/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "3,5,4,11,13,14,6,7,15,12,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -76,24 +74,24 @@
                     }
                 },
                 {
-                    "source": "/Users/eagle/Documents/workspace/android_studio/company/xph5/app/src/main/res/values/dimens.xml",
+                    "source": "/Users/eagle/Documents/GitLab/sdk/xipuh5_android/xph5/app/src/main/res/values/color.xml",
                     "from": {
-                        "startLines": "5,7,6,3,2,4",
-                        "startColumns": "0,0,0,0,0,0",
-                        "startOffsets": "126,201,162,56,13,91",
-                        "endColumns": "35,38,38,34,42,34",
-                        "endOffsets": "161,239,200,90,55,125"
+                        "startLines": "3,5,4,8,9,6,7",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "56,157,112,283,329,200,238",
+                        "endColumns": "55,42,44,45,52,37,44",
+                        "endOffsets": "107,195,152,324,377,233,278"
                     },
                     "to": {
-                        "startLines": "34,35,36,37,38,39",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "2053,2093,2136,2179,2218,2265",
-                        "endColumns": "39,42,42,38,46,38",
-                        "endOffsets": "2088,2131,2174,2213,2260,2299"
+                        "startLines": "2,3,4,5,6,11,12",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,111,154,199,245,590,628",
+                        "endColumns": "55,42,44,45,52,37,44",
+                        "endOffsets": "106,149,194,240,293,623,668"
                     }
                 },
                 {
-                    "source": "/Users/eagle/.gradle/caches/transforms-1/files-1.1/applog-release.aar/0da157cde0ef0fd3e67099661f36a476/res/values/values.xml",
+                    "source": "/Users/eagle/.gradle/caches/transforms-1/files-1.1/applog-release.aar/d74b44f2dd35485df9e608269a89b219/res/values/values.xml",
                     "from": {
                         "startLines": "3,4,5",
                         "startColumns": "4,4,4",
@@ -110,20 +108,22 @@
                     }
                 },
                 {
-                    "source": "/Users/eagle/Documents/workspace/android_studio/company/xph5/app/src/main/res/values/color.xml",
+                    "source": "/Users/eagle/Documents/GitLab/sdk/xipuh5_android/xph5/app/src/main/res/values/styles.xml",
                     "from": {
-                        "startLines": "3,5,4,8,9,6,7",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "56,157,112,283,329,200,238",
-                        "endColumns": "55,42,44,45,52,37,44",
-                        "endOffsets": "107,195,152,324,377,233,278"
+                        "startLines": "2,15,9,4",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "17,597,270,85",
+                        "endLines": "2,17,14,7",
+                        "endColumns": "66,12,12,12",
+                        "endOffsets": "79,718,592,264"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,11,12",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,111,154,199,245,590,628",
-                        "endColumns": "55,42,44,45,52,37,44",
-                        "endOffsets": "106,149,194,240,293,623,668"
+                        "startLines": "80,81,84,90",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "4573,4633,4759,5086",
+                        "endLines": "80,83,89,93",
+                        "endColumns": "59,12,12,12",
+                        "endOffsets": "4628,4754,5081,5265"
                     }
                 }
             ]

@@ -1,0 +1,12 @@
+#一级目录
+*.iml
+.DS_Store
+/.git
+/.gradle
+/.idea
+/build
+/gradle
+/release
+gradlew
+gradlew.bat
+local.properties
