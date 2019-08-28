@@ -1,43 +1,0 @@
-
-vsquid:S00117Õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öÍ—ÿÿÿÿÿ8Œ‰§êË-
-vsquid:S00117Ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ú¹Öøÿÿÿÿ8¹Ä©êË-
-@squid:S1148…"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-Gsquid:S1148Ú"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8‹¬êË-
-osquid:S14505"SRemove the "mUrl" field and declare it as a local variable in the relevant methods.(È¤Å®úÿÿÿÿ
-wsquid:S14504"TRemove the "mRoot" field and declare it as a local variable in the relevant methods.(ä¹¼¿ÿÿÿÿÿ8¢­¢ºË-
-squid:S1186Œ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ı¤Ğüùÿÿÿÿ
-Lsquid:S10681".Remove this unused "SP_PAYINFO" private field.(ÂË„8ı•¨ºË-
-Lsquid:S1125Ö"(Remove the literal "true" boolean value.(¿ú¹Öøÿÿÿÿ8¹Ä©êË-
-jsquid:ModifiersOrderCheck1"EReorder the modifiers to comply with the Java Language Specification.(ÂË„
-qsquid:S00117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò‚±Ö8œ²°êË-
-nsquid:S3776>"RRefactor this method to reduce its Cognitive Complexity from 30 to the 15 allowed.(¨Œşÿÿÿÿ
-qsquid:S00117¦"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÂá8¢£¦éË-
-Gsquid:S1148ï"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8‹¬êË-
-psquid:S00117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦˜z8˜Î¯êË-
-Msquid:S10686"/Remove this unused "mZfbHandler" private field.(Ä²Ì­8¢­¢ºË-
-qsquid:S00117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò‚±Ö8œ²°êË-
-vsquid:S00117ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öÍ—ÿÿÿÿÿ8‹¬êË-
-psquid:S00117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ¥äz8ßìÊêË-
-Psquid:S1854„"8Remove this useless assignment to local variable "path".(™¸Ê—
-Lsquid:S1125ê"(Remove the literal "true" boolean value.(öÍ—ÿÿÿÿÿ8‹¬êË-
-Lsquid:S10684")Remove this unused "mRoot" private field.(ä¹¼¿ÿÿÿÿÿ8¢­¢ºË-
-Nsquid:S10680"+Remove this unused "SP_JRTT" private field.(ñõÚÉûÿÿÿÿ8ı•¨ºË-
-Msquid:S1068;"/Remove this unused "mOutTradeNo" private field.(ªÄ¼8šœ¥éË-
-Csquid:S3398È"$Move this method into "JsInterface".(æé¨8•Ö–äË-
-Usquid:S2589ı"8Remove this expression which always evaluates to "false"(´‹àâşÿÿÿÿ
-Qsquid:S10688".Remove this unused "mWxHandler" private field.(ØĞÃ¸úÿÿÿÿ8¢­¢ºË-
-¥squid:S1186¬"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(âŠ¿äıÿÿÿÿ8ıµ¹Ë-
-qsquid:S00117¦"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÂá8½ÌêË-
-|squid:S1149Ö"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(—…ÓÑÿÿÿÿÿ
-Gsquid:S1066Š"/Merge this if statement with the enclosing one.(ÍÂí¬
-™squid:S1186ë"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¥°¬á
-?squid:S1148x"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-Msquid:S10687"/Remove this unused "mAliHandler" private field.(×©8¢­¢ºË-
-Lsquid:S1125Õ"(Remove the literal "true" boolean value.(öÍ—ÿÿÿÿÿ8Œ‰§êË-
-ksquid:S001162"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éüÔßøÿÿÿÿ
-gsquid:S1192¬"HDefine a constant instead of duplicating this literal "open_id" 3 times.(¨Ğÿ8£›ÍêË-
-osquid:ModifiersOrderCheck0"EReorder the modifiers to comply with the Java Language Specification.(ñõÚÉûÿÿÿÿ
-Csquid:S3398·"$Move this method into "JsInterface".(ò‚±Ö8œ²°êË-
-Ÿsquid:S1186°"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Á¾à8àÖ€¹Ë-
-nsquid:S00117e"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€œÂúûÿÿÿÿ
-qsquid:S00117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò‚±Ö8œ²°êË-

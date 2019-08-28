@@ -1,4 +1,4 @@
-#Tue Aug 27 10:18:34 CST 2019
+#Tue Aug 27 18:06:44 CST 2019
 base.0=/Users/eagle/Documents/GitLab/sdk/xipuh5_android/xph5/app/build/intermediates/transforms/dexMerger/release/0
 path.0=classes.dex
 renamed.0=classes.dex
