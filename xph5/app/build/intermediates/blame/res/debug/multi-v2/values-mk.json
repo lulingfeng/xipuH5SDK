@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/eagle/Documents/GitLab/sdk/xipuh5_android/xph5/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mk/values-mk.xml",
+            "outputFile": "C:\\Work\\test\\xph5\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mk\\values-mk.xml",
             "map": [
                 {
-                    "source": "/Users/eagle/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/f88fe94bf00ec6e364fbfddf81311329/res/values-mk/values-mk.xml",
+                    "source": "C:\\Users\\llf\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\48eec770440fe2f5bd7a52ebf1de14cc\\res\\values-mk\\values-mk.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
