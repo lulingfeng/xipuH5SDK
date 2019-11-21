@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xipuh5_android-xph5.iml" filepath="$PROJECT_DIR$/xipuh5_android-xph5.iml" />
       <module fileurl="file://$PROJECT_DIR$/xph5.iml" filepath="$PROJECT_DIR$/xph5.iml" />
     </modules>
   </component>
