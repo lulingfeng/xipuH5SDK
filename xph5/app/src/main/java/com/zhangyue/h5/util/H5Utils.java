@@ -12,6 +12,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 
+
+import com.startobj.util.check.SOEmulatorUtil;
 import com.startobj.util.common.SOCommonUtil;
 import com.startobj.util.device.SODeviceEntity;
 import com.startobj.util.device.SODeviceUtils;
@@ -43,6 +45,8 @@ public class H5Utils {
     private static String mIdentityToken;
     private static String mIP;
     private static String mUa;
+    //oaid
+    private static String oaid;
 
     /**
      * 获取channel
@@ -69,7 +73,7 @@ public class H5Utils {
                 mChannel = getChannelFromApk(context, "channel_");
             if (TextUtils.isEmpty(mChannel)) {
                 mChannel = "demo";
-                SOToastUtil.toastShow(context, "此信息未配置[游戏渠道:mChannel]时提示，接入方请忽略");
+                SOToastUtil.showShort("此信息未配置[游戏渠道:mChannel]时提示，接入方请忽略");
             }
             //////// 动态打包使用--结束///////
             mIdentityToken = getChannelFromApk(context, "itoken_");
@@ -82,7 +86,7 @@ public class H5Utils {
 
     // 常用参数
     public static HashMap<String, String> getCommonParams(Activity context) {
-        mDeviceEntity = SODeviceUtils.acquireDeviceInfo(context);
+        mDeviceEntity = SODeviceUtils.getInstance().acquireDeviceInfo(context);
 
         HashMap<String, String> paramsMap = new HashMap<String, String>();
         paramsMap.put("manufacturer", mDeviceEntity.getManufacturer());
@@ -109,6 +113,7 @@ public class H5Utils {
         paramsMap.put("package_name", mDeviceEntity.getPackageName());
         paramsMap.put("location", mDeviceEntity.getLocation());
         paramsMap.put("platform", getPlatform());
+        paramsMap.put("oaid", H5Utils.getOaid());
         paramsMap.put("is_suit", isVirtualMachine(context) ? "1" : "0");
         return paramsMap;
     }
@@ -325,7 +330,7 @@ public class H5Utils {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                mIP = SODeviceUtils.getIp3();
+                mIP = SODeviceUtils.getInstance().getIp3();
             }
         }).start();
     }
@@ -365,15 +370,22 @@ public class H5Utils {
 
     }
 
+    public static String getOaid() {
+        return TextUtils.isEmpty(oaid) ? "" : oaid;
+    }
+
+    public static void setOaid(String oaid) {
+        H5Utils.oaid = oaid;
+    }
 
     /**
      * 检测是不是虚拟机，需要添加权限{@link android.Manifest.permission#BODY_SENSORS}
      *
-     * @param activity 上下文环境
+     * @param context 上下文环境
      * @return true/false 是VM/不是VM
      */
-    public static boolean isVirtualMachine(Activity activity) {
-        SensorManager manager = (SensorManager) activity.getSystemService(Context.SENSOR_SERVICE);
+    public static boolean isVirtualMachine(Context context) {
+        SensorManager manager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
         if (manager == null) {
             if (BuildConfig.DEBUG)
                 Log.e("isVirtualMachine", "SensorManager is null");
@@ -388,7 +400,7 @@ public class H5Utils {
         if (proximityValid) nullCounter++;
         Sensor stepCounterSensor = null;
         Sensor stepDetectorSensor = null;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             stepDetectorSensor = manager.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR);
             stepCounterSensor = manager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
         }
@@ -396,6 +408,19 @@ public class H5Utils {
         boolean counterValid = stepCounterSensor != null && !TextUtils.isEmpty(stepCounterSensor.getName());
         if (detectorValid) nullCounter++;
         if (counterValid) nullCounter++;
-        return nullCounter <= 1;
+        return confirmIsVirtual(context, nullCounter <= 1);
+    }
+
+    /**
+     * @param isVirtual 是否为虚拟机
+     * @return 再次判断，提高准确性
+     */
+    private static boolean confirmIsVirtual(Context context, boolean isVirtual) {
+        if (isVirtual) {
+            return true;
+        } else if (SOEmulatorUtil.isEmulator(context)) {
+            return true;
+        }
+        return false;
     }
 }

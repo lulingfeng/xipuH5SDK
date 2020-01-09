@@ -22,9 +22,8 @@ import android.webkit.JavascriptInterface;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import com.ss.android.common.applog.TeaAgent;
-import com.ss.android.common.applog.TeaConfigBuilder;
-import com.ss.android.common.lib.EventUtils;
+import com.bytedance.applog.AppLog;
+import com.bytedance.applog.GameReportHelper;
 import com.startobj.util.http.SORequestParams;
 import com.tencent.smtt.export.external.interfaces.SslError;
 import com.tencent.smtt.export.external.interfaces.SslErrorHandler;
@@ -65,7 +64,6 @@ public class BrowserActivity extends Activity {
                 WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_main);
 
-        jrttActivate();
         tuiaActivate();
         H5Utils.hideBottomUIMenu(this);
         mUrl = generateUrl();
@@ -178,13 +176,6 @@ public class BrowserActivity extends Activity {
         }).init();
     }
 
-    private void jrttActivate() {
-        if (ParamUtil.isUseJrtt()) {
-            TeaAgent.init(TeaConfigBuilder.create(this).setAppName(ParamUtil.getJrttAppname())
-                    .setChannel(ParamUtil.getJrttChannel()).setAid(ParamUtil.getJrttAid()).createTeaConfig());
-            Log.d(H5Utils.TAG,"jrtt init");
-        }
-    }
 
     private void tuiaActivate() {
         if (H5Utils.getIsFirst(this)) {
@@ -282,24 +273,17 @@ public class BrowserActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        if (ParamUtil.isUseJrtt()) {
-            TeaAgent.onResume(this);
-            Log.d(H5Utils.TAG,"jrtt onResume");
-        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        if (ParamUtil.isUseJrtt()) {
-            TeaAgent.onPause(this);
-            Log.d(H5Utils.TAG,"jrtt onPause");
-        }
     }
 
     public void sendJrttPayInfo(boolean is_report, int amount, String out_trade_no) {
         if (ParamUtil.isUseJrtt() && is_report) {
-            EventUtils.setPurchase("type", "元宝", "1", 1, "weixin", "人民币", true, amount / 100);
+            Log.e(H5Utils.TAG, "jrtt pay");
+            GameReportHelper.onEventPurchase("type", "钻石", "1", 1, "xipudemo", "人民币", true, amount / 100);
             HashMap<String, String> map = new HashMap<>();
             map.put("app_id", ParamUtil.getAppId());
             map.put("channel", H5Utils.getChannel());
@@ -318,7 +302,8 @@ public class BrowserActivity extends Activity {
         mOpenID = open_id;
 
         if (ParamUtil.isUseJrtt() && is_report && is_newuser) {
-            EventUtils.setRegister("mobile", true);
+            Log.d(H5Utils.TAG, "jrtt register");
+            GameReportHelper.onEventRegister("mobile", true); // 注册行为上报
             HashMap<String, String> map = new HashMap<>();
             map.put("app_id", ParamUtil.getAppId());
             map.put("channel", H5Utils.getChannel());
@@ -373,7 +358,6 @@ public class BrowserActivity extends Activity {
                     e.printStackTrace();
                 }
             }
-
             sendTuiaPayInfo();
         }
     }

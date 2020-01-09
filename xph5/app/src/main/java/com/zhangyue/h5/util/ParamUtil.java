@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
+
 import com.startobj.util.common.SOCommonUtil;
 import com.zhangyue.h5.config.H5Config;
 
@@ -31,6 +32,18 @@ public class ParamUtil {
     private static String mSdkType;
     // 是否启用闪屏
     private static boolean mIsUseSplash;
+    /**
+     * 喜扑sdk
+     */
+    public static final String XI_PU_SDK = "xp";
+    /**
+     * 掌越sdk
+     */
+    public static final String REN_WAN_SDK = "rw";
+    /**
+     * 殷玩sdk
+     */
+    public static final String YIN_WAN_SDK = "yw";
 
     public static void loadConfig(Context context) {
         if (context == null)
@@ -74,16 +87,15 @@ public class ParamUtil {
             Log.d(H5Utils.TAG, "tuia=" + (mIsUseTuia ? "true" : "false"));
 
             // SDK类型获取
-            String sdk_type_rw = H5Utils.getChannelFromApk(context, "sdk_type_");
-            mSdkType = "xp";
-            if (!TextUtils.isEmpty(sdk_type_rw)) {
-                if (sdk_type_rw.equals("rw"))
-                    mSdkType = "rw";
-                else if (sdk_type_rw.equals("yw"))
-                    mSdkType = "yw";
+            String sdkType = H5Utils.getChannelFromApk(context, "sdk_type_");
+            mSdkType = XI_PU_SDK;
+            if (!TextUtils.isEmpty(sdkType)) {
+                if (sdkType.equals(REN_WAN_SDK))
+                    mSdkType = REN_WAN_SDK;
+                else if (sdkType.equals(YIN_WAN_SDK))
+                    mSdkType = YIN_WAN_SDK;
             }
             Log.d(H5Utils.TAG, "SdkType=" + mSdkType);
-
 
             // 是否使用闪屏获取
             String use_splash = H5Utils.getChannelFromApk(context, "use_splash_");
