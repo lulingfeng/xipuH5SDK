@@ -30,7 +30,6 @@ public class OaidHelper implements IIdentifierListener {
         Log.e(TAG, "OnSupport:true " + oaid);
         idSupplier.shutDown();
         H5Utils.setOaid(oaid);
-        SOToastUtil.showShort(H5Utils.getOaid());
     }
 
     /**

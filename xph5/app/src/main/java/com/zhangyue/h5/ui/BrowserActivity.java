@@ -22,7 +22,6 @@ import android.webkit.JavascriptInterface;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import com.bytedance.applog.AppLog;
 import com.bytedance.applog.GameReportHelper;
 import com.startobj.util.http.SORequestParams;
 import com.tencent.smtt.export.external.interfaces.SslError;
