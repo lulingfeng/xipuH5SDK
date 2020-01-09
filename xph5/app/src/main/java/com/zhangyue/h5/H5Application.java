@@ -26,7 +26,6 @@ public class H5Application extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        QbSdk.initX5Environment(getApplicationContext(), null);
 
         SOToastUtil.init(this);
 
