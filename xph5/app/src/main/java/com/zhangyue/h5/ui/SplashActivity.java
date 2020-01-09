@@ -128,8 +128,6 @@ public class SplashActivity extends Activity {
                 }, 1500);
             }
         });
-
-
         H5Utils.getIP();
     }
 

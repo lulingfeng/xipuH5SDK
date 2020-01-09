@@ -24,7 +24,8 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <!-- 允许程序可以读取设备外部存储空间 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
+    <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
     <application
         android:name="com.zhangyue.h5.H5Application"
         android:allowBackup="true"
@@ -69,6 +70,10 @@
         <meta-data
             android:name="xp_jrtt_channel"
             android:value="ylyhe" />
+        <!-- 喜扑游戏 今日头条统计SDK 是否启用 -->
+        <meta-data
+            android:name="xp_use_jrtt"
+            android:value="false" />
         <!-- 喜扑游戏 今日头条统计SDK aid -->
         <meta-data
             android:name="xp_jrtt_aid"

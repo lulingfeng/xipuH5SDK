@@ -9,15 +9,15 @@ import com.zhangyue.h5.R;
 
 public class WXPayEntryActivity extends Activity /*implements IWXAPIEventHandler*/ {
 
-	private static final String TAG = WXPayEntryActivity.class.getName();
-	private IWXAPI api;
-	private ViewGroup viewGroup;
+    private static final String TAG = WXPayEntryActivity.class.getName();
+    private IWXAPI api;
+    private ViewGroup viewGroup;
 
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.layout_empty);
-		// 父View
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.layout_empty);
+        // 父View
 //		viewGroup = (ViewGroup) findViewById(android.R.id.content);
 //		viewGroup.setVisibility(View.VISIBLE);
 //		viewGroup.setOnClickListener(new OnClickListener() {
@@ -47,7 +47,7 @@ public class WXPayEntryActivity extends Activity /*implements IWXAPIEventHandler
 //		} catch (JSONException e) {
 //			e.printStackTrace();
 //		}
-	}
+    }
 
 //	@Override
 //	protected void onNewIntent(Intent intent) {
