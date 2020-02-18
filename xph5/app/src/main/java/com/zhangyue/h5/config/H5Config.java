@@ -4,14 +4,14 @@ public class H5Config {
     // 服务端版本
     public final static String SDK_VERSION = "v1";
     // 客户端版本
-    public final static String SDK_CODE = "5";
+    public final static String SDK_CODE = "6";
     public final static String H5SDK_URL = "";
     // 第一次使用标示位
     public final static String SP_ISFIRST = "h5_isfirst";
     public final static String SP_TUIAID = "h5_tuiaid";
 //    public final static String API_URL = "http://testapi.kuaigames.com/v1";
     public final static String API_URL = "http://api.zhangyueyx.com/v1";
-//        public static String GAME_BASE_URL = "http://testh5.xipu.com";
+  //      public static String GAME_BASE_URL = "http://testh5.xipu.com";
     public static String GAME_BASE_URL = "https://h5.zhangyueyx.com";
     // 协议头
     public final static String AGREEMENT_SCHEME = "kwsdk";
@@ -50,6 +50,8 @@ public class H5Config {
     public final static String REPORT_JRTT_REGISTER_URL = SERVER_REPORT_URL + "jrtt/jrtt_register_log.php";
     // 今日头条付费上报
     public final static String REPORT_JRTT_PAY_URL = SERVER_REPORT_URL + "jrtt/jrtt_trade_log.php";
+    // 广点通注册上报
+    public final static String REPORT_GDT_REGISTER_URL = SERVER_REPORT_URL + "gdt/gdt_register_log.php";
     public static String GAME_URL = GAME_BASE_URL + "/play.php";
     public static String SDK_SP_NAME = "h5_info";
     public static String SP_CHANNEL = "h5_channel";

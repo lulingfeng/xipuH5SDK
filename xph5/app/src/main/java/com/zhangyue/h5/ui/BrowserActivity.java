@@ -23,6 +23,8 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.bytedance.applog.GameReportHelper;
+import com.qq.gdt.action.ActionType;
+import com.qq.gdt.action.GDTAction;
 import com.startobj.util.http.SORequestParams;
 import com.tencent.smtt.export.external.interfaces.SslError;
 import com.tencent.smtt.export.external.interfaces.SslErrorHandler;
@@ -37,6 +39,9 @@ import com.zhangyue.h5.util.H5Utils;
 import com.zhangyue.h5.util.KeyBoardListener;
 import com.zhangyue.h5.util.ParamUtil;
 import com.zhangyue.h5.util.ZYJSONObject;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.net.URISyntaxException;
 import java.util.HashMap;
@@ -315,6 +320,44 @@ public class BrowserActivity extends Activity {
         }
     }
 
+    /**
+     * 广点通注册
+     */
+    private void sendGDTRegister() {
+        GDTAction.logAction(ActionType.START_APP);
+        GDTAction.logAction(ActionType.REGISTER);
+        HashMap<String, String> map = new HashMap<>();
+        map.put("app_id", ParamUtil.getAppId());
+        map.put("channel", H5Utils.getChannel());
+        map.put("open_id", mOpenID);
+        map.put("imei", H5Utils.mDeviceEntity.getImei1());
+        map.put("androidid", H5Utils.mDeviceEntity.getAndroidID());
+        map.put("oaid", H5Utils.getOaid());
+        H5Utils.reportGDT(this, map);
+        Log.d(H5Utils.TAG, "GDT REGISTER & START_APP");
+    }
+
+    /**
+     * 广点通 支付上报
+     *
+     * @param is_ysdk_report
+     * @param ysdk_report
+     * @param ysdk_report_amount
+     */
+    public void sendGDTPayInfo(boolean is_ysdk_report, boolean ysdk_report, int ysdk_report_amount) {
+        Log.d(H5Utils.TAG, "---is_ysdk_report---" + is_ysdk_report + "--ysdk_report--" + ysdk_report);
+        if (is_ysdk_report && ysdk_report) {
+            try {
+                JSONObject actionParam = new JSONObject();
+                actionParam.put("value", ysdk_report_amount);
+                GDTAction.logAction(ActionType.PURCHASE, actionParam);
+                Log.e(H5Utils.TAG, "GDT PURCHASE " + ysdk_report_amount);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     private void sendTuiaPayInfo() {
         if (ParamUtil.isIsUseTuia()) {
             H5Utils.tuiaApi(this, "6");
@@ -328,12 +371,19 @@ public class BrowserActivity extends Activity {
             if (!TextUtils.isEmpty(value)) {
                 try {
                     ZYJSONObject dataResult = new ZYJSONObject(value);
-                    boolean is_report = dataResult.getInt("is_report") == 1 ? true : false;
-                    boolean is_newuser = dataResult.getInt("is_newuser") == 1 ? true : false;
+                    boolean is_report = dataResult.getInt("is_report") == 1 ? true : false; // 今日头条标识
+                    boolean is_ysdk_report = dataResult.getInt("is_ysdk_report") == 1 ? true : false; // 广点通标识
+                    boolean ysdk_report = dataResult.getInt("ysdk_report") == 1 ? true : false; // 广点通全局标识
+                    boolean is_newuser = dataResult.getInt("is_newuser") == 1 ? true : false; // 新用户标识
+
                     String open_id = dataResult.getString("open_id");
                     sendJrttUserInfo(is_report, is_newuser, open_id);
+                    if (is_newuser && is_ysdk_report && ysdk_report) {
+                        sendGDTRegister();
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
+                    Log.d(H5Utils.TAG, "newAccount Exception=" + e.toString());
                 }
             }
         }
@@ -349,10 +399,15 @@ public class BrowserActivity extends Activity {
             if (!TextUtils.isEmpty(value)) {
                 try {
                     ZYJSONObject dataResult = new ZYJSONObject(value);
-                    boolean is_report = dataResult.getInt("is_report") == 1 ? true : false;
+                    boolean is_report = dataResult.getInt("is_report") == 1 ? true : false; //今日头条标识
                     int amount = dataResult.getInt("report_amount");
+                    boolean is_ysdk_report = dataResult.getInt("is_ysdk_report") == 1 ? true : false; // 广点通0标识
+                    int ysdk_report_amount = dataResult.getInt("ysdk_report_amount");
+                    boolean ysdk_report = dataResult.getInt("ysdk_report") == 1 ? true : false; // 广点通全局标识
                     String out_trade_no = dataResult.getString("out_trade_no");
+
                     sendJrttPayInfo(is_report, amount, out_trade_no);
+                    sendGDTPayInfo(is_ysdk_report, ysdk_report, ysdk_report_amount);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

@@ -35,7 +35,7 @@ import java.util.zip.ZipFile;
 
 public class H5Utils {
 
-    public static final String TAG = H5Utils.class.getName();
+    public static final String TAG = "H5SDK_TAG";
     // 自定义对话框
     public static LoadingProgressDialogs mProgressDialog;
     // 设备信息
@@ -367,6 +367,42 @@ public class H5Utils {
             }
         });
         // pay      app_id, channel, open_id, jrtt, outtradeno
+
+    }
+
+
+    /**
+     * 上报广点通注册行为
+     *
+     * @param activity
+     * @param paramsMap
+     */
+    public static void reportGDT(final Activity activity, HashMap<String, String> paramsMap) {
+
+        final String query_url = H5Config.REPORT_GDT_REGISTER_URL;
+        SORequestParams params = new SORequestParams(query_url, paramsMap);
+        SOHttpConnection.get(activity, params, new SOCallBack.SOCommonCallBack<String>() {
+
+            @Override
+            public void onSuccess(String result) {
+                Log.d(H5Utils.TAG, "reportGDT " + "register onSuccess");
+            }
+
+            @Override
+            public void onHttpError(Throwable ex, boolean isOnCallback) {
+                Log.e(H5Utils.TAG, "reportGDT " + "register onHttpError");
+            }
+
+            @Override
+            public void onCodeError(CodeErrorException cex) {
+                Log.e(H5Utils.TAG, "reportGDT " + "register onCodeError");
+            }
+
+            @Override
+            public void onFinished() {
+                H5Utils.cancelProgress();
+            }
+        });
 
     }
 

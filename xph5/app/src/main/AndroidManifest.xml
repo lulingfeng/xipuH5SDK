@@ -61,15 +61,15 @@
         <!-- 喜扑游戏 客户端id -->
         <meta-data
             android:name="xp_appid"
-            android:value="d3706308d6c62d898f06d260065024fc" />
+            android:value="4a15f05f6fb4527b0f8da937c1d04f76" />
         <!-- 喜扑游戏 今日头条统计SDK appname -->
         <meta-data
             android:name="xp_jrtt_appname"
-            android:value="一恋永恒1" />
+            android:value="" />
         <!-- 喜扑游戏 今日头条统计SDK channel -->
         <meta-data
             android:name="xp_jrtt_channel"
-            android:value="ylyhe" />
+            android:value="" />
         <!-- 喜扑游戏 今日头条统计SDK 是否启用 -->
         <meta-data
             android:name="xp_use_jrtt"
@@ -82,6 +82,14 @@
         <meta-data
             android:name="xp_tuia_advertkey"
             android:value="763EF716C4sdasd1F253AB457CC3B5" />
+        <!--喜扑游戏 广点通 USERACTIONSETID -->
+        <meta-data
+            android:name="xp_gdt_useractionsetid"
+            android:value="" />
+        <!-- 喜扑游戏 广点通 APPSECRETKEY -->
+        <meta-data
+            android:name="xp_gdt_appsecretkey"
+            android:value="" />
     </application>
 
 </manifest>

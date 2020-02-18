@@ -10,10 +10,12 @@ import com.bun.miitmdid.core.JLibrary;
 import com.bytedance.applog.AppLog;
 import com.bytedance.applog.InitConfig;
 import com.bytedance.applog.util.UriConfig;
+import com.qq.gdt.action.GDTAction;
 import com.startobj.util.common.SOCommonUtil;
 import com.startobj.util.toast.SOToastUtil;
 import com.tencent.bugly.crashreport.CrashReport;
 import com.tencent.smtt.sdk.QbSdk;
+import com.zhangyue.h5.util.GDTUtils;
 import com.zhangyue.h5.util.H5Utils;
 import com.zhangyue.h5.util.OaidHelper;
 import com.zhangyue.h5.util.ParamUtil;
@@ -41,6 +43,11 @@ public class H5Application extends Application {
 
         ParamUtil.loadConfig(getApplicationContext());
         Log.d(H5Utils.TAG, "onCreate: "+H5Utils.getOaid());
+
+        GDTAction.init(this,
+                GDTUtils.getUserActionSetID(this),
+                GDTUtils.getAppSecretKey(this));
+
         if (ParamUtil.isUseJrtt()) {
             Log.d(H5Utils.TAG, "头条初始化");
             initRangersAppLog();
