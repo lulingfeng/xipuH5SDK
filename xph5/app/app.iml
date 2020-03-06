@@ -105,6 +105,7 @@
     <orderEntry type="library" name="Gradle: __local_aars__:C.\Users\user\.gradle\caches\transforms-1\files-1.1\soutil-20200302.aar\47d4d1e0c23ee6c07f0ef27e00e3edeb:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-core-utils:26.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:D.\git repository\xipuH5\xph5\app\libs\tbs_sdk_thirdapp_v4.3.0.1072_43646_sharewithdownloadwithfile_withoutGame_obfs_20190429_175122.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:C.\Users\user\.gradle\caches\transforms-1\files-1.1\miit_mdid_1.0.13.aar\f3faab53e35729f55bf11dc5c39d7455:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.core:common:1.0.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-v4:26.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-compat:26.1.0@aar" level="project" />
@@ -114,6 +115,5 @@
     <orderEntry type="library" name="Gradle: __local_aars__:C.\Users\user\.gradle\caches\transforms-1\files-1.1\RangersAppLog-Lite-cn-3.3.12.aar\d701979f0cd9959231c27460bc1af599:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-media-compat:26.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:C.\Users\user\.gradle\caches\transforms-1\files-1.1\GDTActionSDK.min.1.6.4.aar\eb21f6ae20e3646a9d60cf7bf02bda64:unspecified@jar" level="project" />
-    <orderEntry type="library" name="Gradle: __local_aars__:C.\Users\user\.gradle\caches\transforms-1\files-1.1\miit_mdid_1.0.10.aar\47d524072faf9aaa5a640712353d3900:unspecified@jar" level="project" />
   </component>
 </module>

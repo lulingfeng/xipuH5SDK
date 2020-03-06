@@ -1,7 +1,6 @@
 package com.zhangyue.h5;
 
 import android.app.Application;
-import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -22,13 +21,23 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class H5Application extends Application {
+
+
     @Override
     public void onCreate() {
         super.onCreate();
         SOToastUtil.init(this);
         ParamUtil.loadConfig(this);
+        try {
+            JLibrary.InitEntry(this);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(H5Utils.TAG, "oaid JLibrary初始化失败" + e.getMessage());
+        }
+        SOToastUtil.init(this);
+        ParamUtil.loadConfig(getApplicationContext());
         if (!BuildConfig.DEBUG) {
-            Log.d(H5Utils.TAG, "Bugly初始化");
+            Log.d(H5Utils.TAG, "Bugly始化");
             CrashReport.initCrashReport(getApplicationContext(), "592580b3cc", false);
         }
 
@@ -42,12 +51,6 @@ public class H5Application extends Application {
             Log.d(H5Utils.TAG, "头条初始化");
             initRangersAppLog();
         }
-    }
-
-    @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(base);
-        JLibrary.InitEntry(this);
     }
 
     /**

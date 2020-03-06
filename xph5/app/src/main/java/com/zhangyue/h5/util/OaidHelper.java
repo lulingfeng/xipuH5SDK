@@ -4,10 +4,11 @@ import android.content.Context;
 import android.util.Log;
 
 import com.bun.miitmdid.core.ErrorCode;
-import com.bun.miitmdid.core.IIdentifierListener;
+
 import com.bun.miitmdid.core.MdidSdkHelper;
-import com.bun.miitmdid.supplier.IdSupplier;
-import com.startobj.util.toast.SOToastUtil;
+import com.bun.supplier.IIdentifierListener;
+import com.bun.supplier.IdSupplier;
+
 
 /**
  * @author lulingfeng
@@ -18,17 +19,18 @@ import com.startobj.util.toast.SOToastUtil;
  * 目前支持机型可以在 http://www.msa-alliance.cn/col.jsp?id=120 查看
  */
 public class OaidHelper implements IIdentifierListener {
-    private static String TAG = OaidHelper.class.getSimpleName();
 
     @Override
     public void OnSupport(boolean isSupport, IdSupplier idSupplier) {
+        String oaid = "";
         if (idSupplier == null) {
-            Log.e(TAG, "OnSupport: ");
+            Log.e(H5Utils.TAG, "idSupplier为null ");
             return;
         }
-        String oaid = idSupplier.getOAID();
-        Log.e(TAG, "OnSupport:true " + oaid);
-        idSupplier.shutDown();
+        if (idSupplier.isSupported()) {
+            oaid = idSupplier.getOAID();
+            Log.d(H5Utils.TAG, "支持的oaid设备类型: " + oaid);
+        }
         H5Utils.setOaid(oaid);
     }
 
@@ -36,31 +38,27 @@ public class OaidHelper implements IIdentifierListener {
      * @return 回调参数
      * 初始化SDK
      */
-    private int initOaidSDK(Context context) throws Exception {
+    private int initOaidSDK(Context context) {
         return MdidSdkHelper.InitSdk(context, true, OaidHelper.this);
     }
 
     public void getDeviceOaid(Context context) {
         int errorCode = 0;
-        try {
-            errorCode = initOaidSDK(context);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        errorCode = initOaidSDK(context);
         if (errorCode == ErrorCode.INIT_ERROR_DEVICE_NOSUPPORT) {//不支持的设备
-            Log.e(TAG, "getDeviceOaid:不支持的设备 ");
+            Log.e(H5Utils.TAG, "getDeviceOaid:不支持的设备 ");
             return;
         } else if (errorCode == ErrorCode.INIT_ERROR_LOAD_CONFIGFILE) {//加载配置文件出错
-            Log.e(TAG, "getDeviceOaid:加载配置文件出错 ");
+            Log.e(H5Utils.TAG, "getDeviceOaid:加载配置文件出错 ");
             return;
         } else if (errorCode == ErrorCode.INIT_ERROR_MANUFACTURER_NOSUPPORT) {//不支持的设备厂商
-            Log.e(TAG, "getDeviceOaid: 不支持的设备厂商");
+            Log.e(H5Utils.TAG, "getDeviceOaid: 不支持的设备厂商");
             return;
         } else if (errorCode == ErrorCode.INIT_ERROR_RESULT_DELAY) {//获取接口是异步的，结果会在回调中返回，回调执行的回调可能在工作线程
-            Log.e(TAG, "getDeviceOaid: 获取接口是异步的，结果会在回调中返回");
+            Log.e(H5Utils.TAG, "getDeviceOaid: 获取接口是异步的，结果会在回调中返回");
             return;
         } else if (errorCode == ErrorCode.INIT_HELPER_CALL_ERROR) {//反射调用出错
-            Log.e(TAG, "getDeviceOaid: 反射调用出错");
+            Log.e(H5Utils.TAG, "getDeviceOaid: 反射调用出错");
             return;
         }
     }

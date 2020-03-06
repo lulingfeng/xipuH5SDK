@@ -89,8 +89,7 @@ public class BrowserActivity extends Activity {
         }
 
         mWebView.setWebViewClient(new WebViewClient() {
-
-            @Override
+                       @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 Uri uri = Uri.parse(url);
                 if (url.startsWith("http") || url.startsWith("https")) {
