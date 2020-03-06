@@ -415,48 +415,13 @@ public class H5Utils {
     }
 
     /**
-     * 检测是不是虚拟机，需要添加权限{@link android.Manifest.permission#BODY_SENSORS}
+     * 检测虚拟机
      *
      * @param context 上下文环境
      * @return true/false 是VM/不是VM
      */
     public static boolean isVirtualMachine(Context context) {
-        SensorManager manager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
-        if (manager == null) {
-            if (BuildConfig.DEBUG)
-                Log.e("isVirtualMachine", "SensorManager is null");
-            return true;
-        }
-        int nullCounter = 0;
-        Sensor lightSensor = manager.getDefaultSensor(Sensor.TYPE_LIGHT);
-        Sensor proximitySensor = manager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
-        boolean lightValid = lightSensor != null && !TextUtils.isEmpty(lightSensor.getName());
-        boolean proximityValid = proximitySensor != null && !TextUtils.isEmpty(proximitySensor.getName());
-        if (lightValid) nullCounter++;
-        if (proximityValid) nullCounter++;
-        Sensor stepCounterSensor = null;
-        Sensor stepDetectorSensor = null;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            stepDetectorSensor = manager.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR);
-            stepCounterSensor = manager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
-        }
-        boolean detectorValid = stepDetectorSensor != null && !TextUtils.isEmpty(stepDetectorSensor.getName());
-        boolean counterValid = stepCounterSensor != null && !TextUtils.isEmpty(stepCounterSensor.getName());
-        if (detectorValid) nullCounter++;
-        if (counterValid) nullCounter++;
-        return confirmIsVirtual(context, nullCounter <= 1);
+        return SOEmulatorUtil.isEmulator(context);
     }
 
-    /**
-     * @param isVirtual 是否为虚拟机
-     * @return 再次判断，提高准确性
-     */
-    private static boolean confirmIsVirtual(Context context, boolean isVirtual) {
-        if (isVirtual) {
-            return true;
-        } else if (SOEmulatorUtil.isEmulator(context)) {
-            return true;
-        }
-        return false;
-    }
 }

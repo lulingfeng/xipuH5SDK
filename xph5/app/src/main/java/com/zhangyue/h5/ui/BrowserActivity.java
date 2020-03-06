@@ -82,7 +82,6 @@ public class BrowserActivity extends Activity {
         String ua = mWebView.getSettings().getUserAgentString();
         H5Utils.setWebViewUA(ua);
 
-
         mWebView.getSettings().setUserAgentString(ua + "; KuaiGames-" + H5Config.SDK_VERSION);
         //自动播放音乐
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {

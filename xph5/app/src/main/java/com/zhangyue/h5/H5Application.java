@@ -2,7 +2,6 @@ package com.zhangyue.h5;
 
 import android.app.Application;
 import android.content.Context;
-import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -11,10 +10,8 @@ import com.bytedance.applog.AppLog;
 import com.bytedance.applog.InitConfig;
 import com.bytedance.applog.util.UriConfig;
 import com.qq.gdt.action.GDTAction;
-import com.startobj.util.common.SOCommonUtil;
 import com.startobj.util.toast.SOToastUtil;
 import com.tencent.bugly.crashreport.CrashReport;
-import com.tencent.smtt.sdk.QbSdk;
 import com.zhangyue.h5.util.GDTUtils;
 import com.zhangyue.h5.util.H5Utils;
 import com.zhangyue.h5.util.OaidHelper;
@@ -28,22 +25,15 @@ public class H5Application extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
         SOToastUtil.init(this);
-
+        ParamUtil.loadConfig(this);
         if (!BuildConfig.DEBUG) {
             Log.d(H5Utils.TAG, "Bugly初始化");
             CrashReport.initCrashReport(getApplicationContext(), "592580b3cc", false);
         }
 
-        if (!H5Utils.isVirtualMachine(getApplicationContext())) {
-            OaidHelper oaidHelper = new OaidHelper();
-            oaidHelper.getDeviceOaid(getApplicationContext());
-        }
-
-        ParamUtil.loadConfig(getApplicationContext());
         Log.d(H5Utils.TAG, "onCreate: "+H5Utils.getOaid());
-
+        initOaid();
         GDTAction.init(this,
                 GDTUtils.getUserActionSetID(this),
                 GDTUtils.getAppSecretKey(this));
@@ -90,6 +80,18 @@ public class H5Application extends Application {
     }
 
     /**
+     * 初始化Oaid
+     */
+    private void initOaid() {
+        try {
+            OaidHelper oaidHelper = new OaidHelper();
+            oaidHelper.getDeviceOaid(getApplicationContext());  // 获取Oaid
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
      * 初始化
      * 今日头条
      * 行为收集日志模块
@@ -104,6 +106,7 @@ public class H5Application extends Application {
             AppLog.init(this, config);
         } catch (Exception e) {
             e.printStackTrace();
+            Log.e(H5Utils.TAG, "今日头条 initialization failed");
         }
     }
 }
