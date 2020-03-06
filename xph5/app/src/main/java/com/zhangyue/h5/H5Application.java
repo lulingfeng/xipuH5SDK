@@ -28,22 +28,19 @@ public class H5Application extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
+        try {
+            JLibrary.InitEntry(this);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(H5Utils.TAG, "oaid JLibrary初始化失败" + e.getMessage());
+        }
         SOToastUtil.init(this);
-
+        ParamUtil.loadConfig(getApplicationContext());
         if (!BuildConfig.DEBUG) {
             Log.d(H5Utils.TAG, "Bugly初始化");
             CrashReport.initCrashReport(getApplicationContext(), "592580b3cc", false);
         }
-
-        if (!H5Utils.isVirtualMachine(getApplicationContext())) {
-            OaidHelper oaidHelper = new OaidHelper();
-            oaidHelper.getDeviceOaid(getApplicationContext());
-        }
-
-        ParamUtil.loadConfig(getApplicationContext());
-        Log.d(H5Utils.TAG, "onCreate: "+H5Utils.getOaid());
-
+        initOaid();
         GDTAction.init(this,
                 GDTUtils.getUserActionSetID(this),
                 GDTUtils.getAppSecretKey(this));
@@ -54,10 +51,17 @@ public class H5Application extends Application {
         }
     }
 
-    @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(base);
-        JLibrary.InitEntry(this);
+    /**
+     * 初始化Oaid
+     */
+    private void initOaid() {
+        try {
+            OaidHelper oaidHelper = new OaidHelper();
+            oaidHelper.getDeviceOaid(getApplicationContext());  // 获取Oaid
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(H5Utils.TAG, "oaid initialization failed");
+        }
     }
 
     /**
