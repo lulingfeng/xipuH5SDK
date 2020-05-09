@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
-import android.hardware.Sensor;
-import android.hardware.SensorManager;
 import android.os.Build;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -98,8 +96,8 @@ public class H5Utils {
         paramsMap.put("meid1", mDeviceEntity.getMeid1());
         paramsMap.put("meid2", mDeviceEntity.getMeid2());
         paramsMap.put("network", mDeviceEntity.getNetwork());
+        paramsMap.put("os_version_name",mDeviceEntity.getOSVersionName());
         paramsMap.put("os_version", mDeviceEntity.getOSVersionCode());
-        paramsMap.put("os_version_name", mDeviceEntity.getOSVersionName());
         paramsMap.put("screen", mDeviceEntity.getScreen());
         paramsMap.put("android_id", mDeviceEntity.getAndroidID());
         paramsMap.put("phone", mDeviceEntity.getPhone());

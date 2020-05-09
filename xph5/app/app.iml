@@ -98,10 +98,10 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 26 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: com.tencent.bugly:crashreport:3.1.8@aar" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.lifecycle:runtime:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-fragment:26.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.lifecycle:common:1.0.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.tencent.bugly:crashreport:3.2.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:C.\Users\user\.gradle\caches\transforms-1\files-1.1\soutil-20200302.aar\47d4d1e0c23ee6c07f0ef27e00e3edeb:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-core-utils:26.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:D.\git repository\xipuH5\xph5\app\libs\tbs_sdk_thirdapp_v4.3.0.1072_43646_sharewithdownloadwithfile_withoutGame_obfs_20190429_175122.jar:unspecified@jar" level="project" />
