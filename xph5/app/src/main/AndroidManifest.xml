@@ -24,6 +24,13 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <!-- 允许程序可以读取设备外部存储空间 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 屏幕保持唤醒 不锁屏 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS"/>
 
     <application
         android:name="com.zhangyue.h5.H5Application"
@@ -89,6 +96,30 @@
         <meta-data
             android:name="xp_gdt_appsecretkey"
             android:value="" />
+        <!--喜扑游戏 穿山甲 appId -->
+        <meta-data
+            android:name="xp_ttad_appid"
+            android:value="" />
+        <!-- 喜扑游戏 穿山甲 appName -->
+        <meta-data
+            android:name="xp_ttad_appname"
+            android:value="" />
+
+        <!-- 穿山甲 AD -->
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.TTFileProvider"
+            android:authorities=".TTFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
+            android:authorities=".TTMultiProvider"
+            android:exported="false" />
     </application>
 
 </manifest>

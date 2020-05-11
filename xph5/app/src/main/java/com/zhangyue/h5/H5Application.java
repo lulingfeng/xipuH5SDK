@@ -1,6 +1,7 @@
 package com.zhangyue.h5;
 
 import android.app.Application;
+import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -8,6 +9,12 @@ import com.bun.miitmdid.core.JLibrary;
 import com.bytedance.applog.AppLog;
 import com.bytedance.applog.InitConfig;
 import com.bytedance.applog.util.UriConfig;
+import com.bytedance.sdk.openadsdk.AdSlot;
+import com.bytedance.sdk.openadsdk.TTAdConfig;
+import com.bytedance.sdk.openadsdk.TTAdConstant;
+import com.bytedance.sdk.openadsdk.TTAdManager;
+import com.bytedance.sdk.openadsdk.TTAdNative;
+import com.bytedance.sdk.openadsdk.TTAdSdk;
 import com.qq.gdt.action.GDTAction;
 import com.startobj.util.toast.SOToastUtil;
 import com.tencent.bugly.crashreport.CrashReport;
@@ -15,6 +22,7 @@ import com.zhangyue.h5.util.GDTUtils;
 import com.zhangyue.h5.util.H5Utils;
 import com.zhangyue.h5.util.OaidHelper;
 import com.zhangyue.h5.util.ParamUtil;
+import com.zhangyue.h5.util.TTAdUtils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -41,7 +49,7 @@ public class H5Application extends Application {
             CrashReport.initCrashReport(getApplicationContext(), "592580b3cc", false);
         }
 
-        Log.d(H5Utils.TAG, "onCreate: "+H5Utils.getOaid());
+        Log.d(H5Utils.TAG, "onCreate: " + H5Utils.getOaid());
         initOaid();
         GDTAction.init(this,
                 GDTUtils.getUserActionSetID(this),
@@ -51,9 +59,11 @@ public class H5Application extends Application {
             Log.d(H5Utils.TAG, "头条初始化");
             initRangersAppLog();
         }
+
+        initTTAdSDK();
     }
 
-    /**
+    /*
      * 获取进程号对应的进程名
      *
      * @param pid 进程号
@@ -82,7 +92,7 @@ public class H5Application extends Application {
         return null;
     }
 
-    /**
+    /*
      * 初始化Oaid
      */
     private void initOaid() {
@@ -94,7 +104,7 @@ public class H5Application extends Application {
         }
     }
 
-    /**
+    /*
      * 初始化
      * 今日头条
      * 行为收集日志模块
@@ -112,4 +122,25 @@ public class H5Application extends Application {
             Log.e(H5Utils.TAG, "今日头条 initialization failed");
         }
     }
+
+    /*
+     * 初始化 穿山甲 SDK
+     */
+    private void initTTAdSDK() {
+        TTAdSdk.getAdManager().requestPermissionIfNecessary(this);
+
+        TTAdSdk.init(this, new TTAdConfig.Builder()
+                .appId(TTAdUtils.getTTAdAppId(this))
+                .useTextureView(false)
+                .appName(TTAdUtils.getTTAdAppName(this))
+                .titleBarTheme(TTAdConstant.TITLE_BAR_THEME_DARK)
+                .allowShowNotify(true)
+                .allowShowPageWhenScreenLock(true)
+                .debug(BuildConfig.DEBUG)
+                .directDownloadNetworkType(TTAdConstant.NETWORK_STATE_WIFI, TTAdConstant.NETWORK_STATE_3G)
+                .supportMultiProcess(true)
+                .build());
+
+    }
+
 }
