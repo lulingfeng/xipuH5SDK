@@ -17,12 +17,22 @@ import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.View;
 import android.view.WindowManager;
 import android.webkit.JavascriptInterface;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.bytedance.applog.GameReportHelper;
+import com.bytedance.sdk.openadsdk.AdSlot;
+import com.bytedance.sdk.openadsdk.TTAdConstant;
+import com.bytedance.sdk.openadsdk.TTAdDislike;
+import com.bytedance.sdk.openadsdk.TTAdManager;
+import com.bytedance.sdk.openadsdk.TTAdNative;
+import com.bytedance.sdk.openadsdk.TTAppDownloadListener;
+import com.bytedance.sdk.openadsdk.TTFullScreenVideoAd;
+import com.bytedance.sdk.openadsdk.TTNativeExpressAd;
+import com.bytedance.sdk.openadsdk.TTRewardVideoAd;
 import com.qq.gdt.action.ActionType;
 import com.qq.gdt.action.GDTAction;
 import com.startobj.util.http.SORequestParams;
@@ -35,6 +45,7 @@ import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.WebViewClient;
 import com.zhangyue.h5.R;
 import com.zhangyue.h5.config.H5Config;
+import com.zhangyue.h5.config.TTAdManagerHolder;
 import com.zhangyue.h5.util.H5Utils;
 import com.zhangyue.h5.util.KeyBoardListener;
 import com.zhangyue.h5.util.ParamUtil;
@@ -45,6 +56,7 @@ import org.json.JSONObject;
 
 import java.net.URISyntaxException;
 import java.util.HashMap;
+import java.util.List;
 
 @SuppressLint("NewApi")
 public class BrowserActivity extends Activity {
@@ -52,6 +64,7 @@ public class BrowserActivity extends Activity {
     private final static String SP_PAYINFO = "payinfo_openid";
     protected String TAG = "MainActivity";
     private WebView mWebView;
+    private FrameLayout mExpressContainer;
     private FrameLayout mRoot;
     private String mUrl;
     private Handler mZfbHandler;
@@ -60,6 +73,14 @@ public class BrowserActivity extends Activity {
     private ValueCallback<Uri> uploadFile;
     private String mOpenID;
     private String mOutTradeNo;
+    private JsInterface mJsInterface;
+
+    private TTAdNative mTTAdNative;
+
+    private TTNativeExpressAd mTTAd; // 个性化 banner
+
+    private TTRewardVideoAd mTTRewardVideoAd; // 激励视频
+    private TTFullScreenVideoAd mTTFullScreenVideoAd; //全屏广告
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +94,7 @@ public class BrowserActivity extends Activity {
         mUrl = generateUrl();
         mRoot = findViewById(R.id.root);
         mWebView = findViewById(R.id.main_wv);
+        mExpressContainer = (FrameLayout) findViewById(R.id.express_container);
 
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.getSettings().setDomStorageEnabled(true);
@@ -89,7 +111,7 @@ public class BrowserActivity extends Activity {
         }
 
         mWebView.setWebViewClient(new WebViewClient() {
-                       @Override
+            @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 Uri uri = Uri.parse(url);
                 if (url.startsWith("http") || url.startsWith("https")) {
@@ -165,7 +187,8 @@ public class BrowserActivity extends Activity {
         });
 
         H5Utils.showProgress(BrowserActivity.this);
-        mWebView.addJavascriptInterface(new JsInterface(), "zyh5sdk");
+        mJsInterface = new JsInterface();
+        mWebView.addJavascriptInterface(mJsInterface, "zyh5sdk");
         mWebView.loadUrl(mUrl);
         KeyBoardListener.getInstance(this, mWebView, new KeyBoardListener.OnChangeHeightListener() {
             @Override
@@ -176,6 +199,9 @@ public class BrowserActivity extends Activity {
             public void onHidden() {
             }
         }).init();
+        TTAdManager ttAdManager = TTAdManagerHolder.get();
+        TTAdManagerHolder.get().requestPermissionIfNecessary(this);
+        mTTAdNative = ttAdManager.createAdNative(this);
     }
 
 
@@ -228,6 +254,8 @@ public class BrowserActivity extends Activity {
         });
         localBuilder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {
+              //  loadRewardAd();
+                loadBannerAd();
             }
         });
         localBuilder.show();
@@ -267,8 +295,12 @@ public class BrowserActivity extends Activity {
 
     @Override
     protected void onDestroy() {
-        if (mWebView != null)
+        if (mWebView != null) {
             mWebView.destroy();
+        }
+        if (mTTAd != null) {
+            mTTAd.destroy();
+        }
         super.onDestroy();
     }
 
@@ -280,6 +312,467 @@ public class BrowserActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
+    }
+
+    /*
+     * 加载 Banner 广告
+     */
+    private long startTime;
+    private boolean mHasShowDownloadActive = false;
+
+    private void loadBannerAd() {
+        AdSlot mAdSlot = new AdSlot.Builder()
+                .setCodeId("945171491")
+                .setRewardName("喜扑测试")
+                .setExpressViewAcceptedSize(600, 300)
+                .setSupportDeepLink(true)
+                .setRewardAmount(1)
+                .setAdCount(1)
+                .setOrientation(TTAdConstant.VERTICAL)
+                .build();
+        mTTAdNative.loadBannerExpressAd(mAdSlot, new TTAdNative.NativeExpressAdListener() {
+            @Override
+            public void onError(int code, String message) {
+                Toast.makeText(BrowserActivity.this, "load error : " + code + "," + message, Toast.LENGTH_SHORT).show();
+                mJsInterface.onTTCallback(setTTCallBackParams("bannerLoadError", ""));
+                mExpressContainer.removeAllViews();
+            }
+
+            @Override
+            public void onNativeExpressAdLoad(List<TTNativeExpressAd> ads) {
+                if (ads == null || ads.size() == 0) {
+                    mJsInterface.onTTCallback(setTTCallBackParams("bannerLoadError", ""));
+                    return;
+                }
+                mTTAd = ads.get(0);
+                mTTAd.setSlideIntervalTime(30 * 1000);
+                bindBannerAdListener(ads.get(0));
+                startTime = System.currentTimeMillis();
+                mTTAd.render();
+            }
+        });
+    }
+
+    private void bindBannerAdListener(TTNativeExpressAd ad) {
+        ad.setExpressInteractionListener(new TTNativeExpressAd.ExpressAdInteractionListener() {
+            @Override
+            public void onAdClicked(View view, int type) {
+                Log.d(H5Utils.TAG, "onAdClicked()");
+                mJsInterface.onTTCallback(setTTCallBackParams("bannerClick", ""));
+            }
+
+            @Override
+            public void onAdShow(View view, int type) {
+                Log.d(H5Utils.TAG, "onAdShow()");
+                mJsInterface.onTTCallback(setTTCallBackParams("bannerShow", ""));
+            }
+
+            @Override
+            public void onRenderFail(View view, String msg, int code) {
+                Log.d(H5Utils.TAG, "render fail:" + (System.currentTimeMillis() - startTime));
+                mJsInterface.onTTCallback(setTTCallBackParams("bannerLoadError", ""));
+            }
+
+            @Override
+            public void onRenderSuccess(View view, float width, float height) {
+                Log.d(H5Utils.TAG, "render suc:" + (System.currentTimeMillis() - startTime));
+                mJsInterface.onTTCallback(setTTCallBackParams("bannerLoadSuccess", ""));
+                mExpressContainer.removeAllViews();
+                FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams((int) width,(int) height);
+                layoutParams.setMargins(0,500,0,0);
+                mExpressContainer.addView(view,layoutParams);
+            }
+        });
+        //dislike设置
+        bindDislike(ad);
+        if (ad.getInteractionType() != TTAdConstant.INTERACTION_TYPE_DOWNLOAD) {
+            return;
+        }
+        ad.setDownloadListener(new TTAppDownloadListener() {
+            @Override
+            public void onIdle() {
+                mHasShowDownloadActive = false;
+                Log.d(H5Utils.TAG, "onIdle()");
+            }
+
+            @Override
+            public void onDownloadActive(long totalBytes, long currBytes, String fileName, String appName) {
+                if (!mHasShowDownloadActive) {
+                    mHasShowDownloadActive = true;
+                    Log.d(H5Utils.TAG, "onDownloadActive()");
+                }
+            }
+
+            @Override
+            public void onDownloadPaused(long totalBytes, long currBytes, String fileName, String appName) {
+                Log.d(H5Utils.TAG, "onDownloadPaused()");
+            }
+
+            @Override
+            public void onDownloadFailed(long totalBytes, long currBytes, String fileName, String appName) {
+                Log.d(H5Utils.TAG, "onDownloadFailed()");
+            }
+
+            @Override
+            public void onInstalled(String fileName, String appName) {
+                Log.d(H5Utils.TAG, "onInstalled()");
+            }
+
+            @Override
+            public void onDownloadFinished(long totalBytes, String fileName, String appName) {
+                Log.d(H5Utils.TAG, "onDownloadFinished()");
+            }
+        });
+    }
+
+    /*
+     * 设置广告的不喜欢, 注意：强烈建议设置该逻辑，如果不设置dislike处理逻辑，则模板广告中的 dislike区域不响应dislike事件。
+     * @param ad
+     */
+    private void bindDislike(TTNativeExpressAd ad) {
+        //使用默认模板中默认dislike弹出样式
+        ad.setDislikeCallback(BrowserActivity.this, new TTAdDislike.DislikeInteractionCallback() {
+            @Override
+            public void onSelected(int position, String value) {
+                Log.d(H5Utils.TAG, "点击 " + value);
+                //用户选择不喜欢原因后，移除广告展示
+                mJsInterface.onTTCallback(setTTCallBackParams("bannerDislike", ""));
+                mExpressContainer.removeAllViews();
+            }
+
+            @Override
+            public void onCancel() {
+                Log.d(H5Utils.TAG, "点击取消");
+            }
+        });
+    }
+
+    /*
+     * 加载 插屏 广告
+     */
+    private void loadInteractionAd() {
+        AdSlot mAdSlot = new AdSlot.Builder()
+                .setCodeId("945172312") //广告位id
+                .setSupportDeepLink(true)
+                .setAdCount(1) //请求广告数量为1到3条
+                .setExpressViewAcceptedSize(300, 300) //期望模板广告view的size,单位dp
+                .build();
+        mTTAdNative.loadInteractionExpressAd(mAdSlot, new TTAdNative.NativeExpressAdListener() {
+            @Override
+            public void onError(int code, String message) {
+                Toast.makeText(BrowserActivity.this, "load error : " + code + "," + message, Toast.LENGTH_SHORT).show();
+                mJsInterface.onTTCallback(setTTCallBackParams("interactionLoadError", ""));
+            }
+
+            @Override
+            public void onNativeExpressAdLoad(List<TTNativeExpressAd> ads) {
+                if (ads == null || ads.size() == 0) {
+                    mJsInterface.onTTCallback(setTTCallBackParams("interactionLoadError", ""));
+                    return;
+                }
+                mTTAd = ads.get(0);
+                bindInteractionAdListener(mTTAd);
+                startTime = System.currentTimeMillis();
+                mTTAd.render();
+            }
+        });
+    }
+
+    private void bindInteractionAdListener(TTNativeExpressAd ad) {
+        ad.setExpressInteractionListener(new TTNativeExpressAd.AdInteractionListener() {
+            @Override
+            public void onAdDismiss() {
+                mJsInterface.onTTCallback(setTTCallBackParams("interactionClose", ""));
+            }
+
+            @Override
+            public void onAdClicked(View view, int type) {
+                mJsInterface.onTTCallback(setTTCallBackParams("interactionClick", ""));
+            }
+
+            @Override
+            public void onAdShow(View view, int type) {
+                mJsInterface.onTTCallback(setTTCallBackParams("interactionShow", ""));
+            }
+
+            @Override
+            public void onRenderFail(View view, String msg, int code) {
+                Log.e("ExpressView", "render fail:" + (System.currentTimeMillis() - startTime));
+                mJsInterface.onTTCallback(setTTCallBackParams("interactionLoadError", ""));
+            }
+
+            @Override
+            public void onRenderSuccess(View view, float width, float height) {
+                Log.e("ExpressView", "render suc:" + (System.currentTimeMillis() - startTime));
+                //返回view的宽高 单位 dp
+                mJsInterface.onTTCallback(setTTCallBackParams("interactionLoadSuccess", ""));
+                mTTAd.showInteractionExpressAd(BrowserActivity.this);
+            }
+        });
+
+        if (ad.getInteractionType() != TTAdConstant.INTERACTION_TYPE_DOWNLOAD) {
+            return;
+        }
+        ad.setDownloadListener(new TTAppDownloadListener() {
+            @Override
+            public void onIdle() {
+                mHasShowDownloadActive = false;
+                Log.d(H5Utils.TAG, "onIdle()");
+            }
+
+            @Override
+            public void onDownloadActive(long totalBytes, long currBytes, String fileName, String appName) {
+                if (!mHasShowDownloadActive) {
+                    mHasShowDownloadActive = true;
+                    Log.d(H5Utils.TAG, "onDownloadActive()");
+                }
+            }
+
+            @Override
+            public void onDownloadPaused(long totalBytes, long currBytes, String fileName, String appName) {
+                Log.d(H5Utils.TAG, "onDownloadPaused()");
+            }
+
+            @Override
+            public void onDownloadFailed(long totalBytes, long currBytes, String fileName, String appName) {
+                Log.d(H5Utils.TAG, "onDownloadFailed()");
+            }
+
+            @Override
+            public void onInstalled(String fileName, String appName) {
+                Log.d(H5Utils.TAG, "onInstalled()");
+            }
+
+            @Override
+            public void onDownloadFinished(long totalBytes, String fileName, String appName) {
+                Log.d(H5Utils.TAG, "onDownloadFinished()");
+            }
+        });
+    }
+
+
+    /*
+     * 加载 激励视频
+     */
+    private void loadRewardAd() {
+        AdSlot adSlot = new AdSlot.Builder()
+                .setCodeId("945171724")
+                .setSupportDeepLink(true)
+                .setRewardName("金币") //奖励的名称
+                .setRewardAmount(10)  //奖励的数量
+                .setUserID("")//用户id,必传参数
+                .setMediaExtra("") //附加参数，可选
+                .setOrientation(TTAdConstant.VERTICAL) //必填参数，期望视频的播放方向：TTAdConstant.HORIZONTAL 或 TTAdConstant.VERTICAL
+                .build();
+        mTTAdNative.loadRewardVideoAd(adSlot, new TTAdNative.RewardVideoAdListener() {
+            @Override
+            public void onError(int code, String message) {
+                Log.d(H5Utils.TAG, "onError()" + code + message);
+                mJsInterface.onTTCallback(setTTCallBackParams("rewardLoadError", ""));
+            }
+
+            //视频广告加载后，视频资源缓存到本地的回调，在此回调后，播放本地视频，流畅不阻塞。
+            @Override
+            public void onRewardVideoCached() {
+                Log.d(H5Utils.TAG, "onRewardVideoCached()");
+                mJsInterface.onTTCallback(setTTCallBackParams("rewardCache", ""));
+            }
+
+            //视频广告的素材加载完毕，比如视频url等，在此回调后，可以播放在线视频，网络不好可能出现加载缓冲，影响体验。
+            @Override
+            public void onRewardVideoAdLoad(TTRewardVideoAd ad) {
+                Log.d(H5Utils.TAG, "onRewardVideoAdLoad()");
+                mJsInterface.onTTCallback(setTTCallBackParams("rewardLoadSuccess", ""));
+                mTTRewardVideoAd = ad;
+                mTTRewardVideoAd.setRewardAdInteractionListener(new TTRewardVideoAd.RewardAdInteractionListener() {
+
+                    @Override
+                    public void onAdShow() {
+                        Log.d(H5Utils.TAG, "onAdShow()");
+                        mJsInterface.onTTCallback(setTTCallBackParams("rewardShow", ""));
+                    }
+
+                    @Override
+                    public void onAdVideoBarClick() {
+                        Log.d(H5Utils.TAG, "onAdVideoBarClick()");
+                        mJsInterface.onTTCallback(setTTCallBackParams("rewardBarClick", ""));
+                    }
+
+                    @Override
+                    public void onAdClose() {
+                        Log.d(H5Utils.TAG, "onAdClose()");
+                        mJsInterface.onTTCallback(setTTCallBackParams("rewardClose", ""));
+                    }
+
+                    //视频播放完成回调
+                    @Override
+                    public void onVideoComplete() {
+                        Log.d(H5Utils.TAG, "onVideoComplete()");
+                        mJsInterface.onTTCallback(setTTCallBackParams("rewardPlayEnd", ""));
+                    }
+
+                    @Override
+                    public void onVideoError() {
+                        Log.d(H5Utils.TAG, "onVideoError()");
+                    }
+
+                    //视频播放完成后，奖励验证回调，rewardVerify：是否有效，rewardAmount：奖励梳理，rewardName：奖励名称
+                    @Override
+                    public void onRewardVerify(boolean rewardVerify, int rewardAmount, String rewardName) {
+                        Log.d(H5Utils.TAG, "onRewardVerify()");
+                        mJsInterface.onTTCallback(setTTCallBackParams("rewardVerify", ""));
+                    }
+
+                    @Override
+                    public void onSkippedVideo() {
+                        Log.d(H5Utils.TAG, "onSkippedVideo()");
+                        mJsInterface.onTTCallback(setTTCallBackParams("rewardSkip", ""));
+                    }
+                });
+                mTTRewardVideoAd.setDownloadListener(new TTAppDownloadListener() {
+                    @Override
+                    public void onIdle() {
+                        Log.d(H5Utils.TAG,  "onIdle()");
+                        mHasShowDownloadActive = false;
+                    }
+
+                    @Override
+                    public void onDownloadActive(long totalBytes, long currBytes, String fileName, String appName) {
+                        Log.d(H5Utils.TAG, "onDownloadActive==totalBytes=" + totalBytes + ",currBytes=" + currBytes + ",fileName=" + fileName + ",appName=" + appName);
+                        if (!mHasShowDownloadActive) {
+                            mHasShowDownloadActive = true;
+                            Log.d(H5Utils.TAG,  "下载中，点击下载区域暂停");
+                        }
+                    }
+
+                    @Override
+                    public void onDownloadPaused(long totalBytes, long currBytes, String fileName, String appName) {
+                        Log.d(H5Utils.TAG, "onDownloadPaused===totalBytes=" + totalBytes + ",currBytes=" + currBytes + ",fileName=" + fileName + ",appName=" + appName);
+                    }
+
+                    @Override
+                    public void onDownloadFailed(long totalBytes, long currBytes, String fileName, String appName) {
+                        Log.d(H5Utils.TAG, "onDownloadFailed==totalBytes=" + totalBytes + ",currBytes=" + currBytes + ",fileName=" + fileName + ",appName=" + appName);
+                    }
+
+                    @Override
+                    public void onDownloadFinished(long totalBytes, String fileName, String appName) {
+                        Log.d(H5Utils.TAG, "onDownloadFinished==totalBytes=" + totalBytes + ",fileName=" + fileName + ",appName=" + appName);
+                    }
+
+                    @Override
+                    public void onInstalled(String fileName, String appName) {
+                        Log.d(H5Utils.TAG, "onInstalled==" + ",fileName=" + fileName + ",appName=" + appName);
+                    }
+                });
+                mTTRewardVideoAd.showRewardVideoAd(BrowserActivity.this,TTAdConstant.RitScenes.CUSTOMIZE_SCENES,"scenes_test");
+                mTTRewardVideoAd = null;
+            }
+        });
+    }
+
+    /*
+     * 加载 全屏广告
+     */
+    private void loadFullScreenVideoAd() {
+        AdSlot mAdSlot = new AdSlot.Builder()
+                .setCodeId("945172362")
+                .setSupportDeepLink(true)
+                .setOrientation(TTAdConstant.VERTICAL)//必填参数，期望视频的播放方向：TTAdConstant.HORIZONTAL 或 TTAdConstant.VERTICAL
+                .build();
+        mTTAdNative.loadFullScreenVideoAd(mAdSlot, new TTAdNative.FullScreenVideoAdListener() {
+            @Override
+            public void onError(int code, String message) {
+                Toast.makeText(BrowserActivity.this, "load error : " + code + "," + message, Toast.LENGTH_SHORT).show();
+                mJsInterface.onTTCallback(setTTCallBackParams("fullScreenLoadError", ""));
+            }
+
+            @Override
+            public void onFullScreenVideoCached() {
+                Log.d(H5Utils.TAG, "onFullScreenVideoCached()");
+                mJsInterface.onTTCallback(setTTCallBackParams("fullScreenCache", ""));
+            }
+
+            @Override
+            public void onFullScreenVideoAdLoad(TTFullScreenVideoAd ttFullScreenVideoAd) {
+                Log.d(H5Utils.TAG, "onFullScreenVideoAdLoad()");
+                ttFullScreenVideoAd.setFullScreenVideoAdInteractionListener(new TTFullScreenVideoAd.FullScreenVideoAdInteractionListener() {
+                    @Override
+                    public void onAdShow() {
+                        Log.d(H5Utils.TAG, "onAdShow()");
+                        mJsInterface.onTTCallback(setTTCallBackParams("fullScreenShow", ""));
+                    }
+
+                    @Override
+                    public void onAdVideoBarClick() {
+                        Log.d(H5Utils.TAG, "onAdVideoBarClick()");
+                        mJsInterface.onTTCallback(setTTCallBackParams("fullScreenBarClick", ""));
+                    }
+
+                    @Override
+                    public void onAdClose() {
+                        Log.d(H5Utils.TAG, "onAdClose()");
+                        mJsInterface.onTTCallback(setTTCallBackParams("fullScreenClose", ""));
+                    }
+
+                    @Override
+                    public void onVideoComplete() {
+                        Log.d(H5Utils.TAG, "onVideoComplete()");
+                        mJsInterface.onTTCallback(setTTCallBackParams("fullScreenPlayEnd", ""));
+                    }
+
+                    @Override
+                    public void onSkippedVideo() {
+                        Log.d(H5Utils.TAG, "onSkippedVideo()");
+                        mJsInterface.onTTCallback(setTTCallBackParams("fullScreenSkip", ""));
+                    }
+                });
+
+                ttFullScreenVideoAd.setDownloadListener(new TTAppDownloadListener() {
+                    @Override
+                    public void onIdle() {
+                        mHasShowDownloadActive = false;
+                        Log.d(H5Utils.TAG, "onIdle()");
+                    }
+
+                    @Override
+                    public void onDownloadActive(long l, long l1, String s, String s1) {
+                        if (!mHasShowDownloadActive) {
+                            mHasShowDownloadActive = true;
+                            Log.d(H5Utils.TAG, "onDownloadActive()");
+                        }
+                    }
+
+                    @Override
+                    public void onDownloadPaused(long l, long l1, String s, String s1) {
+                        Log.d(H5Utils.TAG, "onDownloadPaused()");
+                    }
+
+                    @Override
+                    public void onDownloadFailed(long l, long l1, String s, String s1) {
+                        Log.d(H5Utils.TAG, "onDownloadFailed()");
+                    }
+
+                    @Override
+                    public void onDownloadFinished(long l, String s, String s1) {
+                        Log.d(H5Utils.TAG, "onDownloadFinished()");
+                    }
+
+                    @Override
+                    public void onInstalled(String s, String s1) {
+                        Log.d(H5Utils.TAG, "onInstalled()");
+                    }
+                });
+                ttFullScreenVideoAd.showFullScreenVideoAd(BrowserActivity.this);
+            }
+        });
+    }
+
+    /*
+     * set 回调 Params
+     */
+    private String setTTCallBackParams(String type, String data) {
+        return "{\"type\":\"" + type + "\",\"data\":\"" + data + "\"}";
     }
 
     public void sendJrttPayInfo(boolean is_report, int amount, String out_trade_no) {
@@ -412,7 +905,35 @@ public class BrowserActivity extends Activity {
             }
             sendTuiaPayInfo();
         }
+
+        //加载 banner广告
+        @JavascriptInterface
+        public void openTTBannerAd() {
+            loadBannerAd();
+        }
+
+        //加载 插屏广告
+        @JavascriptInterface
+        public void openTTInteractionAd() {
+            loadInteractionAd();
+        }
+
+        //加载 激励视频
+        @JavascriptInterface
+        public void openTTRewardVideoAd() {
+            //    loadRewardVideoAd();
+        }
+
+        //加载 全屏广告
+        @JavascriptInterface
+        public void openTTFullScreenVideoAd() {
+            loadFullScreenVideoAd();
+        }
+
+        // 回调 H5
+        @JavascriptInterface
+        public void onTTCallback(String json) {
+
+        }
     }
-
-
 }

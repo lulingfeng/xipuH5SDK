@@ -9,8 +9,8 @@ public class H5Config {
     // 第一次使用标示位
     public final static String SP_ISFIRST = "h5_isfirst";
     public final static String SP_TUIAID = "h5_tuiaid";
-    //  public final static String API_URL = "http://testapi.kuaigames.com/v1";
-    public final static String API_URL = "http://api.zhangyueyx.com/v1";
+    public final static String API_URL = "http://testapi.kuaigames.com/v1";
+ //   public final static String API_URL = "http://api.zhangyueyx.com/v1";
     //  public static String GAME_BASE_URL = "http://testh5.xipu.com";
     public static String GAME_BASE_URL = "https://h5.zhangyueyx.com";
     // 协议头

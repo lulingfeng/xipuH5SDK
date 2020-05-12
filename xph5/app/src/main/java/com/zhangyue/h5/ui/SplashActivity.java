@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Toast;
 
+import com.bytedance.sdk.openadsdk.TTAdManager;
+import com.bytedance.sdk.openadsdk.TTAdSdk;
 import com.startobj.util.http.SOCallBack.SOCommonCallBack;
 import com.startobj.util.http.SOHttpConnection;
 import com.startobj.util.http.SOJsonMapper;

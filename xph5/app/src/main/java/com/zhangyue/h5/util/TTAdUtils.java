@@ -7,6 +7,8 @@ import android.util.Log;
 
 public class TTAdUtils {
 
+
+
     public static String getTTAdAppId(final Context context) {
         String mTTAdAppId = "";
         try {
@@ -34,4 +36,5 @@ public class TTAdUtils {
             Log.e(H5Utils.TAG, "--------TTAd appName NULL---------");
         return mTTAdAppName;
     }
+
 }

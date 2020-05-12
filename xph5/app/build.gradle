@@ -4,7 +4,6 @@ android {
     compileSdkVersion 26
 
     defaultConfig {
-        applicationId "com.zhangyue.ylyhe"
         minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
