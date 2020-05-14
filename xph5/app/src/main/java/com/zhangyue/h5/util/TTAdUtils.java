@@ -5,8 +5,11 @@ import android.content.pm.PackageManager;
 import android.text.TextUtils;
 import android.util.Log;
 
-public class TTAdUtils {
+import com.bytedance.sdk.openadsdk.TTAdConstant;
 
+import org.json.JSONException;
+
+public class TTAdUtils {
 
 
     public static String getTTAdAppId(final Context context) {
@@ -37,4 +40,92 @@ public class TTAdUtils {
         return mTTAdAppName;
     }
 
+    /**
+     * @param values
+     * @return Banner广告参数
+     */
+    public static AdConfig getBannerAdParams(final String values) {
+        AdConfig adConfig = new AdConfig();
+        try {
+            ZYJSONObject dataResult = new ZYJSONObject(values);
+            adConfig.setAd_id(dataResult.getStringDef("ad_id"));
+            adConfig.setCount(dataResult.getInt("count"));
+            ZYJSONObject styleObject = new ZYJSONObject(dataResult.getStringDef("style"));
+            adConfig.setTop(styleObject.getInt("top"));
+            adConfig.setLeft(styleObject.getInt("left"));
+            adConfig.setWidth(styleObject.getInt("width"));
+            adConfig.setHeight(styleObject.getInt("height"));
+            Log.d(H5Utils.TAG, "getBannerAdParams: " + adConfig.toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.e(H5Utils.TAG, "getBannerAdParams: " + e.getMessage());
+        }
+        return adConfig;
+    }
+
+    /**
+     * @param values
+     * @return 插屏广告参数
+     */
+    public static AdConfig getInteractionAdParams(final String values) {
+        AdConfig adConfig = new AdConfig();
+        try {
+            ZYJSONObject dataResult = new ZYJSONObject(values);
+            adConfig.setAd_id(dataResult.getStringDef("ad_id"));
+            adConfig.setCount(dataResult.getInt("count"));
+            ZYJSONObject styleObject = new ZYJSONObject(dataResult.getStringDef("style"));
+            adConfig.setTop(styleObject.getInt("top"));
+            adConfig.setLeft(styleObject.getInt("left"));
+            adConfig.setWidth(styleObject.getInt("width"));
+            adConfig.setHeight(styleObject.getInt("height"));
+            Log.d(H5Utils.TAG, "getInteractionAdParams: " + adConfig.toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.e(H5Utils.TAG, "getInteractionAdParams: " + e.getMessage());
+        }
+        return adConfig;
+    }
+
+    public static AdConfig getRewardVideoAdParams(final String values) {
+        AdConfig adConfig = new AdConfig();
+        try {
+            ZYJSONObject dataResult = new ZYJSONObject(values);
+            adConfig.setAd_id(dataResult.getStringDef("ad_id"));
+            if (dataResult.getStringDef("orientation").contains("vertical")) {
+                adConfig.setOrientation(TTAdConstant.VERTICAL);
+            } else if (dataResult.getStringDef("orientation").contains("horizontal")) {
+                adConfig.setOrientation(TTAdConstant.HORIZONTAL);
+            }
+            adConfig.setReward_name(dataResult.getStringDef("reward_name"));
+            adConfig.setReward_count(dataResult.getInt("reward_count"));
+            adConfig.setUser_id(dataResult.getStringDef("user_id"));
+            Log.d(H5Utils.TAG, "getFullScreenVideoAdParams: " + adConfig.toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.e(H5Utils.TAG, "getFullScreenVideoAdParams: " + e.getMessage());
+        }
+        return adConfig;
+    }
+
+    /**
+     * @param values
+     * @return 全屏广告参数
+     */
+    public static AdConfig getFullScreenVideoAdParams(final String values) {
+        AdConfig adConfig = new AdConfig();
+        try {
+            ZYJSONObject dataResult = new ZYJSONObject(values);
+            adConfig.setAd_id(dataResult.getStringDef("ad_id"));
+            if (dataResult.getStringDef("orientation").contains("vertical")) {
+                adConfig.setOrientation(TTAdConstant.VERTICAL);
+            } else if (dataResult.getStringDef("orientation").contains("horizontal")) {
+                adConfig.setOrientation(TTAdConstant.HORIZONTAL);
+            }
+            Log.d(H5Utils.TAG, "getFullScreenVideoAdParams: " + adConfig.toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.e(H5Utils.TAG, "getFullScreenVideoAdParams: " + e.getMessage());
+        }
+        return adConfig;
+    }
 }

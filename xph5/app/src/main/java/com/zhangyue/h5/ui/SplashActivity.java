@@ -7,15 +7,14 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Toast;
 
-import com.bytedance.sdk.openadsdk.TTAdManager;
-import com.bytedance.sdk.openadsdk.TTAdSdk;
+
 import com.startobj.util.http.SOCallBack.SOCommonCallBack;
 import com.startobj.util.http.SOHttpConnection;
 import com.startobj.util.http.SOJsonMapper;
 import com.startobj.util.http.SORequestParams;
 import com.startobj.util.http.SOServertReturnErrorException;
 import com.startobj.util.network.SONetworkUtil;
-import com.tencent.smtt.sdk.QbSdk;
+
 import com.zhangyue.h5.R;
 import com.zhangyue.h5.config.H5Config;
 import com.zhangyue.h5.util.H5Utils;
@@ -46,22 +45,13 @@ public class SplashActivity extends Activity {
         mPermissionsChecker = new PermissionsChecker(this);// 缺少权限时, 进入权限配置页面
         if (mPermissionsChecker.lacksPermissions(PERMISSIONS)) {
             startPermissionsActivity(this);
+
         } else {
-            QbSdk.initX5Environment(getApplicationContext(), new QbSdk.PreInitCallback() {
-                @Override
-                public void onCoreInitFinished() {
-
-                }
-
-                @Override
-                public void onViewInitFinished(boolean b) {
-                    startLoading();
-                    // 获取数据
-                    obtainData();
-                    // loading结束
-                    stopLoading();
-                }
-            });
+            startLoading();
+            // 获取数据
+            obtainData();
+            // loading结束
+            stopLoading();
         }
     }
 

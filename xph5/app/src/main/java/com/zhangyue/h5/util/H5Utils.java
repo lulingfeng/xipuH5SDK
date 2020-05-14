@@ -21,7 +21,6 @@ import com.startobj.util.http.SOHttpConnection;
 import com.startobj.util.http.SORequestParams;
 import com.startobj.util.log.SOLogUtil;
 import com.startobj.util.toast.SOToastUtil;
-import com.zhangyue.h5.BuildConfig;
 import com.zhangyue.h5.config.H5Config;
 import com.zhangyue.h5.custom.view.LoadingProgressDialogs;
 

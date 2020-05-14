@@ -8,18 +8,16 @@ import com.bun.miitmdid.core.JLibrary;
 import com.bytedance.applog.AppLog;
 import com.bytedance.applog.InitConfig;
 import com.bytedance.applog.util.UriConfig;
-import com.bytedance.sdk.openadsdk.TTAdConfig;
-import com.bytedance.sdk.openadsdk.TTAdConstant;
-import com.bytedance.sdk.openadsdk.TTAdSdk;
 import com.qq.gdt.action.GDTAction;
 import com.startobj.util.toast.SOToastUtil;
 import com.tencent.bugly.crashreport.CrashReport;
+import com.tencent.smtt.sdk.QbSdk;
 import com.zhangyue.h5.config.TTAdManagerHolder;
+import com.zhangyue.h5.util.AdConfig;
 import com.zhangyue.h5.util.GDTUtils;
 import com.zhangyue.h5.util.H5Utils;
 import com.zhangyue.h5.util.OaidHelper;
 import com.zhangyue.h5.util.ParamUtil;
-import com.zhangyue.h5.util.TTAdUtils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -32,6 +30,7 @@ public class H5Application extends Application {
         super.onCreate();
         SOToastUtil.init(this);
         ParamUtil.loadConfig(this);
+        QbSdk.initX5Environment(this,null);
         try {
             JLibrary.InitEntry(this);
         } catch (Exception e) {
@@ -57,6 +56,8 @@ public class H5Application extends Application {
         }
 
         TTAdManagerHolder.init(this);
+        AdConfig adConfig =new AdConfig();
+        Log.e("调试", adConfig.getAd_id());
     }
 
     /*
