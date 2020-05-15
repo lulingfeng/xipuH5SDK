@@ -77,7 +77,6 @@ public class BrowserActivity extends Activity {
     private ValueCallback<Uri> uploadFile;
     private String mOpenID;
     private String mOutTradeNo;
-    private JsInterface mJsInterface;
 
     private TTAdNative mTTAdNative;
 
@@ -88,7 +87,8 @@ public class BrowserActivity extends Activity {
 
     private static final int CLOSE_BANNER = 0x1;
     private static final int SHOW_REWARD_VIDEO = 0x2;
-
+    private static final int SHOW_FULLSCREEN_VIDEO = 0x3;
+    private static final int SHOW_INTERACTION_VIDEO = 0x4;
     private AdConfig adConfig;
 
     private Handler handler;
@@ -197,8 +197,7 @@ public class BrowserActivity extends Activity {
         });
 
         H5Utils.showProgress(BrowserActivity.this);
-        mJsInterface = new JsInterface();
-        mWebView.addJavascriptInterface(mJsInterface, "zyh5sdk");
+        mWebView.addJavascriptInterface(new JsInterface(), "zyh5sdk");
         mWebView.loadUrl(mUrl);
         KeyBoardListener.getInstance(this, mWebView, new KeyBoardListener.OnChangeHeightListener() {
             @Override
@@ -218,14 +217,25 @@ public class BrowserActivity extends Activity {
         handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
-                if (msg.what == CLOSE_BANNER) {
-                    if (mExpressContainer != null) {
-                        mExpressContainer.removeAllViews();
-                    }
-                } else if (msg.what == SHOW_REWARD_VIDEO) {
-                    mTTRewardVideoAd.showRewardVideoAd(BrowserActivity.this, TTAdConstant.RitScenes.CUSTOMIZE_SCENES, "scenes_test");
-                    mTTRewardVideoAd = null;
+                switch (msg.what) {
+                    case CLOSE_BANNER:
+                        if (mExpressContainer != null) {
+                            mExpressContainer.removeAllViews();
+                        }
+                        break;
+                    case SHOW_REWARD_VIDEO:
+                        mTTRewardVideoAd.showRewardVideoAd(BrowserActivity.this, TTAdConstant.RitScenes.CUSTOMIZE_SCENES, "scenes_test");
+                        mTTRewardVideoAd = null;
+                        break;
+                    case SHOW_FULLSCREEN_VIDEO:
+                        TTFullScreenVideoAd ttFullScreenVideoAd = (TTFullScreenVideoAd) msg.obj;
+                        ttFullScreenVideoAd.showFullScreenVideoAd(BrowserActivity.this);
+                        break;
+                    case SHOW_INTERACTION_VIDEO:
+                        mTTAd.showInteractionExpressAd(BrowserActivity.this);
+                        break;
                 }
+
             }
         };
     }
@@ -365,14 +375,14 @@ public class BrowserActivity extends Activity {
             @Override
             public void onError(int code, String message) {
                 Toast.makeText(BrowserActivity.this, "load error : " + code + "," + message, Toast.LENGTH_SHORT).show();
-                mJsInterface.onTTCallback(setTTCallBackParams("bannerLoadError", code + "," + message));
+                onTTCallback(setTTCallBackParams("bannerLoadError", code, message, null, null, null, null, null));
                 mExpressContainer.removeAllViews();
             }
 
             @Override
             public void onNativeExpressAdLoad(List<TTNativeExpressAd> ads) {
                 if (ads == null || ads.size() == 0) {
-                    mJsInterface.onTTCallback(setTTCallBackParams("bannerLoadError", "Banner广告获取失败"));
+                    onTTCallback(setTTCallBackParams("bannerLoadError", null, "广告数量为0", null, null, null, null, null));
                     return;
                 }
                 mTTAd = ads.get(0);
@@ -389,25 +399,25 @@ public class BrowserActivity extends Activity {
             @Override
             public void onAdClicked(View view, int type) {
                 Log.d(H5Utils.TAG, "onAdClicked()");
-                mJsInterface.onTTCallback(setTTCallBackParams("bannerClick", ""));
+                onTTCallback(setTTCallBackParams("bannerClick", null, null, type, null, null, null, null));
             }
 
             @Override
             public void onAdShow(View view, int type) {
                 Log.d(H5Utils.TAG, "onAdShow()");
-                mJsInterface.onTTCallback(setTTCallBackParams("bannerShow", ""));
+                onTTCallback(setTTCallBackParams("bannerShow", null, null, type, null, null, null, null));
             }
 
             @Override
             public void onRenderFail(View view, String msg, int code) {
                 Log.d(H5Utils.TAG, "render fail:" + (System.currentTimeMillis() - startTime));
-                mJsInterface.onTTCallback(setTTCallBackParams("bannerLoadError", code + "," + msg));
+                onTTCallback(setTTCallBackParams("bannerLoadError", code, msg, null, null, null, null, null));
             }
 
             @Override
             public void onRenderSuccess(View view, float width, float height) {
                 Log.d(H5Utils.TAG, "render suc:" + (System.currentTimeMillis() - startTime));
-                mJsInterface.onTTCallback(setTTCallBackParams("bannerLoadSuccess", ""));
+                onTTCallback(setTTCallBackParams("bannerLoadSuccess", null, null, null, width, height, null, null));
                 mExpressContainer.removeAllViews();
                 FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 layoutParams.setMargins(adConfig.getLeft(), adConfig.getTop(), 0, 0);
@@ -467,7 +477,7 @@ public class BrowserActivity extends Activity {
             public void onSelected(int position, String value) {
                 Log.d(H5Utils.TAG, "点击 " + value);
                 //用户选择不喜欢原因后，移除广告展示
-                mJsInterface.onTTCallback(setTTCallBackParams("bannerDislike", value));
+                onTTCallback(setTTCallBackParams("bannerDislike", null, null, null, null, null, value, null));
                 mExpressContainer.removeAllViews();
             }
 
@@ -492,13 +502,13 @@ public class BrowserActivity extends Activity {
             @Override
             public void onError(int code, String message) {
                 Toast.makeText(BrowserActivity.this, "load error : " + code + "," + message, Toast.LENGTH_SHORT).show();
-                mJsInterface.onTTCallback(setTTCallBackParams("interactionLoadError", code + "," + message));
+                onTTCallback(setTTCallBackParams("interactionLoadError", code, message, null, null, null, null, null));
             }
 
             @Override
             public void onNativeExpressAdLoad(List<TTNativeExpressAd> ads) {
                 if (ads == null || ads.size() == 0) {
-                    mJsInterface.onTTCallback(setTTCallBackParams("interactionLoadError", "插屏广告为空"));
+                    onTTCallback(setTTCallBackParams("interactionLoadError", null, "插屏广告为空", null, null, null, null, null));
                     return;
                 }
                 mTTAd = ads.get(0);
@@ -513,31 +523,31 @@ public class BrowserActivity extends Activity {
         ad.setExpressInteractionListener(new TTNativeExpressAd.AdInteractionListener() {
             @Override
             public void onAdDismiss() {
-                mJsInterface.onTTCallback(setTTCallBackParams("interactionClose", ""));
+                onTTCallback(setTTCallBackParams("interactionClose", null, null, null, null, null, null, null));
             }
 
             @Override
             public void onAdClicked(View view, int type) {
-                mJsInterface.onTTCallback(setTTCallBackParams("interactionClick", ""));
+                onTTCallback(setTTCallBackParams("interactionClick", null, null, type, null, null, null, null));
             }
 
             @Override
             public void onAdShow(View view, int type) {
-                mJsInterface.onTTCallback(setTTCallBackParams("interactionShow", ""));
+                onTTCallback(setTTCallBackParams("interactionShow", null, null, type, null, null, null, null));
             }
 
             @Override
             public void onRenderFail(View view, String msg, int code) {
                 Log.e("ExpressView", "render fail:" + (System.currentTimeMillis() - startTime));
-                mJsInterface.onTTCallback(setTTCallBackParams("interactionLoadError", msg));
+                onTTCallback(setTTCallBackParams("interactionLoadError", code, msg, null, null, null, null, null));
             }
 
             @Override
             public void onRenderSuccess(View view, float width, float height) {
                 Log.e("ExpressView", "render suc:" + (System.currentTimeMillis() - startTime));
                 //返回view的宽高 单位 dp
-                mJsInterface.onTTCallback(setTTCallBackParams("interactionLoadSuccess", ""));
-                mTTAd.showInteractionExpressAd(BrowserActivity.this);
+                onTTCallback(setTTCallBackParams("interactionLoadSuccess", null, null, null, width, height, null, null));
+                handler.sendEmptyMessage(SHOW_INTERACTION_VIDEO);
             }
         });
 
@@ -599,47 +609,47 @@ public class BrowserActivity extends Activity {
             @Override
             public void onError(int code, String message) {
                 Log.d(H5Utils.TAG, "onError()" + code + message);
-                mJsInterface.onTTCallback(setTTCallBackParams("rewardLoadError", code + "," + message));
+                onTTCallback(setTTCallBackParams("rewardLoadError", code, message, null, null, null, null, null));
             }
 
             //视频广告加载后，视频资源缓存到本地的回调，在此回调后，播放本地视频，流畅不阻塞。
             @Override
             public void onRewardVideoCached() {
                 Log.d(H5Utils.TAG, "onRewardVideoCached()");
-                mJsInterface.onTTCallback(setTTCallBackParams("rewardCache", ""));
+                onTTCallback(setTTCallBackParams("rewardCache", null, null, null, null, null, null, null));
             }
 
             //视频广告的素材加载完毕，比如视频url等，在此回调后，可以播放在线视频，网络不好可能出现加载缓冲，影响体验。
             @Override
             public void onRewardVideoAdLoad(TTRewardVideoAd ad) {
                 Log.d(H5Utils.TAG, "onRewardVideoAdLoad()");
-                mJsInterface.onTTCallback(setTTCallBackParams("rewardLoadSuccess", ""));
+                onTTCallback(setTTCallBackParams("rewardLoadSuccess", null, null, null, null, null, null, null));
                 mTTRewardVideoAd = ad;
                 mTTRewardVideoAd.setRewardAdInteractionListener(new TTRewardVideoAd.RewardAdInteractionListener() {
 
                     @Override
                     public void onAdShow() {
                         Log.d(H5Utils.TAG, "onAdShow()");
-                        mJsInterface.onTTCallback(setTTCallBackParams("rewardShow", ""));
+                        onTTCallback(setTTCallBackParams("rewardShow", null, null, null, null, null, null, null));
                     }
 
                     @Override
                     public void onAdVideoBarClick() {
                         Log.d(H5Utils.TAG, "onAdVideoBarClick()");
-                        mJsInterface.onTTCallback(setTTCallBackParams("rewardBarClick", ""));
+                        onTTCallback(setTTCallBackParams("rewardBarClick", null, null, null, null, null, null, null));
                     }
 
                     @Override
                     public void onAdClose() {
                         Log.d(H5Utils.TAG, "onAdClose()");
-                        mJsInterface.onTTCallback(setTTCallBackParams("rewardClose", ""));
+                        onTTCallback(setTTCallBackParams("rewardClose", null, null, null, null, null, null, null));
                     }
 
                     //视频播放完成回调
                     @Override
                     public void onVideoComplete() {
                         Log.d(H5Utils.TAG, "onVideoComplete()");
-                        mJsInterface.onTTCallback(setTTCallBackParams("rewardPlayEnd", ""));
+                        onTTCallback(setTTCallBackParams("rewardPlayEnd", null, null, null, null, null, null, null));
                     }
 
                     @Override
@@ -651,13 +661,13 @@ public class BrowserActivity extends Activity {
                     @Override
                     public void onRewardVerify(boolean rewardVerify, int rewardAmount, String rewardName) {
                         Log.d(H5Utils.TAG, "onRewardVerify()" + rewardVerify + "/" + rewardAmount + "/" + rewardName);
-                        mJsInterface.onTTCallback(setTTCallBackParams("rewardVerify", rewardVerify + ""));
+                        onTTCallback(setTTCallBackParams("rewardVerify", null, null, null, null, null, null, rewardVerify));
                     }
 
                     @Override
                     public void onSkippedVideo() {
                         Log.d(H5Utils.TAG, "onSkippedVideo()");
-                        mJsInterface.onTTCallback(setTTCallBackParams("rewardSkip", ""));
+                        onTTCallback(setTTCallBackParams("rewardSkip", null, null, null, null, null, null, null));
                     }
                 });
                 mTTRewardVideoAd.setDownloadListener(new TTAppDownloadListener() {
@@ -715,13 +725,13 @@ public class BrowserActivity extends Activity {
             @Override
             public void onError(int code, String message) {
                 Toast.makeText(BrowserActivity.this, "load error : " + code + "," + message, Toast.LENGTH_SHORT).show();
-                mJsInterface.onTTCallback(setTTCallBackParams("fullScreenLoadError", code + "," + message));
+                onTTCallback(setTTCallBackParams("fullScreenLoadError", code, message, null, null, null, null, null));
             }
 
             @Override
             public void onFullScreenVideoCached() {
                 Log.d(H5Utils.TAG, "onFullScreenVideoCached()");
-                mJsInterface.onTTCallback(setTTCallBackParams("fullScreenCache", ""));
+                onTTCallback(setTTCallBackParams("fullScreenCache", null, null, null, null, null, null, null));
             }
 
             @Override
@@ -731,31 +741,31 @@ public class BrowserActivity extends Activity {
                     @Override
                     public void onAdShow() {
                         Log.d(H5Utils.TAG, "onAdShow()");
-                        mJsInterface.onTTCallback(setTTCallBackParams("fullScreenShow", ""));
+                        onTTCallback(setTTCallBackParams("fullScreenShow", null, null, null, null, null, null, null));
                     }
 
                     @Override
                     public void onAdVideoBarClick() {
                         Log.d(H5Utils.TAG, "onAdVideoBarClick()");
-                        mJsInterface.onTTCallback(setTTCallBackParams("fullScreenBarClick", ""));
+                        onTTCallback(setTTCallBackParams("fullScreenBarClick", null, null, null, null, null, null, null));
                     }
 
                     @Override
                     public void onAdClose() {
                         Log.d(H5Utils.TAG, "onAdClose()");
-                        mJsInterface.onTTCallback(setTTCallBackParams("fullScreenClose", ""));
+                        onTTCallback(setTTCallBackParams("fullScreenClose", null, null, null, null, null, null, null));
                     }
 
                     @Override
                     public void onVideoComplete() {
                         Log.d(H5Utils.TAG, "onVideoComplete()");
-                        mJsInterface.onTTCallback(setTTCallBackParams("fullScreenPlayEnd", ""));
+                        onTTCallback(setTTCallBackParams("fullScreenPlayEnd", null, null, null, null, null, null, null));
                     }
 
                     @Override
                     public void onSkippedVideo() {
                         Log.d(H5Utils.TAG, "onSkippedVideo()");
-                        mJsInterface.onTTCallback(setTTCallBackParams("fullScreenSkip", ""));
+                        onTTCallback(setTTCallBackParams("fullScreenSkip", null, null, null, null, null, null, null));
                     }
                 });
 
@@ -794,18 +804,22 @@ public class BrowserActivity extends Activity {
                         Log.d(H5Utils.TAG, "onInstalled()");
                     }
                 });
-                ttFullScreenVideoAd.showFullScreenVideoAd(BrowserActivity.this);
+                Message message = Message.obtain();
+                message.what = SHOW_FULLSCREEN_VIDEO;
+                message.obj = ttFullScreenVideoAd;
+                handler.sendMessage(message);
             }
         });
     }
 
-    /*
-     * set 回调 Params
-     */
-    private String setTTCallBackParams(String type, String data) {
-        Log.d(H5Utils.TAG, "回调: " + "{\"type\":\"" + type + "\",\"data\":\"" + data + "\"}");
-        return "{\"type\":\"" + type + "\",\"data\":\"" + data + "\"}";
+
+    private String setTTCallBackParams(String type, Object errCode, Object errMsg, Object adType, Object width, Object height, Object dislikeValue, Object rewardVerify) {
+        Object data = "{\"type\":\"" + type + "\",\"data\":{\"errCode\":" + errCode + ",\"errMsg\":\"" + errMsg + "\",\"adType\":" + adType + ",\"width\":\"" + width + "\",\"height\":\"" + height + "\",\"dislikeValue\":\"" + dislikeValue + "\",\"rewardVerify\":\"" + rewardVerify + "\"}}";
+        Log.d(H5Utils.TAG, (String) data);
+        return (String) data;
+
     }
+
 
     public void sendJrttPayInfo(boolean is_report, int amount, String out_trade_no) {
         if (ParamUtil.isUseJrtt() && is_report) {
@@ -888,6 +902,18 @@ public class BrowserActivity extends Activity {
         }
     }
 
+    // 回调 H5
+    public void onTTCallback(String json) {
+        if (mWebView != null) {
+            mWebView.evaluateJavascript("XipuSDK.onTTCallback(" + json + ")", new ValueCallback<String>() {
+                @Override
+                public void onReceiveValue(String s) {
+                    //   Log.d(H5Utils.TAG, "onReceiveValue:" + s);
+                }
+            });
+        }
+    }
+
     private class JsInterface {
         @JavascriptInterface
         public void newAccount(final String value) {
@@ -949,7 +975,7 @@ public class BrowserActivity extends Activity {
         @JavascriptInterface
         public void openTTBannerAd(final String values) {
             Log.d(H5Utils.TAG, "openTTBannerAd: " + values);
-            loadBannerAd(TTAdUtils.getBannerAdParams(values));
+            loadBannerAd(TTAdUtils.getAdParams(values));
         }
 
         //加载 关闭Banner广告
@@ -963,36 +989,22 @@ public class BrowserActivity extends Activity {
         @JavascriptInterface
         public void openTTInteractionAd(final String values) {
             Log.d(H5Utils.TAG, "openTTInteractionAd: " + values);
-            loadInteractionAd(TTAdUtils.getInteractionAdParams(values));
+            loadInteractionAd(TTAdUtils.getAdParams(values));
         }
 
         //加载 激励视频
         @JavascriptInterface
         public void openTTRewardVideoAd(final String values) {
             Log.d(H5Utils.TAG, "openTTRewardVideoAd: " + values);
-            loadRewardAd(TTAdUtils.getRewardVideoAdParams(values));
+            loadRewardAd(TTAdUtils.getAdParams(values));
         }
 
         //加载 全屏广告
         @JavascriptInterface
         public void openTTFullScreenVideoAd(final String values) {
             Log.d(H5Utils.TAG, "openTTFullScreenVideoAd: " + values);
-            loadFullScreenVideoAd(TTAdUtils.getFullScreenVideoAdParams(values));
+            loadFullScreenVideoAd(TTAdUtils.getAdParams(values));
         }
-
-        // 回调 H5
-        @JavascriptInterface
-        public void onTTCallback(String json) {
-            if (mWebView != null) {
-                mWebView.evaluateJavascript("XipuSDK.onTTCallback(" + json + ")", new ValueCallback<String>() {
-                    @Override
-                    public void onReceiveValue(String s) {
-
-                    }
-                });
-            }
-        }
-
 
     }
 

@@ -14,6 +14,7 @@ public class AdConfig {
     private String reward_name;
     private int reward_count;
     private String user_id;
+    private String extra;
 
 
     public void setAd_id(String ad_id) {
@@ -60,6 +61,10 @@ public class AdConfig {
         this.orientation = orientation;
     }
 
+    public void setExtra(String extra) {
+        this.extra = extra;
+    }
+
     public String getAd_id() {
         return TextUtils.isEmpty(ad_id) ? "" : ad_id;
     }
@@ -100,6 +105,10 @@ public class AdConfig {
         return TextUtils.isEmpty(user_id) ? "" : user_id;
     }
 
+    public String getExtra() {
+        return extra;
+    }
+
     public int getOrientation() {
         return orientation;
     }
@@ -118,6 +127,7 @@ public class AdConfig {
                 ", reward_count='" + reward_count + '\'' +
                 ", user_id='" + user_id + '\'' +
                 ", orientation='" + orientation + '\'' +
+                ", extra='" + extra + '\'' +
                 '}';
     }
 

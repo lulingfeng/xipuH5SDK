@@ -40,91 +40,31 @@ public class TTAdUtils {
         return mTTAdAppName;
     }
 
-    /**
-     * @param values
-     * @return Banner广告参数
-     */
-    public static AdConfig getBannerAdParams(final String values) {
+
+    public static AdConfig getAdParams(final String values) {
         AdConfig adConfig = new AdConfig();
         try {
             ZYJSONObject dataResult = new ZYJSONObject(values);
             adConfig.setAd_id(dataResult.getStringDef("ad_id"));
-            adConfig.setCount(dataResult.getInt("count"));
+            adConfig.setCount(dataResult.optInt("count"));
+            adConfig.setReward_name(dataResult.getStringDef("reward_name"));
+            adConfig.setReward_count(dataResult.optInt("reward_count"));
+            adConfig.setUser_id(dataResult.getStringDef("user_id"));
+            adConfig.setExtra(dataResult.getStringDef("extra"));
+            if (dataResult.getStringDef("orientation").contains("vertical")) {
+                adConfig.setOrientation(TTAdConstant.VERTICAL);
+            } else if (dataResult.getStringDef("orientation").contains("horizontal")) {
+                adConfig.setOrientation(TTAdConstant.HORIZONTAL);
+            }
+            //获取坐标
             ZYJSONObject styleObject = new ZYJSONObject(dataResult.getStringDef("style"));
-            adConfig.setTop(styleObject.getInt("top"));
-            adConfig.setLeft(styleObject.getInt("left"));
-            adConfig.setWidth(styleObject.getInt("width"));
-            adConfig.setHeight(styleObject.getInt("height"));
-            Log.d(H5Utils.TAG, "getBannerAdParams: " + adConfig.toString());
+            adConfig.setTop(styleObject.optInt("top"));
+            adConfig.setLeft(styleObject.optInt("left"));
+            adConfig.setWidth(styleObject.optInt("width"));
+            adConfig.setHeight(styleObject.optInt("height"));
         } catch (JSONException e) {
             e.printStackTrace();
             Log.e(H5Utils.TAG, "getBannerAdParams: " + e.getMessage());
-        }
-        return adConfig;
-    }
-
-    /**
-     * @param values
-     * @return 插屏广告参数
-     */
-    public static AdConfig getInteractionAdParams(final String values) {
-        AdConfig adConfig = new AdConfig();
-        try {
-            ZYJSONObject dataResult = new ZYJSONObject(values);
-            adConfig.setAd_id(dataResult.getStringDef("ad_id"));
-            adConfig.setCount(dataResult.getInt("count"));
-            ZYJSONObject styleObject = new ZYJSONObject(dataResult.getStringDef("style"));
-            adConfig.setTop(styleObject.getInt("top"));
-            adConfig.setLeft(styleObject.getInt("left"));
-            adConfig.setWidth(styleObject.getInt("width"));
-            adConfig.setHeight(styleObject.getInt("height"));
-            Log.d(H5Utils.TAG, "getInteractionAdParams: " + adConfig.toString());
-        } catch (JSONException e) {
-            e.printStackTrace();
-            Log.e(H5Utils.TAG, "getInteractionAdParams: " + e.getMessage());
-        }
-        return adConfig;
-    }
-
-    public static AdConfig getRewardVideoAdParams(final String values) {
-        AdConfig adConfig = new AdConfig();
-        try {
-            ZYJSONObject dataResult = new ZYJSONObject(values);
-            adConfig.setAd_id(dataResult.getStringDef("ad_id"));
-            if (dataResult.getStringDef("orientation").contains("vertical")) {
-                adConfig.setOrientation(TTAdConstant.VERTICAL);
-            } else if (dataResult.getStringDef("orientation").contains("horizontal")) {
-                adConfig.setOrientation(TTAdConstant.HORIZONTAL);
-            }
-            adConfig.setReward_name(dataResult.getStringDef("reward_name"));
-            adConfig.setReward_count(dataResult.getInt("reward_count"));
-            adConfig.setUser_id(dataResult.getStringDef("user_id"));
-            Log.d(H5Utils.TAG, "getFullScreenVideoAdParams: " + adConfig.toString());
-        } catch (JSONException e) {
-            e.printStackTrace();
-            Log.e(H5Utils.TAG, "getFullScreenVideoAdParams: " + e.getMessage());
-        }
-        return adConfig;
-    }
-
-    /**
-     * @param values
-     * @return 全屏广告参数
-     */
-    public static AdConfig getFullScreenVideoAdParams(final String values) {
-        AdConfig adConfig = new AdConfig();
-        try {
-            ZYJSONObject dataResult = new ZYJSONObject(values);
-            adConfig.setAd_id(dataResult.getStringDef("ad_id"));
-            if (dataResult.getStringDef("orientation").contains("vertical")) {
-                adConfig.setOrientation(TTAdConstant.VERTICAL);
-            } else if (dataResult.getStringDef("orientation").contains("horizontal")) {
-                adConfig.setOrientation(TTAdConstant.HORIZONTAL);
-            }
-            Log.d(H5Utils.TAG, "getFullScreenVideoAdParams: " + adConfig.toString());
-        } catch (JSONException e) {
-            e.printStackTrace();
-            Log.e(H5Utils.TAG, "getFullScreenVideoAdParams: " + e.getMessage());
         }
         return adConfig;
     }
