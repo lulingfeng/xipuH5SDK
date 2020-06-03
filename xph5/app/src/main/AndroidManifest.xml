@@ -67,7 +67,7 @@
         <!-- 喜扑游戏 客户端id -->
         <meta-data
             android:name="xp_appid"
-            android:value="38807b0c59747f0cb583c3a00a24a788" />
+            android:value="e11e7719e94c38c422d5fc855bde1720" />
         <!-- 喜扑游戏 今日头条统计SDK appname -->
         <meta-data
             android:name="xp_jrtt_appname"

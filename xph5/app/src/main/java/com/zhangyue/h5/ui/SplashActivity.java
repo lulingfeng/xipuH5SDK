@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.widget.Toast;
 
 
@@ -97,6 +98,8 @@ public class SplashActivity extends Activity {
                     JSONObject dataResult = new JSONObject(datas[1]);
                     H5Utils.setChannel(SplashActivity.this, dataResult.optString("channel"));
                     H5Config.GAME_BASE_URL = dataResult.optString("h5base");
+                    H5Config.GAME_URL = H5Config.GAME_BASE_URL + "/play.php";
+                    Log.d(H5Utils.TAG, "实际地址: " + H5Config.GAME_URL);
                 } catch (Exception e) {
                     if (e instanceof SOServertReturnErrorException)
                         Toast.makeText(SplashActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
