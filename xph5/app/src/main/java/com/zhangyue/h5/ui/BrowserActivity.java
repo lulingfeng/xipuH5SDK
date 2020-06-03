@@ -79,11 +79,18 @@ public class BrowserActivity extends Activity {
     private String mOutTradeNo;
 
     private TTAdNative mTTAdNative;
-
     private TTNativeExpressAd mTTAd; // 个性化 banner
-
     private TTRewardVideoAd mTTRewardVideoAd; // 激励视频
-    private TTFullScreenVideoAd mTTFullScreenVideoAd; //全屏广告
+    private AdSlot mAdSlot;
+    /*
+     * 加载 Banner 广告
+     */
+    private long startTime;
+    private boolean mHasShowDownloadActive = false;
+    /*
+     * 加载广告容错count
+     */
+    private int mLoadCount;
 
     private static final int CLOSE_BANNER = 0x1;
     private static final int SHOW_REWARD_VIDEO = 0x2;
@@ -360,27 +367,30 @@ public class BrowserActivity extends Activity {
         super.onPause();
     }
 
-    /*
-     * 加载 Banner 广告
-     */
-    private long startTime;
-    private boolean mHasShowDownloadActive = false;
-
     private void loadBannerAd(AdConfig adConfig) {
         this.adConfig = adConfig;
-        final AdSlot mAdSlot = new AdSlot.Builder()
+        mLoadCount = 1;
+        mAdSlot = new AdSlot.Builder()
                 .setCodeId(adConfig.getAd_id())
                 .setExpressViewAcceptedSize(adConfig.getWidth(), adConfig.getHeight())
                 .setSupportDeepLink(true)
                 .setAdCount(adConfig.getCount())
                 .build();
+        loadBannerAdInfo();
+    }
+
+    private void loadBannerAdInfo() {
         mTTAdNative.loadBannerExpressAd(mAdSlot, new TTAdNative.NativeExpressAdListener() {
             @Override
             public void onError(int code, String message) {
                 Log.d(H5Utils.TAG, "onError: " + mAdSlot.toString());
-                Toast.makeText(BrowserActivity.this, "load error : " + code + "," + message, Toast.LENGTH_SHORT).show();
-                onTTCallback(setTTCallBackParams("bannerLoadError", code, message, null, null, null, null, null));
-                mExpressContainer.removeAllViews();
+                if (mLoadCount >= 3) {
+                    onTTCallback(setTTCallBackParams("bannerLoadError", code, message, null, null, null, null, null));
+                    mExpressContainer.removeAllViews();
+                } else {
+                    ++mLoadCount;
+                    loadBannerAdInfo();
+                }
             }
 
             @Override
@@ -496,17 +506,27 @@ public class BrowserActivity extends Activity {
      * 加载 插屏 广告
      */
     private void loadInteractionAd(AdConfig adConfig) {
-        AdSlot mAdSlot = new AdSlot.Builder()
+        mLoadCount = 1;
+        mAdSlot = new AdSlot.Builder()
                 .setCodeId(adConfig.getAd_id()) //广告位id
                 .setSupportDeepLink(true)
                 .setAdCount(adConfig.getCount()) //请求广告数量为1到3条
                 .setExpressViewAcceptedSize(adConfig.getWidth(), adConfig.getHeight()) //期望模板广告view的size,单位dp
                 .build();
+        loadInteractionAdInfo();
+    }
+
+    private void loadInteractionAdInfo() {
         mTTAdNative.loadInteractionExpressAd(mAdSlot, new TTAdNative.NativeExpressAdListener() {
             @Override
             public void onError(int code, String message) {
-                Toast.makeText(BrowserActivity.this, "load error : " + code + "," + message, Toast.LENGTH_SHORT).show();
-                onTTCallback(setTTCallBackParams("interactionLoadError", code, message, null, null, null, null, null));
+                Log.d(H5Utils.TAG, "onError : " + code + "," + message);
+                if (mLoadCount >= 3) {
+                    onTTCallback(setTTCallBackParams("interactionLoadError", code, message, null, null, null, null, null));
+                } else {
+                    ++mLoadCount;
+                    loadInteractionAdInfo();
+                }
             }
 
             @Override
@@ -600,7 +620,8 @@ public class BrowserActivity extends Activity {
      * 加载 激励视频
      */
     private void loadRewardAd(AdConfig adConfig) {
-        AdSlot adSlot = new AdSlot.Builder()
+        mLoadCount = 1;
+        mAdSlot = new AdSlot.Builder()
                 .setCodeId(adConfig.getAd_id())
                 .setRewardName(adConfig.getReward_name())
                 .setRewardAmount(adConfig.getReward_count())
@@ -609,11 +630,20 @@ public class BrowserActivity extends Activity {
                 .setMediaExtra("") //附加参数，可选
                 .setOrientation(adConfig.getOrientation()) //必填参数，期望视频的播放方向：TTAdConstant.HORIZONTAL 或 TTAdConstant.VERTICAL
                 .build();
-        mTTAdNative.loadRewardVideoAd(adSlot, new TTAdNative.RewardVideoAdListener() {
+        loadRewardAdInfo();
+    }
+
+    private void loadRewardAdInfo() {
+        mTTAdNative.loadRewardVideoAd(mAdSlot, new TTAdNative.RewardVideoAdListener() {
             @Override
             public void onError(int code, String message) {
-                Log.d(H5Utils.TAG, "onError()" + code + message);
-                onTTCallback(setTTCallBackParams("rewardLoadError", code, message, null, null, null, null, null));
+                Log.d(H5Utils.TAG, "onError" + code + message);
+                if (mLoadCount >= 3) {
+                    onTTCallback(setTTCallBackParams("rewardLoadError", code, message, null, null, null, null, null));
+                } else {
+                    ++mLoadCount;
+                    loadRewardAdInfo();
+                }
             }
 
             //视频广告加载后，视频资源缓存到本地的回调，在此回调后，播放本地视频，流畅不阻塞。
@@ -711,7 +741,6 @@ public class BrowserActivity extends Activity {
                     }
                 });
                 handler.sendEmptyMessage(SHOW_REWARD_VIDEO);
-
             }
         });
     }
@@ -720,16 +749,26 @@ public class BrowserActivity extends Activity {
      * 加载 全屏广告
      */
     private void loadFullScreenVideoAd(AdConfig adConfig) {
-        AdSlot mAdSlot = new AdSlot.Builder()
+        mLoadCount = 1;
+        mAdSlot = new AdSlot.Builder()
                 .setCodeId(adConfig.getAd_id())
                 .setSupportDeepLink(true)
                 .setOrientation(adConfig.getOrientation())//必填参数，期望视频的播放方向：TTAdConstant.HORIZONTAL 或 TTAdConstant.VERTICAL
                 .build();
+        loadFullScreenVideoAdInfo();
+    }
+
+    private void loadFullScreenVideoAdInfo() {
         mTTAdNative.loadFullScreenVideoAd(mAdSlot, new TTAdNative.FullScreenVideoAdListener() {
             @Override
             public void onError(int code, String message) {
-                Toast.makeText(BrowserActivity.this, "load error : " + code + "," + message, Toast.LENGTH_SHORT).show();
-                onTTCallback(setTTCallBackParams("fullScreenLoadError", code, message, null, null, null, null, null));
+                Log.d(H5Utils.TAG, "onError" + code + message);
+                if (mLoadCount >= 3) {
+                    onTTCallback(setTTCallBackParams("fullScreenLoadError", code, message, null, null, null, null, null));
+                } else {
+                    ++mLoadCount;
+                    loadFullScreenVideoAdInfo();
+                }
             }
 
             @Override
@@ -821,9 +860,7 @@ public class BrowserActivity extends Activity {
         Object data = "{\"type\":\"" + type + "\",\"data\":{\"errCode\":" + errCode + ",\"errMsg\":\"" + errMsg + "\",\"adType\":" + adType + ",\"width\":\"" + width + "\",\"height\":\"" + height + "\",\"dislikeValue\":\"" + dislikeValue + "\",\"rewardVerify\":\"" + rewardVerify + "\"}}";
         Log.d(H5Utils.TAG, (String) data);
         return (String) data;
-
     }
-
 
     public void sendJrttPayInfo(boolean is_report, int amount, String out_trade_no) {
         if (ParamUtil.isUseJrtt() && is_report) {

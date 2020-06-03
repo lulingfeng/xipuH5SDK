@@ -6,13 +6,11 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="H5SDK_TAG" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7933645d-277f-4f54-8267-edad984af8e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/config/TTAdManagerHolder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -27,14 +25,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/H5Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/H5Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/config/H5Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/config/H5Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/BrowserActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/BrowserActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/SplashActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/SplashActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/TTAdUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/TTAdUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/master-index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/master-index.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -75,18 +67,34 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/BrowserActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="326" column="50" selection-start-line="326" selection-start-column="50" selection-end-line="326" selection-end-column="50" />
+            <state relative-caret-position="87">
+              <caret line="812" column="19" selection-start-line="812" selection-start-column="19" selection-end-line="812" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#10710#10711#0" expanded="true" />
-                <element signature="e#10739#10740#0" expanded="true" />
-                <element signature="e#11984#11985#0" expanded="true" />
-                <element signature="e#12016#12017#0" expanded="true" />
-                <element signature="e#12062#12063#0" expanded="true" />
-                <element signature="e#12093#12094#0" expanded="true" />
-                <element signature="e#29436#29437#0" expanded="true" />
-                <element signature="e#29520#29521#0" expanded="true" />
+                <element signature="e#7356#7357#0" expanded="true" />
+                <element signature="e#7412#7413#0" expanded="true" />
+                <element signature="e#7636#8113#0" expanded="true" />
+                <element signature="e#8112#8113#0" expanded="true" />
+                <element signature="e#8877#9948#0" expanded="true" />
+                <element signature="e#9947#9948#0" expanded="true" />
+                <element signature="e#11722#11968#0" expanded="true" />
+                <element signature="e#11967#11968#0" expanded="true" />
+                <element signature="e#12268#12269#0" expanded="true" />
+                <element signature="e#12297#12298#0" expanded="true" />
+                <element signature="e#13802#13803#0" expanded="true" />
+                <element signature="e#13834#13835#0" expanded="true" />
+                <element signature="e#13880#13881#0" expanded="true" />
+                <element signature="e#13911#13912#0" expanded="true" />
+                <element signature="e#19434#19435#0" expanded="true" />
+                <element signature="e#19492#19493#0" expanded="true" />
+                <element signature="e#27341#27342#0" expanded="true" />
+                <element signature="e#27425#27426#0" expanded="true" />
+                <element signature="e#39126#39575#0" expanded="true" />
+                <element signature="e#39291#39541#0" expanded="true" />
+                <element signature="e#39540#39541#0" expanded="true" />
+                <element signature="e#39574#39575#0" expanded="true" />
+                <element signature="e#41301#41302#0" expanded="true" />
+                <element signature="e#41357#41358#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,11 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/TTAdUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="910">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -107,7 +112,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/H5Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2496">
+            <state relative-caret-position="2574">
               <caret line="119" column="5" selection-start-line="119" selection-start-column="5" selection-end-line="119" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -118,19 +123,19 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="364">
               <caret line="14" column="42" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="42" />
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/H5Utils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="156">
-              <caret line="35" column="47" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="47" />
+              <caret line="34" column="47" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,8 +146,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="30" column="58" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="58" />
+            <state relative-caret-position="85">
+              <caret line="30" column="58" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -171,10 +176,22 @@
       <find>mTTNativeExpressAd</find>
       <find>mttRewardVideoAd</find>
       <find>mTTRewardVideoAd</find>
+      <find>SHOW_REWARD_VIDEO</find>
+      <find>mAdSlot</find>
+      <find>mTTFullScreenVideoAd</find>
+      <find>onError</find>
+      <find>load error</find>
+      <find>adConfig</find>
     </findStrings>
     <replaceStrings>
       <replace />
     </replaceStrings>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="C:\Users\user\Desktop\keystore\gemjy.keystore" />
+    <option name="KEY_ALIAS" value="gemjycn" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -195,17 +212,17 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/SplashActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/dialog/DislikeDialog.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/TTAdUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/H5Application.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/config/TTAdManagerHolder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/TTAdUtils.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/BrowserActivity.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-1863" />
-    <option name="y" value="43" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="10" />
+    <option name="y" value="53" />
     <option name="width" value="1795" />
     <option name="height" value="950" />
   </component>
@@ -215,7 +232,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,6 +252,12 @@
               <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="libs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="release" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
@@ -353,13 +378,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="device.picker.selection" value="E4J4C17415004940" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/穿山甲安卓SDK/demo" />
+    <property name="ExportApk.ApkPath" value="D:\git repository\xipuH5\xph5\app" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="ExportApk.SignV1" value="true" />
+    <property name="device.picker.selection" value="3784c89a" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/keystore/gemjy.keystore" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="show.do.not.ask.upgrade.gradle.plugin" value="3.1.4" />
   </component>
@@ -459,12 +485,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1863" y="43" width="1795" height="950" extended-state="1" />
-    <editor active="true" />
+    <frame x="10" y="53" width="1795" height="950" extended-state="1" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.329683" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.329683" />
       <window_info id="Structure" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
@@ -480,7 +505,7 @@
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.3272059" />
       <window_info anchor="bottom" id="Find" order="8" />
-      <window_info anchor="bottom" id="Logcat" order="9" visible="true" weight="0.35171568" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="9" visible="true" weight="0.76715684" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
@@ -491,12 +516,12 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/applog-release.aar/34ddc6eddac6b9b336215312b72daf62/res/values/values.xml" />
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/applog-release.aar/34ddc6eddac6b9b336215312b72daf62/jars/classes.jar!/com/ss/android/common/lib/EventUtils.class" />
@@ -552,14 +577,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/splash.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash2.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/app/libs/tbs_sdk_thirdapp_v4.3.0.1072_43646_sharewithdownloadwithfile_withoutGame_obfs_20190429_175122.jar!/com/tencent/smtt/export/external/interfaces/IX5WebSettings.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -703,17 +720,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/libs/mopub-sdk-rewardedvideo-5.8.0.aar" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/config/TTAdManagerHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-          <folding>
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -725,51 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/TTAdUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/H5Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2496">
-          <caret line="119" column="5" selection-start-line="119" selection-start-column="5" selection-end-line="119" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/H5Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="35" column="47" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="30" column="58" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -794,20 +755,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/BrowserActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash2.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/TTAdUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="326" column="50" selection-start-line="326" selection-start-column="50" selection-end-line="326" selection-end-column="50" />
+        <state relative-caret-position="910">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/H5Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2574">
+          <caret line="119" column="5" selection-start-line="119" selection-start-column="5" selection-end-line="119" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10710#10711#0" expanded="true" />
-            <element signature="e#10739#10740#0" expanded="true" />
-            <element signature="e#11984#11985#0" expanded="true" />
-            <element signature="e#12016#12017#0" expanded="true" />
-            <element signature="e#12062#12063#0" expanded="true" />
-            <element signature="e#12093#12094#0" expanded="true" />
-            <element signature="e#29436#29437#0" expanded="true" />
-            <element signature="e#29520#29521#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="42" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/H5Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="34" column="47" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/config/TTAdManagerHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="30" column="58" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/BrowserActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="812" column="19" selection-start-line="812" selection-start-column="19" selection-end-line="812" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7356#7357#0" expanded="true" />
+            <element signature="e#7412#7413#0" expanded="true" />
+            <element signature="e#7636#8113#0" expanded="true" />
+            <element signature="e#8112#8113#0" expanded="true" />
+            <element signature="e#8877#9948#0" expanded="true" />
+            <element signature="e#9947#9948#0" expanded="true" />
+            <element signature="e#11722#11968#0" expanded="true" />
+            <element signature="e#11967#11968#0" expanded="true" />
+            <element signature="e#12268#12269#0" expanded="true" />
+            <element signature="e#12297#12298#0" expanded="true" />
+            <element signature="e#13802#13803#0" expanded="true" />
+            <element signature="e#13834#13835#0" expanded="true" />
+            <element signature="e#13880#13881#0" expanded="true" />
+            <element signature="e#13911#13912#0" expanded="true" />
+            <element signature="e#19434#19435#0" expanded="true" />
+            <element signature="e#19492#19493#0" expanded="true" />
+            <element signature="e#27341#27342#0" expanded="true" />
+            <element signature="e#27425#27426#0" expanded="true" />
+            <element signature="e#39126#39575#0" expanded="true" />
+            <element signature="e#39291#39541#0" expanded="true" />
+            <element signature="e#39540#39541#0" expanded="true" />
+            <element signature="e#39574#39575#0" expanded="true" />
+            <element signature="e#41301#41302#0" expanded="true" />
+            <element signature="e#41357#41358#0" expanded="true" />
           </folding>
         </state>
       </provider>
