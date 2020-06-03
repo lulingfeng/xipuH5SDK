@@ -57,11 +57,14 @@ public class TTAdUtils {
                 adConfig.setOrientation(TTAdConstant.HORIZONTAL);
             }
             //获取坐标
-            ZYJSONObject styleObject = new ZYJSONObject(dataResult.getStringDef("style"));
-            adConfig.setTop(styleObject.optInt("top"));
-            adConfig.setLeft(styleObject.optInt("left"));
-            adConfig.setWidth(styleObject.optInt("width"));
-            adConfig.setHeight(styleObject.optInt("height"));
+            if (!TextUtils.isEmpty(dataResult.getStringDef("style"))){
+                ZYJSONObject styleObject = new ZYJSONObject(dataResult.getStringDef("style"));
+                adConfig.setTop(styleObject.optInt("top"));
+                adConfig.setLeft(styleObject.optInt("left"));
+                adConfig.setWidth(styleObject.optInt("width"));
+                adConfig.setHeight(styleObject.optInt("height"));
+            }
+
         } catch (JSONException e) {
             e.printStackTrace();
             Log.e(H5Utils.TAG, "getBannerAdParams: " + e.getMessage());

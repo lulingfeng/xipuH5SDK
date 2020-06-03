@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">一恋永恒</string>
+    <string name="app_name">夏目的美丽日记</string>
     <string name="ask_wechat_install">主人大大，请先装微信?</string>
     <string name="ask_alipay_install">主人大大，请先装支付宝?</string>
     <string name="pay_wx_result">正在等待微信支付结果...</string>

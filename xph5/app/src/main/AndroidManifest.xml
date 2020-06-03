@@ -67,7 +67,7 @@
         <!-- 喜扑游戏 客户端id -->
         <meta-data
             android:name="xp_appid"
-            android:value="e11e7719e94c38c422d5fc855bde1720" />
+            android:value="0723d02cec14fc2dd6ec725c344ef5c1" />
         <!-- 喜扑游戏 今日头条统计SDK appname -->
         <meta-data
             android:name="xp_jrtt_appname"
@@ -99,7 +99,7 @@
         <!--喜扑游戏 穿山甲 appId -->
         <meta-data
             android:name="xp_ttad_appid"
-            android:value="5065168" />
+            android:value="5073945" />
         <!-- 喜扑游戏 穿山甲 appName -->
         <meta-data
             android:name="xp_ttad_appname"

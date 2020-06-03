@@ -199,6 +199,7 @@ public class BrowserActivity extends Activity {
         H5Utils.showProgress(BrowserActivity.this);
         mWebView.addJavascriptInterface(new JsInterface(), "zyh5sdk");
         mWebView.loadUrl(mUrl);
+        Log.d(H5Utils.TAG, "loadUrl: " + mUrl);
         KeyBoardListener.getInstance(this, mWebView, new KeyBoardListener.OnChangeHeightListener() {
             @Override
             public void onShow(int usableHeightNow) {
@@ -268,12 +269,13 @@ public class BrowserActivity extends Activity {
      * @return
      */
     private String generateUrl() {
-        StringBuffer sb = new StringBuffer(H5Config.GAME_URL);
+        //   StringBuffer sb = new StringBuffer(H5Config.GAME_URL);
         //  StringBuffer sb = new StringBuffer("http://testh5.xipu.com/play.php");
+        StringBuffer sb = new StringBuffer("http://h5.xipu.com/play.php");
         sb.append("?app_id=" + ParamUtil.getAppId() + "&");
-        SORequestParams params = new SORequestParams(H5Config.GAME_URL, H5Utils.getCommonParams(this));
+        SORequestParams params = new SORequestParams("http://h5.xipu.com/play.php", H5Utils.getCommonParams(this));
         sb.append(params.getParamsStr());
-        Log.d(H5Utils.TAG, "generateUrl: "+sb.toString());
+        Log.d(H5Utils.TAG, "generateUrl: " + sb.toString());
         return sb.toString();
     }
 
@@ -366,7 +368,7 @@ public class BrowserActivity extends Activity {
 
     private void loadBannerAd(AdConfig adConfig) {
         this.adConfig = adConfig;
-        AdSlot mAdSlot = new AdSlot.Builder()
+        final AdSlot mAdSlot = new AdSlot.Builder()
                 .setCodeId(adConfig.getAd_id())
                 .setExpressViewAcceptedSize(adConfig.getWidth(), adConfig.getHeight())
                 .setSupportDeepLink(true)
@@ -375,6 +377,7 @@ public class BrowserActivity extends Activity {
         mTTAdNative.loadBannerExpressAd(mAdSlot, new TTAdNative.NativeExpressAdListener() {
             @Override
             public void onError(int code, String message) {
+                Log.d(H5Utils.TAG, "onError: " + mAdSlot.toString());
                 Toast.makeText(BrowserActivity.this, "load error : " + code + "," + message, Toast.LENGTH_SHORT).show();
                 onTTCallback(setTTCallBackParams("bannerLoadError", code, message, null, null, null, null, null));
                 mExpressContainer.removeAllViews();
@@ -904,12 +907,17 @@ public class BrowserActivity extends Activity {
     }
 
     // 回调 H5
-    public void onTTCallback(String json) {
+    public void onTTCallback(final String json) {
         if (mWebView != null) {
-            mWebView.evaluateJavascript("XipuSDK.onTTCallback(" + json + ")", new ValueCallback<String>() {
+            this.runOnUiThread(new Runnable() {
                 @Override
-                public void onReceiveValue(String s) {
-                    //   Log.d(H5Utils.TAG, "onReceiveValue:" + s);
+                public void run() {
+                    mWebView.evaluateJavascript("XipuSDK.onTTCallback(" + json + ")", new ValueCallback<String>() {
+                        @Override
+                        public void onReceiveValue(String s) {
+                            //   Log.d(H5Utils.TAG, "onReceiveValue:" + s);
+                        }
+                    });
                 }
             });
         }
@@ -969,7 +977,7 @@ public class BrowserActivity extends Activity {
         //初始化
         @JavascriptInterface
         public void TTAdInit(final String values) {
-
+            Log.d(H5Utils.TAG, "TTAdInit: ");
         }
 
         //加载 banner广告

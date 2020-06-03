@@ -13,7 +13,6 @@ import com.startobj.util.toast.SOToastUtil;
 import com.tencent.bugly.crashreport.CrashReport;
 import com.tencent.smtt.sdk.QbSdk;
 import com.zhangyue.h5.config.TTAdManagerHolder;
-import com.zhangyue.h5.util.AdConfig;
 import com.zhangyue.h5.util.GDTUtils;
 import com.zhangyue.h5.util.H5Utils;
 import com.zhangyue.h5.util.OaidHelper;
@@ -22,6 +21,7 @@ import com.zhangyue.h5.util.ParamUtil;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
 
 public class H5Application extends Application {
 
@@ -30,7 +30,7 @@ public class H5Application extends Application {
         super.onCreate();
         SOToastUtil.init(this);
         ParamUtil.loadConfig(this);
-        QbSdk.initX5Environment(this,null);
+        QbSdk.initX5Environment(this, null);
         try {
             JLibrary.InitEntry(this);
         } catch (Exception e) {
@@ -55,10 +55,9 @@ public class H5Application extends Application {
             initRangersAppLog();
         }
 
-        TTAdManagerHolder.init(this);
-        AdConfig adConfig =new AdConfig();
-        Log.e("调试", adConfig.getAd_id());
+           TTAdManagerHolder.init(this);
     }
+
 
     /*
      * 获取进程号对应的进程名
