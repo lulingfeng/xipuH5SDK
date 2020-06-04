@@ -64,10 +64,10 @@
             android:launchMode="singleTop"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/H5AppTheme.Permissions" />
-        <!-- 喜扑游戏 客户端id -->
+        <!-- 喜扑游戏 客户端id  -->
         <meta-data
             android:name="xp_appid"
-            android:value="f602ac3f1847c82db74d70b887943ed2" />
+            android:value="0723d02cec14fc2dd6ec725c344ef5c1" />
         <!-- 喜扑游戏 今日头条统计SDK appname -->
         <meta-data
             android:name="xp_jrtt_appname"

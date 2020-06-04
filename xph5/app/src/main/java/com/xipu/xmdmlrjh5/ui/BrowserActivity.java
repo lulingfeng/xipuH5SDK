@@ -41,6 +41,7 @@ import com.startobj.util.device.SODensityUtil;
 import com.startobj.util.http.SORequestParams;
 import com.tencent.smtt.export.external.interfaces.SslError;
 import com.tencent.smtt.export.external.interfaces.SslErrorHandler;
+import com.tencent.smtt.sdk.CookieManager;
 import com.tencent.smtt.sdk.ValueCallback;
 import com.tencent.smtt.sdk.WebChromeClient;
 import com.tencent.smtt.sdk.WebSettings;
@@ -116,6 +117,12 @@ public class BrowserActivity extends Activity {
         mExpressContainer = (FrameLayout) findViewById(R.id.express_container);
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.getSettings().setDomStorageEnabled(true);
+
+        mWebView.getSettings().setAppCacheMaxSize(1024*1024*8);
+        mWebView.getSettings().setAppCachePath(getApplicationContext().getCacheDir().getAbsolutePath());
+        mWebView.getSettings().setAllowFileAccess(true);
+        mWebView.getSettings().setAppCacheEnabled(true);
+
         mWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
         mWebView.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
         // 设置UserAgent
@@ -207,6 +214,7 @@ public class BrowserActivity extends Activity {
         H5Utils.showProgress(BrowserActivity.this);
         mWebView.addJavascriptInterface(new JsInterface(), "zyh5sdk");
         mWebView.loadUrl(mUrl);
+        mWebView.reload();
         KeyBoardListener.getInstance(this, mWebView, new KeyBoardListener.OnChangeHeightListener() {
             @Override
             public void onShow(int usableHeightNow) {
@@ -274,7 +282,7 @@ public class BrowserActivity extends Activity {
      */
     private String generateUrl() {
         StringBuffer sb = new StringBuffer(H5Config.GAME_URL);
-        //    StringBuffer sb = new StringBuffer("http://testh5.xipu.com/play.php");
+    //    StringBuffer sb = new StringBuffer("http://testh5.xipu.com/play.php");
         //  StringBuffer sb = new StringBuffer("http://h5.xipu.com/play.php");
         sb.append("?app_id=" + ParamUtil.getAppId() + "&");
         SORequestParams params = new SORequestParams(H5Config.GAME_URL, H5Utils.getCommonParams(this));
@@ -337,7 +345,7 @@ public class BrowserActivity extends Activity {
 
     @Override
     protected void onDestroy() {
-        if (mWebView != null) {
+        if(mWebView != null){
             mWebView.destroy();
         }
         if (mTTAd != null) {

@@ -6,27 +6,25 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="H5SDK_TAG" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7933645d-277f-4f54-8267-edad984af8e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskJars.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskJars.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/BrowserActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/BrowserActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/master-index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/master-index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/config/H5Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/config/H5Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/ui/BrowserActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/ui/BrowserActivity.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -64,59 +62,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="69" column="59" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
+              <folding>
+                <element signature="e#1780#1798#0" expanded="true" />
+                <element signature="e#2006#2024#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/config/H5Config.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="12" column="38" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/BrowserActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/ui/BrowserActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="812" column="19" selection-start-line="812" selection-start-column="19" selection-end-line="812" selection-end-column="19" />
+            <state relative-caret-position="100">
+              <caret line="216" column="26" selection-start-line="216" selection-start-column="26" selection-end-line="216" selection-end-column="26" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#7356#7357#0" expanded="true" />
-                <element signature="e#7412#7413#0" expanded="true" />
-                <element signature="e#7636#8113#0" expanded="true" />
-                <element signature="e#8112#8113#0" expanded="true" />
-                <element signature="e#8877#9948#0" expanded="true" />
-                <element signature="e#9947#9948#0" expanded="true" />
-                <element signature="e#11722#11968#0" expanded="true" />
-                <element signature="e#11967#11968#0" expanded="true" />
-                <element signature="e#12268#12269#0" expanded="true" />
-                <element signature="e#12297#12298#0" expanded="true" />
-                <element signature="e#13802#13803#0" expanded="true" />
-                <element signature="e#13834#13835#0" expanded="true" />
-                <element signature="e#13880#13881#0" expanded="true" />
-                <element signature="e#13911#13912#0" expanded="true" />
-                <element signature="e#19434#19435#0" expanded="true" />
-                <element signature="e#19492#19493#0" expanded="true" />
-                <element signature="e#27341#27342#0" expanded="true" />
-                <element signature="e#27425#27426#0" expanded="true" />
-                <element signature="e#39126#39575#0" expanded="true" />
-                <element signature="e#39291#39541#0" expanded="true" />
-                <element signature="e#39540#39541#0" expanded="true" />
-                <element signature="e#39574#39575#0" expanded="true" />
-                <element signature="e#41301#41302#0" expanded="true" />
-                <element signature="e#41357#41358#0" expanded="true" />
+                <element signature="e#7791#7792#0" expanded="true" />
+                <element signature="e#7847#7848#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/TTAdUtils.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/util/ParamUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="910">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/H5Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2574">
-              <caret line="119" column="5" selection-start-line="119" selection-start-column="5" selection-end-line="119" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="245">
+              <caret line="118" column="21" selection-start-line="118" selection-start-column="15" selection-end-line="118" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -129,18 +115,6 @@
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/H5Utils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="34" column="47" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -182,6 +156,9 @@
       <find>onError</find>
       <find>load error</find>
       <find>adConfig</find>
+      <find>xp_appid</find>
+      <find>mAppid</find>
+      <find>mWebView</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -207,7 +184,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/OaidHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/H5Utils.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/config/H5Config.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/SplashActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/dialog/DislikeDialog.java" />
@@ -217,12 +193,16 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/TTAdUtils.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/BrowserActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/util/ParamUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/config/H5Config.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/ui/BrowserActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="y" value="53" />
+    <option name="x" value="45" />
+    <option name="y" value="46" />
     <option name="width" value="1795" />
     <option name="height" value="950" />
   </component>
@@ -297,7 +277,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="zhangyue" type="462c0819:PsiDirectoryNode" />
+              <item name="xipu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
@@ -307,8 +287,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="zhangyue" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="xipu" type="462c0819:PsiDirectoryNode" />
+              <item name="xmdmlrjh5" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
@@ -318,8 +298,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="zhangyue" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="xipu" type="462c0819:PsiDirectoryNode" />
+              <item name="xmdmlrjh5" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -330,8 +310,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="zhangyue" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="xipu" type="462c0819:PsiDirectoryNode" />
+              <item name="xmdmlrjh5" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -342,8 +322,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="zhangyue" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="xipu" type="462c0819:PsiDirectoryNode" />
+              <item name="xmdmlrjh5" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -384,7 +364,7 @@
     <property name="ExportApk.ApkPath" value="D:\git repository\xipuH5\xph5\app" />
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.SignV1" value="true" />
-    <property name="device.picker.selection" value="3784c89a" />
+    <property name="device.picker.selection" value="V4IBUOMVNBUK9TFQ" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/keystore/gemjy.keystore" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="show.do.not.ask.upgrade.gradle.plugin" value="3.1.4" />
@@ -485,11 +465,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="53" width="1795" height="950" extended-state="1" />
+    <frame x="45" y="46" width="1795" height="950" extended-state="0" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.329683" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.329683" />
       <window_info id="Structure" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
@@ -505,7 +485,7 @@
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.3272059" />
       <window_info anchor="bottom" id="Find" order="8" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="9" visible="true" weight="0.76715684" />
+      <window_info anchor="bottom" id="Logcat" order="9" visible="true" weight="0.53186274" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
@@ -515,24 +495,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/applog-release.aar/34ddc6eddac6b9b336215312b72daf62/res/values/values.xml" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/applog-release.aar/34ddc6eddac6b9b336215312b72daf62/jars/classes.jar!/com/ss/android/common/lib/EventUtils.class" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lyydl_jrtt.iml" />
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -654,14 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="115" column="53" selection-start-line="115" selection-start-column="53" selection-end-line="115" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/GDTUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -780,14 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="42" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/H5Utils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -814,7 +760,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/BrowserActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
+        <state relative-caret-position="15018">
           <caret line="812" column="19" selection-start-line="812" selection-start-column="19" selection-end-line="812" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -842,6 +788,65 @@
             <element signature="e#39574#39575#0" expanded="true" />
             <element signature="e#41301#41302#0" expanded="true" />
             <element signature="e#41357#41358#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-26/java/lang/StringBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="264" column="5" lean-forward="true" selection-start-line="264" selection-start-column="5" selection-end-line="264" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="42" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/util/ParamUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="118" column="21" selection-start-line="118" selection-start-column="15" selection-end-line="118" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/libs/tbs_sdk_thirdapp_v4.3.0.3_43903_sharewithdownloadwithfile_withoutGame_obfs_20200402_121309.jar!/com/tencent/smtt/sdk/WebSettings.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/config/H5Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="69" column="59" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
+          <folding>
+            <element signature="e#1780#1798#0" expanded="true" />
+            <element signature="e#2006#2024#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/ui/BrowserActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="216" column="26" selection-start-line="216" selection-start-column="26" selection-end-line="216" selection-end-column="26" />
+          <folding>
+            <element signature="e#7791#7792#0" expanded="true" />
+            <element signature="e#7847#7848#0" expanded="true" />
           </folding>
         </state>
       </provider>
