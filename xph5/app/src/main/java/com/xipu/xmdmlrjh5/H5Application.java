@@ -28,7 +28,7 @@ public class H5Application extends Application {
         super.onCreate();
         SOToastUtil.init(this);
         ParamUtil.loadConfig(this);
-        QbSdk.initX5Environment(this, null);
+
         try {
             JLibrary.InitEntry(this);
         } catch (Exception e) {

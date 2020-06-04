@@ -16,6 +16,7 @@ import com.startobj.util.http.SORequestParams;
 import com.startobj.util.http.SOServertReturnErrorException;
 import com.startobj.util.network.SONetworkUtil;
 
+import com.tencent.smtt.sdk.QbSdk;
 import com.xipu.xmdmlrjh5.R;
 import com.xipu.xmdmlrjh5.config.H5Config;
 import com.xipu.xmdmlrjh5.util.H5Utils;
@@ -46,13 +47,23 @@ public class SplashActivity extends Activity {
         mPermissionsChecker = new PermissionsChecker(this);// 缺少权限时, 进入权限配置页面
         if (mPermissionsChecker.lacksPermissions(PERMISSIONS)) {
             startPermissionsActivity(this);
-
         } else {
             startLoading();
-            // 获取数据
-            obtainData();
-            // loading结束
-            stopLoading();
+            QbSdk.initX5Environment(this, new QbSdk.PreInitCallback() {
+                @Override
+                public void onCoreInitFinished() {
+
+                }
+
+                @Override
+                public void onViewInitFinished(boolean b) {
+                    Log.d(H5Utils.TAG, "onViewInitFinished()" + b);
+                    // 获取数据
+                    obtainData();
+                    // loading结束
+                    stopLoading();
+                }
+            });
         }
     }
 

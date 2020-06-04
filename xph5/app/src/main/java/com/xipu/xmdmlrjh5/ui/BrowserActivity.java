@@ -118,11 +118,6 @@ public class BrowserActivity extends Activity {
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.getSettings().setDomStorageEnabled(true);
 
-        mWebView.getSettings().setAppCacheMaxSize(1024*1024*8);
-        mWebView.getSettings().setAppCachePath(getApplicationContext().getCacheDir().getAbsolutePath());
-        mWebView.getSettings().setAllowFileAccess(true);
-        mWebView.getSettings().setAppCacheEnabled(true);
-
         mWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
         mWebView.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
         // 设置UserAgent
@@ -214,7 +209,6 @@ public class BrowserActivity extends Activity {
         H5Utils.showProgress(BrowserActivity.this);
         mWebView.addJavascriptInterface(new JsInterface(), "zyh5sdk");
         mWebView.loadUrl(mUrl);
-        mWebView.reload();
         KeyBoardListener.getInstance(this, mWebView, new KeyBoardListener.OnChangeHeightListener() {
             @Override
             public void onShow(int usableHeightNow) {
