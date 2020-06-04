@@ -1,4 +1,4 @@
-package com.zhangyue.h5.ui;
+package com.xipu.xmdmlrjh5.ui;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -37,6 +37,7 @@ import com.bytedance.sdk.openadsdk.TTNativeExpressAd;
 import com.bytedance.sdk.openadsdk.TTRewardVideoAd;
 import com.qq.gdt.action.ActionType;
 import com.qq.gdt.action.GDTAction;
+import com.startobj.util.device.SODensityUtil;
 import com.startobj.util.http.SORequestParams;
 import com.tencent.smtt.export.external.interfaces.SslError;
 import com.tencent.smtt.export.external.interfaces.SslErrorHandler;
@@ -45,15 +46,15 @@ import com.tencent.smtt.sdk.WebChromeClient;
 import com.tencent.smtt.sdk.WebSettings;
 import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.WebViewClient;
-import com.zhangyue.h5.R;
-import com.zhangyue.h5.config.H5Config;
-import com.zhangyue.h5.config.TTAdManagerHolder;
-import com.zhangyue.h5.util.AdConfig;
-import com.zhangyue.h5.util.H5Utils;
-import com.zhangyue.h5.util.KeyBoardListener;
-import com.zhangyue.h5.util.ParamUtil;
-import com.zhangyue.h5.util.TTAdUtils;
-import com.zhangyue.h5.util.ZYJSONObject;
+import com.xipu.xmdmlrjh5.R;
+import com.xipu.xmdmlrjh5.config.H5Config;
+import com.xipu.xmdmlrjh5.config.TTAdManagerHolder;
+import com.xipu.xmdmlrjh5.util.AdConfig;
+import com.xipu.xmdmlrjh5.util.H5Utils;
+import com.xipu.xmdmlrjh5.util.KeyBoardListener;
+import com.xipu.xmdmlrjh5.util.ParamUtil;
+import com.xipu.xmdmlrjh5.util.TTAdUtils;
+import com.xipu.xmdmlrjh5.util.ZYJSONObject;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -206,7 +207,6 @@ public class BrowserActivity extends Activity {
         H5Utils.showProgress(BrowserActivity.this);
         mWebView.addJavascriptInterface(new JsInterface(), "zyh5sdk");
         mWebView.loadUrl(mUrl);
-        Log.d(H5Utils.TAG, "loadUrl: " + mUrl);
         KeyBoardListener.getInstance(this, mWebView, new KeyBoardListener.OnChangeHeightListener() {
             @Override
             public void onShow(int usableHeightNow) {
@@ -216,9 +216,6 @@ public class BrowserActivity extends Activity {
             public void onHidden() {
             }
         }).init();
-        TTAdManager ttAdManager = TTAdManagerHolder.get();
-        TTAdManagerHolder.get().requestPermissionIfNecessary(BrowserActivity.this);
-        mTTAdNative = ttAdManager.createAdNative(BrowserActivity.this);
     }
 
     private void initHandler() {
@@ -276,11 +273,11 @@ public class BrowserActivity extends Activity {
      * @return
      */
     private String generateUrl() {
-        //   StringBuffer sb = new StringBuffer(H5Config.GAME_URL);
-        //  StringBuffer sb = new StringBuffer("http://testh5.xipu.com/play.php");
-        StringBuffer sb = new StringBuffer("http://h5.xipu.com/play.php");
+        StringBuffer sb = new StringBuffer(H5Config.GAME_URL);
+        //    StringBuffer sb = new StringBuffer("http://testh5.xipu.com/play.php");
+        //  StringBuffer sb = new StringBuffer("http://h5.xipu.com/play.php");
         sb.append("?app_id=" + ParamUtil.getAppId() + "&");
-        SORequestParams params = new SORequestParams("http://h5.xipu.com/play.php", H5Utils.getCommonParams(this));
+        SORequestParams params = new SORequestParams(H5Config.GAME_URL, H5Utils.getCommonParams(this));
         sb.append(params.getParamsStr());
         Log.d(H5Utils.TAG, "generateUrl: " + sb.toString());
         return sb.toString();
@@ -862,6 +859,12 @@ public class BrowserActivity extends Activity {
         return (String) data;
     }
 
+    private String setTTCallBackParams(Object width, Object height) {
+        Object data = "{\"width\":" + width + ",\"height\":" + height + "}";
+        Log.d(H5Utils.TAG, (String) data);
+        return (String) data;
+    }
+
     public void sendJrttPayInfo(boolean is_report, int amount, String out_trade_no) {
         if (ParamUtil.isUseJrtt() && is_report) {
             Log.e(H5Utils.TAG, "jrtt pay");
@@ -943,7 +946,7 @@ public class BrowserActivity extends Activity {
         }
     }
 
-    // 回调 H5
+    // 广告参数回调 H5
     public void onTTCallback(final String json) {
         if (mWebView != null) {
             this.runOnUiThread(new Runnable() {
@@ -953,6 +956,23 @@ public class BrowserActivity extends Activity {
                         @Override
                         public void onReceiveValue(String s) {
                             //   Log.d(H5Utils.TAG, "onReceiveValue:" + s);
+                        }
+                    });
+                }
+            });
+        }
+    }
+
+    //宽高参数回调 H5
+    public void screenSizeCallback(final String json) {
+        if (mWebView != null) {
+            this.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    mWebView.evaluateJavascript("XipuSDK.screenSizeCallback(" + json + ")", new ValueCallback<String>() {
+                        @Override
+                        public void onReceiveValue(String s) {
+                            //  Log.d(H5Utils.TAG, "onReceiveValue:" + s);
                         }
                     });
                 }
@@ -1014,7 +1034,19 @@ public class BrowserActivity extends Activity {
         //初始化
         @JavascriptInterface
         public void TTAdInit(final String values) {
-            Log.d(H5Utils.TAG, "TTAdInit: ");
+            if (!TextUtils.isEmpty(values)) {
+                try {
+                    Log.d(H5Utils.TAG, "TTAdInit: " + values);
+                    ZYJSONObject dataResult = new ZYJSONObject(values);
+                    TTAdManagerHolder.init(getApplicationContext(), dataResult.getStringDef("app_id"));
+                    TTAdManager ttAdManager = TTAdManagerHolder.get();
+                    TTAdManagerHolder.get().requestPermissionIfNecessary(BrowserActivity.this);
+                    mTTAdNative = ttAdManager.createAdNative(BrowserActivity.this);
+                } catch (JSONException e) {
+                    Log.e(H5Utils.TAG, "TTAdInit:初始化失败 " + e.getMessage());
+                    e.printStackTrace();
+                }
+            }
         }
 
         //加载 banner广告
@@ -1052,6 +1084,11 @@ public class BrowserActivity extends Activity {
             loadFullScreenVideoAd(TTAdUtils.getAdParams(values));
         }
 
+        @JavascriptInterface
+        public void getScreenSize(final String values) {
+            Log.d(H5Utils.TAG, "getScreenSize: " + values);
+            screenSizeCallback(setTTCallBackParams(SODensityUtil.getScreenWidth(BrowserActivity.this), SODensityUtil.getScreenHeight(BrowserActivity.this)));
+        }
     }
 
 }

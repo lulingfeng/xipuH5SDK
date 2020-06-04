@@ -1,4 +1,4 @@
-package com.zhangyue.h5.ui;
+package com.xipu.xmdmlrjh5.ui;
 
 
 import android.app.Activity;
@@ -13,9 +13,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 
 import com.startobj.util.common.SOCommonUtil;
-import com.zhangyue.h5.custom.view.H5Dialog;
-import com.zhangyue.h5.util.PermissionsChecker;
-import com.zhangyue.h5.util.permission.PermissionUtils;
+import com.xipu.xmdmlrjh5.custom.view.H5Dialog;
+import com.xipu.xmdmlrjh5.util.PermissionsChecker;
+import com.xipu.xmdmlrjh5.util.permission.PermissionUtils;
 
 import java.util.ArrayList;
 import java.util.List;

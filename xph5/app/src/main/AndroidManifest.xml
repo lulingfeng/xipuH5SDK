@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zhangyue.h5">
+    package="com.xipu.xmdmlrjh5">
 
     <!-- 允许网络连接 -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -33,13 +33,13 @@
     <uses-permission android:name="android.permission.GET_TASKS"/>
 
     <application
-        android:name="com.zhangyue.h5.H5Application"
+        android:name=".H5Application"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/H5AppTheme">
         <activity
-            android:name="com.zhangyue.h5.ui.SplashActivity"
+            android:name=".ui.SplashActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="sensorPortrait"
@@ -52,14 +52,14 @@
         </activity>
 
         <activity
-            android:name="com.zhangyue.h5.ui.BrowserActivity"
+            android:name=".ui.BrowserActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:launchMode="singleTop"
             android:screenOrientation="sensorPortrait"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"></activity>
 
         <activity
-            android:name="com.zhangyue.h5.ui.PermissionsActivity"
+            android:name=".ui.PermissionsActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:launchMode="singleTop"
             android:screenOrientation="sensorPortrait"
@@ -67,7 +67,7 @@
         <!-- 喜扑游戏 客户端id -->
         <meta-data
             android:name="xp_appid"
-            android:value="0723d02cec14fc2dd6ec725c344ef5c1" />
+            android:value="f602ac3f1847c82db74d70b887943ed2" />
         <!-- 喜扑游戏 今日头条统计SDK appname -->
         <meta-data
             android:name="xp_jrtt_appname"
@@ -99,7 +99,7 @@
         <!--喜扑游戏 穿山甲 appId -->
         <meta-data
             android:name="xp_ttad_appid"
-            android:value="5073945" />
+            android:value="" />
         <!-- 喜扑游戏 穿山甲 appName -->
         <meta-data
             android:name="xp_ttad_appname"
@@ -108,7 +108,7 @@
         <!-- 穿山甲 AD -->
         <provider
             android:name="com.bytedance.sdk.openadsdk.TTFileProvider"
-            android:authorities="com.zhangyue.h5.TTFileProvider"
+            android:authorities="com.xipu.xmdmlrjh5.TTFileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -118,8 +118,10 @@
 
         <provider
             android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
-            android:authorities="com.zhangyue.h5.TTMultiProvider"
-            android:exported="false" />
+            android:authorities="com.xipu.xmdmlrjh5.TTMultiProvider"
+            android:exported="false" >
+        </provider>
+
     </application>
 
 </manifest>

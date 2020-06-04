@@ -1,4 +1,4 @@
-package com.zhangyue.h5;
+package com.xipu.xmdmlrjh5;
 
 import android.app.Application;
 import android.text.TextUtils;
@@ -12,16 +12,14 @@ import com.qq.gdt.action.GDTAction;
 import com.startobj.util.toast.SOToastUtil;
 import com.tencent.bugly.crashreport.CrashReport;
 import com.tencent.smtt.sdk.QbSdk;
-import com.zhangyue.h5.config.TTAdManagerHolder;
-import com.zhangyue.h5.util.GDTUtils;
-import com.zhangyue.h5.util.H5Utils;
-import com.zhangyue.h5.util.OaidHelper;
-import com.zhangyue.h5.util.ParamUtil;
+import com.xipu.xmdmlrjh5.util.GDTUtils;
+import com.xipu.xmdmlrjh5.util.H5Utils;
+import com.xipu.xmdmlrjh5.util.OaidHelper;
+import com.xipu.xmdmlrjh5.util.ParamUtil;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
 
 public class H5Application extends Application {
 
@@ -38,7 +36,6 @@ public class H5Application extends Application {
             Log.e(H5Utils.TAG, "oaid JLibrary初始化失败" + e.getMessage());
         }
         SOToastUtil.init(this);
-        ParamUtil.loadConfig(getApplicationContext());
         if (!BuildConfig.DEBUG) {
             Log.d(H5Utils.TAG, "Bugly始化");
             CrashReport.initCrashReport(getApplicationContext(), "592580b3cc", false);
@@ -55,7 +52,7 @@ public class H5Application extends Application {
             initRangersAppLog();
         }
 
-           TTAdManagerHolder.init(this);
+      //  TTAdManagerHolder.init(this);
     }
 
 

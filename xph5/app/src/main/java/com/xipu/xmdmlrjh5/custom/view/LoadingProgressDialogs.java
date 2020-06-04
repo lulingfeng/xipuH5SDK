@@ -1,11 +1,11 @@
-package com.zhangyue.h5.custom.view;
+package com.xipu.xmdmlrjh5.custom.view;
 
 
 import android.app.Dialog;
 import android.content.Context;
 import android.view.Gravity;
 
-import com.zhangyue.h5.R;
+import com.xipu.xmdmlrjh5.R;
 
 
 public class LoadingProgressDialogs extends Dialog {

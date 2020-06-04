@@ -1,4 +1,4 @@
-package com.zhangyue.h5.util;
+package com.xipu.xmdmlrjh5.util;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -43,31 +43,33 @@ public class TTAdUtils {
 
     public static AdConfig getAdParams(final String values) {
         AdConfig adConfig = new AdConfig();
-        try {
-            ZYJSONObject dataResult = new ZYJSONObject(values);
-            adConfig.setAd_id(dataResult.getStringDef("ad_id"));
-            adConfig.setCount(dataResult.optInt("count"));
-            adConfig.setReward_name(dataResult.getStringDef("reward_name"));
-            adConfig.setReward_count(dataResult.optInt("reward_count"));
-            adConfig.setUser_id(dataResult.getStringDef("user_id"));
-            adConfig.setExtra(dataResult.getStringDef("extra"));
-            if (dataResult.getStringDef("orientation").contains("vertical")) {
-                adConfig.setOrientation(TTAdConstant.VERTICAL);
-            } else if (dataResult.getStringDef("orientation").contains("horizontal")) {
-                adConfig.setOrientation(TTAdConstant.HORIZONTAL);
-            }
-            //获取坐标
-            if (!TextUtils.isEmpty(dataResult.getStringDef("style"))){
-                ZYJSONObject styleObject = new ZYJSONObject(dataResult.getStringDef("style"));
-                adConfig.setTop(styleObject.optInt("top"));
-                adConfig.setLeft(styleObject.optInt("left"));
-                adConfig.setWidth(styleObject.optInt("width"));
-                adConfig.setHeight(styleObject.optInt("height"));
-            }
+        if (!TextUtils.isEmpty(values)) {
+            try {
+                ZYJSONObject dataResult = new ZYJSONObject(values);
+                adConfig.setAd_id(dataResult.getStringDef("ad_id"));
+                adConfig.setCount(dataResult.optInt("count"));
+                adConfig.setReward_name(dataResult.getStringDef("reward_name"));
+                adConfig.setReward_count(dataResult.optInt("reward_count"));
+                adConfig.setUser_id(dataResult.getStringDef("user_id"));
+                adConfig.setExtra(dataResult.getStringDef("extra"));
+                if (dataResult.getStringDef("orientation").contains("vertical")) {
+                    adConfig.setOrientation(TTAdConstant.VERTICAL);
+                } else if (dataResult.getStringDef("orientation").contains("horizontal")) {
+                    adConfig.setOrientation(TTAdConstant.HORIZONTAL);
+                }
+                //获取坐标
+                if (!TextUtils.isEmpty(dataResult.getStringDef("style"))) {
+                    ZYJSONObject styleObject = new ZYJSONObject(dataResult.getStringDef("style"));
+                    adConfig.setTop(styleObject.optInt("top"));
+                    adConfig.setLeft(styleObject.optInt("left"));
+                    adConfig.setWidth(styleObject.optInt("width"));
+                    adConfig.setHeight(styleObject.optInt("height"));
+                }
 
-        } catch (JSONException e) {
-            e.printStackTrace();
-            Log.e(H5Utils.TAG, "getBannerAdParams: " + e.getMessage());
+            } catch (JSONException e) {
+                e.printStackTrace();
+                Log.e(H5Utils.TAG, "getBannerAdParams: " + e.getMessage());
+            }
         }
         return adConfig;
     }

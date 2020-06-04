@@ -1,4 +1,4 @@
-package com.zhangyue.h5.config;
+package com.xipu.xmdmlrjh5.config;
 
 public class H5Config {
     // 服务端版本

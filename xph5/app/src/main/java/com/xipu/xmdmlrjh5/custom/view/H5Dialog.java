@@ -1,4 +1,4 @@
-package com.zhangyue.h5.custom.view;
+package com.xipu.xmdmlrjh5.custom.view;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;

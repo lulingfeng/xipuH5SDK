@@ -1,4 +1,4 @@
-package com.zhangyue.h5.util;
+package com.xipu.xmdmlrjh5.util;
 
 import android.content.Context;
 import android.util.Log;

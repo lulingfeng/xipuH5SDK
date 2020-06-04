@@ -1,4 +1,4 @@
-package com.zhangyue.h5.util.permission;
+package com.xipu.xmdmlrjh5.util.permission;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.zhangyue.h5.ui;
+package com.xipu.xmdmlrjh5.ui;
 
 import android.Manifest;
 import android.app.Activity;
@@ -16,11 +16,11 @@ import com.startobj.util.http.SORequestParams;
 import com.startobj.util.http.SOServertReturnErrorException;
 import com.startobj.util.network.SONetworkUtil;
 
-import com.zhangyue.h5.R;
-import com.zhangyue.h5.config.H5Config;
-import com.zhangyue.h5.util.H5Utils;
-import com.zhangyue.h5.util.ParamUtil;
-import com.zhangyue.h5.util.PermissionsChecker;
+import com.xipu.xmdmlrjh5.R;
+import com.xipu.xmdmlrjh5.config.H5Config;
+import com.xipu.xmdmlrjh5.util.H5Utils;
+import com.xipu.xmdmlrjh5.util.ParamUtil;
+import com.xipu.xmdmlrjh5.util.PermissionsChecker;
 
 import org.json.JSONObject;
 
@@ -99,7 +99,7 @@ public class SplashActivity extends Activity {
                     H5Utils.setChannel(SplashActivity.this, dataResult.optString("channel"));
                     H5Config.GAME_BASE_URL = dataResult.optString("h5base");
                     H5Config.GAME_URL = H5Config.GAME_BASE_URL + "/play.php";
-                    Log.d(H5Utils.TAG, "实际地址: " + H5Config.GAME_URL);
+                    Log.d(H5Utils.TAG, "实际请求地址: " + H5Config.GAME_URL);
                 } catch (Exception e) {
                     if (e instanceof SOServertReturnErrorException)
                         Toast.makeText(SplashActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();

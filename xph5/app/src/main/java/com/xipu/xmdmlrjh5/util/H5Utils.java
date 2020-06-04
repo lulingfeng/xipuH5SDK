@@ -1,4 +1,4 @@
-package com.zhangyue.h5.util;
+package com.xipu.xmdmlrjh5.util;
 
 import android.app.Activity;
 import android.content.Context;
@@ -21,8 +21,8 @@ import com.startobj.util.http.SOHttpConnection;
 import com.startobj.util.http.SORequestParams;
 import com.startobj.util.log.SOLogUtil;
 import com.startobj.util.toast.SOToastUtil;
-import com.zhangyue.h5.config.H5Config;
-import com.zhangyue.h5.custom.view.LoadingProgressDialogs;
+import com.xipu.xmdmlrjh5.config.H5Config;
+import com.xipu.xmdmlrjh5.custom.view.LoadingProgressDialogs;
 
 import java.io.IOException;
 import java.util.Enumeration;
