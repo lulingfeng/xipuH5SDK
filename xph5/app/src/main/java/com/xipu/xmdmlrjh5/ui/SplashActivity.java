@@ -71,14 +71,14 @@ public class SplashActivity extends Activity {
      * 开始loading
      */
     private void startLoading() {
-
+        H5Utils.showProgress(this, false, 0);
     }
 
     /**
      * 结束loading
      */
     private void stopLoading() {
-
+        H5Utils.cancelProgress();
     }
 
     /**

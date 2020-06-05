@@ -276,7 +276,7 @@ public class BrowserActivity extends Activity {
      */
     private String generateUrl() {
         StringBuffer sb = new StringBuffer(H5Config.GAME_URL);
-    //    StringBuffer sb = new StringBuffer("http://testh5.xipu.com/play.php");
+        //    StringBuffer sb = new StringBuffer("http://testh5.xipu.com/play.php");
         //  StringBuffer sb = new StringBuffer("http://h5.xipu.com/play.php");
         sb.append("?app_id=" + ParamUtil.getAppId() + "&");
         SORequestParams params = new SORequestParams(H5Config.GAME_URL, H5Utils.getCommonParams(this));
@@ -339,7 +339,7 @@ public class BrowserActivity extends Activity {
 
     @Override
     protected void onDestroy() {
-        if(mWebView != null){
+        if (mWebView != null) {
             mWebView.destroy();
         }
         if (mTTAd != null) {
@@ -371,7 +371,7 @@ public class BrowserActivity extends Activity {
         mLoadCount = 1;
         mAdSlot = new AdSlot.Builder()
                 .setCodeId(adConfig.getAd_id())
-                .setExpressViewAcceptedSize(adConfig.getWidth(), adConfig.getHeight())
+                .setExpressViewAcceptedSize(SODensityUtil.px2dip(BrowserActivity.this, adConfig.getWidth()), SODensityUtil.px2dip(BrowserActivity.this, adConfig.getHeight()))
                 .setSupportDeepLink(true)
                 .setAdCount(adConfig.getCount())
                 .build();
@@ -510,7 +510,7 @@ public class BrowserActivity extends Activity {
                 .setCodeId(adConfig.getAd_id()) //广告位id
                 .setSupportDeepLink(true)
                 .setAdCount(adConfig.getCount()) //请求广告数量为1到3条
-                .setExpressViewAcceptedSize(adConfig.getWidth(), adConfig.getHeight()) //期望模板广告view的size,单位dp
+                .setExpressViewAcceptedSize(SODensityUtil.px2dip(BrowserActivity.this, adConfig.getWidth()), SODensityUtil.px2dip(BrowserActivity.this, adConfig.getHeight()))
                 .build();
         loadInteractionAdInfo();
     }
