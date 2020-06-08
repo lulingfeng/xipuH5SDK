@@ -48,6 +48,7 @@ public class TTAdUtils {
                 ZYJSONObject dataResult = new ZYJSONObject(values);
                 adConfig.setAd_id(dataResult.getStringDef("ad_id"));
                 adConfig.setCount(dataResult.optInt("count"));
+                adConfig.setIntervalTime(dataResult.optInt("delay"));
                 adConfig.setReward_name(dataResult.getStringDef("reward_name"));
                 adConfig.setReward_count(dataResult.optInt("reward_count"));
                 adConfig.setUser_id(dataResult.getStringDef("user_id"));

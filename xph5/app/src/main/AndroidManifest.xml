@@ -103,7 +103,7 @@
         <!-- 喜扑游戏 穿山甲 appName -->
         <meta-data
             android:name="xp_ttad_appname"
-            android:value="喜扑测试" />
+            android:value="夏目的美丽日记_android" />
 
         <!-- 穿山甲 AD -->
         <provider

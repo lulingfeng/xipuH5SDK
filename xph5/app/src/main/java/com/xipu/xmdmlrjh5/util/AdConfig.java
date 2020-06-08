@@ -6,6 +6,7 @@ public class AdConfig {
     private String app_id;
     private String ad_id;
     private int count;
+    private int intervalTime;
     private int top;
     private int left;
     private int width;
@@ -65,12 +66,20 @@ public class AdConfig {
         this.extra = extra;
     }
 
+    public void setIntervalTime(int intervalTime) {
+        this.intervalTime = intervalTime;
+    }
+
     public String getAd_id() {
         return TextUtils.isEmpty(ad_id) ? "" : ad_id;
     }
 
     public String getApp_id() {
         return TextUtils.isEmpty(app_id) ? "" : app_id;
+    }
+
+    public int getIntervalTime() {
+        return intervalTime;
     }
 
     public int getHeight() {
@@ -119,6 +128,7 @@ public class AdConfig {
                 "app_id='" + app_id + '\'' +
                 ", ad_id='" + ad_id + '\'' +
                 ", count='" + count + '\'' +
+                ", intervalTime='" + intervalTime + '\'' +
                 ", top='" + top + '\'' +
                 ", left='" + left + '\'' +
                 ", width='" + width + '\'' +

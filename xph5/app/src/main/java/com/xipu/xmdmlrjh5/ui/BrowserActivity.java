@@ -398,9 +398,12 @@ public class BrowserActivity extends Activity {
                     onTTCallback(setTTCallBackParams("bannerLoadError", null, "广告数量为0", null, null, null, null, null));
                     return;
                 }
+                Log.d(H5Utils.TAG, "onNativeExpressAdLoad: " + ads.size());
                 mTTAd = ads.get(0);
-                mTTAd.setSlideIntervalTime(30 * 1000);
-                bindBannerAdListener(ads.get(0));
+                if (adConfig.getIntervalTime() > 0) {
+                    mTTAd.setSlideIntervalTime(adConfig.getIntervalTime() * 1000);
+                }
+                bindBannerAdListener(mTTAd);
                 startTime = System.currentTimeMillis();
                 mTTAd.render();
             }
