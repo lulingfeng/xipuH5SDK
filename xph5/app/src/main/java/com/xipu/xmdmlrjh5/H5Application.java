@@ -8,10 +8,12 @@ import com.bun.miitmdid.core.JLibrary;
 import com.bytedance.applog.AppLog;
 import com.bytedance.applog.InitConfig;
 import com.bytedance.applog.util.UriConfig;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
 import com.qq.gdt.action.GDTAction;
 import com.startobj.util.toast.SOToastUtil;
 import com.tencent.bugly.crashreport.CrashReport;
-import com.tencent.smtt.sdk.QbSdk;
+import com.xipu.h5.osdk.utils.OSDKUtils;
 import com.xipu.xmdmlrjh5.util.GDTUtils;
 import com.xipu.xmdmlrjh5.util.H5Utils;
 import com.xipu.xmdmlrjh5.util.OaidHelper;
@@ -26,6 +28,8 @@ public class H5Application extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        OSDKUtils.getInstance().loadThirdConfig(this);
+        initFacebookTransaction();
         SOToastUtil.init(this);
         ParamUtil.loadConfig(this);
 
@@ -52,9 +56,22 @@ public class H5Application extends Application {
             initRangersAppLog();
         }
 
-      //  TTAdManagerHolder.init(this);
+        //  TTAdManagerHolder.init(this);
     }
 
+    /**
+     * 初始化facebook 事务
+     */
+    private void initFacebookTransaction() {
+        try {
+            FacebookSdk.sdkInitialize(this);
+            //记录应用启动
+            AppEventsLogger.activateApp(this);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.d(OSDKUtils.TAG, "initFacebookTransaction Exception: " + e.getMessage());
+        }
+    }
 
     /*
      * 获取进程号对应的进程名

@@ -4,13 +4,12 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.ViewGroup;
 
-import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.xipu.xmdmlrjh5.R;
 
 public class WXPayEntryActivity extends Activity /*implements IWXAPIEventHandler*/ {
 
     private static final String TAG = WXPayEntryActivity.class.getName();
-    private IWXAPI api;
+   // private IWXAPI api;
     private ViewGroup viewGroup;
 
     @Override

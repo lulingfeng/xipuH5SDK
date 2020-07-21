@@ -75,7 +75,7 @@ public class H5Utils {
             //////// 动态打包使用--结束///////
             mIdentityToken = getChannelFromApk(context, "itoken_");
             if (TextUtils.isEmpty(mIdentityToken))
-                mIdentityToken = SOFileUtil.getFromAssets(context, "itoken.txt");
+                mIdentityToken = SOFileUtil.getAssetsFile(context, "itoken.txt");
         } catch (Exception e) {
             e.printStackTrace();
         }

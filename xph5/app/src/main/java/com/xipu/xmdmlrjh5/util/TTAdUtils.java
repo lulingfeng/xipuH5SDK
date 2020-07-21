@@ -11,8 +11,21 @@ import org.json.JSONException;
 
 public class TTAdUtils {
 
+    private static TTAdUtils instance;
 
-    public static String getTTAdAppId(final Context context) {
+    public static TTAdUtils getInstance() {
+        if (instance == null) {
+            synchronized (TTAdUtils.class) {
+                if (instance == null) {
+                    instance = new TTAdUtils();
+                }
+            }
+        }
+        return instance;
+    }
+
+
+    public String getTTAdAppId(final Context context) {
         String mTTAdAppId = "";
         try {
             mTTAdAppId = context.getPackageManager().getApplicationInfo(
@@ -26,7 +39,7 @@ public class TTAdUtils {
         return mTTAdAppId;
     }
 
-    public static String getTTAdAppName(final Context context) {
+    public String getTTAdAppName(final Context context) {
         String mTTAdAppName = "";
         try {
             mTTAdAppName = context.getPackageManager().getApplicationInfo(
@@ -41,7 +54,9 @@ public class TTAdUtils {
     }
 
 
-    public static AdConfig getAdParams(final String values) {
+
+
+    public AdConfig getAdParams(final String values) {
         AdConfig adConfig = new AdConfig();
         if (!TextUtils.isEmpty(values)) {
             try {

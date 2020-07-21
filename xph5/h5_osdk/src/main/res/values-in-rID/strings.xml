@@ -1,0 +1,45 @@
+<resources>
+
+    <string name="o_Payment_failed_no_payment_product_ID_passed_in">Pembayaran gagal: Tidak ada ID produk pembayaran yang diteruskan</string>
+    <string name="o_Payment_failed_payment_product_id_is_empty">Pembayaran gagal: id produk pembayaran kosong</string>
+    <string name="o_Payment_failed_order_number_cannot_be_empty">Pembayaran gagal: Nomor pesanan tidak boleh kosong</string>
+    <string name="o_Payment_failed_no_order_number">Pembayaran gagal: tidak ada nomor pesanan</string>
+    <string name="o_third_bind_hint">Akun tiga pihak terikat dengan sukses, dan akun tamu tidak akan bisa masuk. Silakan masuk menggunakan akun tiga pihak lain kali.</string>
+    <string name="o_understood">Mengerti</string>
+    <string name="o_please_use_third_account_for_login">Silakan masuk menggunakan akun tiga pihak terikat</string>
+    <string name="o_guest_login_hint">Login akun anonim lokal</string>
+    <string name="o_make_guest_for_login">Buat login akun anonim</string>
+    <string name="o_verified">Otentikasi nama asli</string>
+    <string name="o_payment_is_not_supported_in_the_current_environment">Lingkungan saat ini tidak mendukung pembayaran</string>
+    <string name="o_google_login_error">Login Google gagal</string>
+    <string name="o_google_login_exception">Pengecualian login Google</string>
+    <string name="o_google_cancel_pay">Google membatalkan pembayaran</string>
+    <string name="o_google_pay_error">Pembayaran Google gagal</string>
+    <string name="o_google_query_product_exception">Google menanyakan kelainan produk</string>
+    <string name="o_google_confirms_abnormal_payment">Google mengonfirmasi pembayaran tidak normal</string>
+    <string name="o_facebook_onCancel">Facebook membatalkan login</string>
+    <string name="o_facebook_onError">Login Facebook gagal</string>
+    <string name="o_facebook_login_exception">Pengecualian login Facebook</string>
+    <string name="o_line_login_canceled">Line Batalkan login</string>
+    <string name="o_line_login_error">Line Gagal masuk</string>
+    <string name="o_line_login_exception">Line Login tidak normal</string>
+    <string name="o_login">Masuk</string>
+    <string name="o_jump">Lewati</string>
+    <string name="o_line_login">Line</string>
+    <string name="o_google_login">Google</string>
+    <string name="o_facebook_login">Facebook</string>
+    <string name="o_guest_login">Guest</string>
+    <string name="o_guest_hint">Akun turis mudah hilang, silakan ikat akun berikut sesegera mungkin</string>
+    <string name="o_line_no_install">Silakan instal Line dan bagikan</string>
+    <string name="o_facebook_share_video_null">Video bersama tidak ada</string>
+    <string name="o_facebook_no_login_for_share">1. Versi terbaru aplikasi facebook harus diinstal\n2. Masuk ke aplikasi facebook dan pastikan aplikasi itu berjalan di latar belakang untuk menyelesaikan masalah berbagi</string>
+    <string name="o_facebook_no_install">Silakan instal Facebook7.0 atau yang lebih baru untuk berbagi</string>
+    <string name="o_facebook_share_size_too_long">Bagikan konten termasuk hingga 6 elemen foto dan video</string>
+    <string name="o_Failed_to_generate_guest_account">Gagal membuat akun tamu, silakan coba lagi nanti</string>
+    <string name="o_facebook_bind_onCancel">Facebook tidak mengikat</string>
+    <string name="o_facebook_bind_onError">Facebook Binding gagal</string>
+    <string name="o_line_bind_onCancel">Line tidak mengikat</string>
+    <string name="o_line_bind_onError">Line Binding gagal</string>
+    <string name="o_google_bind_onCancel">Google tidak mengikat</string>
+    <string name="o_google_bind_onError">Google Binding gagal</string>
+</resources>
