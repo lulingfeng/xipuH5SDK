@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/o_bg_oversea_login"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <TextView
+            android:id="@+id/o_login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="@string/o_login"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/o_account_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/o_username"
+            android:textColor="#a8a3a3"
+            android:textSize="14dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/o_password_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/o_password"
+                android:textColor="#a8a3a3"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:id="@+id/o_login_dialog_password_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/o_password_hint"
+                android:background="@drawable/o_bg_oversea_login_dialog_text"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/o_login_dialog_password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/o_login_dialog_but"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/o_login_dialog_password_layout"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/o_bg_oversea_login_dialog_but"
+                android:gravity="center"
+                android:text="@string/o_confirm"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/o_login_dialog_list_root"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/o_bg_oversea_dialog_account_list"
+                android:clickable="true"
+                android:visibility="gone">
+
+                <ListView
+                    android:id="@+id/o_login_dialog_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="1dp"
+                    android:divider="@null"
+                    android:scrollbars="none" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/o_login_dialog_account_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/o_bg_oversea_login_dialog_text"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/o_login_dialog_account"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:id="@+id/o_login_dialog_user_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:src="@mipmap/o_icon_down" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

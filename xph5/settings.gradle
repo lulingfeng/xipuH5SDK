@@ -1,1 +1,1 @@
-include ':app', ':h5_osdk'
+include ':h5module_osdk', ':h5sdk', ':soutil', ':h5demo_h5', ':h5demo_osdk', ':h5module_h5'
