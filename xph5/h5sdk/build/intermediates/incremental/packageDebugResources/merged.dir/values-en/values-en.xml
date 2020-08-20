@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="h5_cancel">cancel</string>
+    <string name="h5_confirm">confirm</string>
+    <string name="h5_help">help</string>
+    <string name="h5_help_text">The current application lacks necessary permissions。\n\nPlease click\"Set up\"-\"Authority\"-Open the required permissions。</string>
+    <string name="h5_is_exit">Whether to exit the game？</string>
+    <string name="h5_prompt">prompt</string>
+    <string name="h5_quit">quit</string>
+    <string name="h5_tip_network">Network connection is unavailable</string>
+    <string name="h5_tip_server_error">Server connection failed</string>
+</resources>

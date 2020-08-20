@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="h5_cancel">取消</string>
+    <string name="h5_confirm">確定</string>
+    <string name="h5_help">幫助</string>
+    <string name="h5_help_text">當前應用缺少必要權限。\n\n請點擊\"設置\"-\"權限\"-打開所需權限。</string>
+    <string name="h5_is_exit">是否退出遊戲？</string>
+    <string name="h5_prompt">提示</string>
+    <string name="h5_quit">退出</string>
+    <string name="h5_tip_network">當前網絡連接不可用，請檢查網絡設置後重試</string>
+    <string name="h5_tip_server_error">服務器開小差了,稍後再試吧</string>
+</resources>

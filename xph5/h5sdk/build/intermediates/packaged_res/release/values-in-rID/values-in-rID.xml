@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="h5_cancel">membatalkan</string>
+    <string name="h5_confirm">menentukan</string>
+    <string name="h5_help">Tolong</string>
+    <string name="h5_help_text">Aplikasi saat ini tidak memiliki izin yang diperlukan。\n\nSilakan klik\"Mempersiapkan\"-\"Wewenang\"-Buka izin yang diperlukan。</string>
+    <string name="h5_is_exit">Apakah akan keluar dari game？</string>
+    <string name="h5_prompt">cepat</string>
+    <string name="h5_quit">keluar</string>
+    <string name="h5_tip_network">Koneksi jaringan tidak tersedia</string>
+    <string name="h5_tip_server_error">Koneksi server gagal</string>
+</resources>

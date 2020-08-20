@@ -1,47 +1,324 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AndroidLayouts">
-    <shared>
-      <config />
-    </shared>
-  </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="H5SDK_TAG" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7933645d-277f-4f54-8267-edad984af8e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+    <list default="true" id="6c0cf5ca-f9c5-4e2c-831f-e460555f6ac4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/h5demo_h5/build/generated/source/buildConfig/androidTest/debug/com/xipu/xmdmlrjh5/test/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5demo_h5/build/generated/source/buildConfig/debug/com/xipu/xmdmlrjh5/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5demo_h5/build/intermediates/apk_list/debug/mainApkListPersistenceDebug/apk-list.gson" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5demo_h5/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5demo_h5/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5demo_h5/build/intermediates/compatible_screen_manifest/debug/createDebugCompatibleScreenManifests/out/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5demo_h5/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5demo_h5/build/intermediates/instant_app_manifest/debug/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5demo_h5/build/intermediates/instant_run_merged_manifests/debug/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5demo_h5/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5demo_h5/build/intermediates/merged_manifests/debug/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5demo_h5/build/intermediates/merged_manifests/debugAndroidTest/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5demo_h5/build/intermediates/merged_manifests/debugAndroidTest/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5demo_h5/build/intermediates/metadata_feature_manifest/debug/processDebugManifest/metadata-feature/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5demo_h5/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/generated/source/buildConfig/androidTest/debug/com/xipu/h5/osdk/test/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/generated/source/buildConfig/debug/com/xipu/h5/osdk/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/generated/source/buildConfig/release/com/xipu/h5/osdk/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/aapt_friendly_merged_manifests/release/aapt/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/aapt_friendly_merged_manifests/release/aapt/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/annotation_processor_list/debug/annotationProcessors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/annotation_processor_list/release/annotationProcessors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/compile_library_classes/debug/classes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/compile_library_classes/release/classes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/compile_only_not_namespaced_r_class_jar/release/generateReleaseRFile/R.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/debug-mergeJniLibs/merge-state" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/mergeReleaseShaders/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageDebugAssets/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageDebugResources/merged.dir/values-en/values-en.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageDebugResources/merged.dir/values-in-rID/values-in-rID.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageDebugResources/merged.dir/values-th-rTH/values-th-rTH.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageDebugResources/merged.dir/values-zh-rMO/values-zh-rMO.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageDebugResources/merged.dir/values/values.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageDebugResources/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageReleaseAssets/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageReleaseResources/merged.dir/values-en/values-en.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageReleaseResources/merged.dir/values-in-rID/values-in-rID.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageReleaseResources/merged.dir/values-th-rTH/values-th-rTH.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageReleaseResources/merged.dir/values-zh-rCN/values-zh-rCN.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageReleaseResources/merged.dir/values-zh-rHK/values-zh-rHK.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageReleaseResources/merged.dir/values-zh-rMO/values-zh-rMO.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageReleaseResources/merged.dir/values-zh-rTW/values-zh-rTW.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageReleaseResources/merged.dir/values/values.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/packageReleaseResources/merger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/incremental/release-mergeJniLibs/merge-state" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/BuildConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$5$1$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$5$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$9.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/OSDK.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/OSDKApplication$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/OSDKApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/adapter/OUserAdapter$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/adapter/OUserAdapter$UserListHolder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/adapter/OUserAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/callback/OBindAccountCallback.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/callback/OLoginCallBack.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/callback/OLoginUserCallBack.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/callback/OOverseaAccountLoginCallback.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/callback/ORandomAccountCallback.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/callback/OSDKApi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/callback/OShareApi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/callback/OUserListCallBack.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/config/OSDKConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/dialog/OBindAccountDialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/dialog/OH5Dialog$Builder$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/dialog/OH5Dialog$Builder$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/dialog/OH5Dialog$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/dialog/OH5Dialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/dialog/OLoginDialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/dialog/OXiPuLoginDialog$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/dialog/OXiPuLoginDialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/FacebookManager$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/FacebookManager$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/FacebookManager$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/FacebookManager$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/FacebookManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$1$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$8$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/LineManager$1$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/LineManager$1$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/LineManager$1$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/LineManager$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/LineManager$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/LineManager$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/manager/LineManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/OAppsFlyerUtils$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/OAppsFlyerUtils$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/OAppsFlyerUtils$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/OAppsFlyerUtils$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/OAppsFlyerUtils$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/OAppsFlyerUtils$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/OAppsFlyerUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/OLoginCodeUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/OLoginTypeUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/ONetWorkUtils$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/ONetWorkUtils$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/ONetWorkUtils$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/ONetWorkUtils$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/ONetWorkUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/OSDKUtils$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/OSDKUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/OSharePlatform.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/OShareType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/SystemUiUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/xipu/h5/osdk/utils/ThreadManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/BuildConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$5$1$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$5$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/OSDK$9.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/OSDK.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/OSDKApplication$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/OSDKApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/adapter/OUserAdapter$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/adapter/OUserAdapter$UserListHolder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/adapter/OUserAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/callback/OBindAccountCallback.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/callback/OLoginCallBack.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/callback/OLoginUserCallBack.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/callback/OOverseaAccountLoginCallback.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/callback/ORandomAccountCallback.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/callback/OSDKApi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/callback/OShareApi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/callback/OUserListCallBack.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/config/OSDKConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/dialog/OBindAccountDialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/dialog/OH5Dialog$Builder$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/dialog/OH5Dialog$Builder$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/dialog/OH5Dialog$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/dialog/OH5Dialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/dialog/OLoginDialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/dialog/OXiPuLoginDialog$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/dialog/OXiPuLoginDialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/FacebookManager$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/FacebookManager$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/FacebookManager$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/FacebookManager$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/FacebookManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$1$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$8$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/GoogleManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/LineManager$1$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/LineManager$1$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/LineManager$1$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/LineManager$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/LineManager$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/LineManager$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/manager/LineManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/OAppsFlyerUtils$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/OAppsFlyerUtils$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/OAppsFlyerUtils$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/OAppsFlyerUtils$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/OAppsFlyerUtils$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/OAppsFlyerUtils$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/OAppsFlyerUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/OLoginCodeUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/OLoginTypeUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/ONetWorkUtils$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/ONetWorkUtils$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/ONetWorkUtils$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/ONetWorkUtils$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/ONetWorkUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/OSDKUtils$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/OSDKUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/OSharePlatform.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/OShareType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/SystemUiUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/xipu/h5/osdk/utils/ThreadManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/library_java_res/debug/res.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/library_java_res/release/res.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/library_manifest/debug/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/library_manifest/release/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/merged_manifests/debug/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/merged_manifests/debugAndroidTest/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/merged_manifests/debugAndroidTest/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/merged_manifests/release/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/drawable/bg_border_tv_red.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/drawable/o_bg_oversea_dialog_account_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/drawable/o_bg_oversea_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/drawable/o_bg_oversea_login_dialog_but.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/drawable/o_bg_oversea_login_dialog_text.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/drawable/o_bg_user_textcolor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/drawable/round_bg_white.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/drawable/round_title_red.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/layout-port/o_layout_oversea_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/layout/layout_dialog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/layout/o_layout_oversea_bind_account.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/layout/o_layout_oversea_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/layout/o_layout_oversea_user_list_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/layout/o_layout_oversea_xp_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/mipmap-xhdpi-v4/icon_logo_title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/mipmap-xhdpi-v4/o_bg_facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/mipmap-xhdpi-v4/o_bg_google.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/mipmap-xhdpi-v4/o_bg_guest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/mipmap-xhdpi-v4/o_bg_line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/mipmap-xhdpi-v4/o_icon_big_facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/mipmap-xhdpi-v4/o_icon_big_google.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/mipmap-xhdpi-v4/o_icon_big_line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/mipmap-xhdpi-v4/o_icon_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/mipmap-xhdpi-v4/o_icon_facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/mipmap-xhdpi-v4/o_icon_google.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/mipmap-xhdpi-v4/o_icon_guest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/mipmap-xhdpi-v4/o_icon_line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/mipmap-xhdpi-v4/o_icon_up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/values-en/values-en.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/values-in-rID/values-in-rID.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/values-th-rTH/values-th-rTH.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/values-zh-rCN/values-zh-rCN.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/values-zh-rHK/values-zh-rHK.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/values-zh-rMO/values-zh-rMO.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/values-zh-rTW/values-zh-rTW.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/debug/values/values.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/drawable/bg_border_tv_red.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/drawable/o_bg_oversea_dialog_account_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/drawable/o_bg_oversea_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/drawable/o_bg_oversea_login_dialog_but.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/drawable/o_bg_oversea_login_dialog_text.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/drawable/o_bg_user_textcolor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/drawable/round_bg_white.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/drawable/round_title_red.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/layout-port/o_layout_oversea_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/layout/layout_dialog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/layout/o_layout_oversea_bind_account.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/layout/o_layout_oversea_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/layout/o_layout_oversea_user_list_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/layout/o_layout_oversea_xp_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/mipmap-xhdpi-v4/icon_logo_title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/mipmap-xhdpi-v4/o_bg_facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/mipmap-xhdpi-v4/o_bg_google.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/mipmap-xhdpi-v4/o_bg_guest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/mipmap-xhdpi-v4/o_bg_line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/mipmap-xhdpi-v4/o_icon_big_facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/mipmap-xhdpi-v4/o_icon_big_google.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/mipmap-xhdpi-v4/o_icon_big_line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/mipmap-xhdpi-v4/o_icon_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/mipmap-xhdpi-v4/o_icon_facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/mipmap-xhdpi-v4/o_icon_google.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/mipmap-xhdpi-v4/o_icon_guest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/mipmap-xhdpi-v4/o_icon_line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/mipmap-xhdpi-v4/o_icon_up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/values-en/values-en.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/values-in-rID/values-in-rID.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/values-th-rTH/values-th-rTH.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/values-zh-rCN/values-zh-rCN.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/values-zh-rHK/values-zh-rHK.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/values-zh-rMO/values-zh-rMO.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/values-zh-rTW/values-zh-rTW.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/packaged_res/release/values/values.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/res/symbol-table-with-package/release/package-aware-r.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/runtime_library_classes/debug/classes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/runtime_library_classes/release/classes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/symbols/debug/R.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/symbols/release/R.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/transforms/mergeJniLibs/debug/__content__.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/intermediates/transforms/mergeJniLibs/release/__content__.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_google/build/outputs/logs/manifest-merger-release-report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_h5/build/generated/source/buildConfig/androidTest/debug/com/xipu/h5/h5sdk/test/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_h5/build/generated/source/buildConfig/debug/com/xipu/h5/h5sdk/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_h5/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_h5/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_h5/build/intermediates/library_manifest/debug/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_h5/build/intermediates/merged_manifests/debug/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_h5/build/intermediates/merged_manifests/debugAndroidTest/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_h5/build/intermediates/merged_manifests/debugAndroidTest/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5module_h5/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5sdk/build/generated/source/buildConfig/androidTest/debug/com/xipu/h5_sdk/test/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5sdk/build/generated/source/buildConfig/debug/com/xipu/h5_sdk/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5sdk/build/generated/source/buildConfig/release/com/xipu/h5_sdk/BuildConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5sdk/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/H5Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/H5Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/ui/BrowserActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/ui/BrowserActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/ui/SplashActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/ui/SplashActivity.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.gradle/" />
-    <ignored path="$PROJECT_DIR$/build/classes/" />
-    <ignored path="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/" />
-    <ignored path="$PROJECT_DIR$/app/build/generated/source/r/" />
-    <ignored path="$PROJECT_DIR$/app/build/intermediates/blame/" />
-    <ignored path="$PROJECT_DIR$/app/build/intermediates/check-manifest/" />
-    <ignored path="$PROJECT_DIR$/app/build/intermediates/incremental/" />
-    <ignored path="$PROJECT_DIR$/app/build/intermediates/manifests/" />
-    <ignored path="$PROJECT_DIR$/app/build/intermediates/prebuild/" />
-    <ignored path="$PROJECT_DIR$/app/build/intermediates/res/" />
-    <ignored path="$PROJECT_DIR$/app/build/intermediates/rs/" />
-    <ignored path="$PROJECT_DIR$/app/build/intermediates/splits-support/" />
-    <ignored path="$PROJECT_DIR$/app/build/intermediates/symbols/" />
-    <ignored path="$PROJECT_DIR$/app/build/outputs/" />
-    <ignored path="$PROJECT_DIR$/app/build/intermediates/classes/debug/" />
-    <ignored path="$PROJECT_DIR$/app/build/intermediates/classes/test/debug/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,110 +337,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="25" column="75" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/ui/BrowserActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="118" column="58" selection-start-line="118" selection-start-column="58" selection-end-line="118" selection-end-column="58" />
-              <folding>
-                <element signature="e#9060#10131#0" expanded="true" />
-                <element signature="e#10130#10131#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/H5Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/ui/SplashActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="30" column="58" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="resourceFile" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>mUa</find>
-      <find>device/activate</find>
-      <find>ACCESS_COARSE_LOCATION</find>
-      <find>xp_gdt_appsecretkey</find>
-      <find>addJavascriptInterface</find>
-      <find>loadBannerAd</find>
-      <find>JsInterface</find>
-      <find>().requestPermissionIfNecessary</find>
-      <find>onD</find>
-      <find>mTTNativeExpressAd</find>
-      <find>mttRewardVideoAd</find>
-      <find>mTTRewardVideoAd</find>
-      <find>SHOW_REWARD_VIDEO</find>
-      <find>mAdSlot</find>
-      <find>mTTFullScreenVideoAd</find>
-      <find>onError</find>
-      <find>load error</find>
-      <find>adConfig</find>
-      <find>xp_appid</find>
-      <find>mAppid</find>
-      <find>mWebView</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
-  </component>
-  <component name="GenerateSignedApkSettings">
-    <option name="KEY_STORE_PATH" value="C:\Users\user\Desktop\keystore\gemjy.keystore" />
-    <option name="KEY_ALIAS" value="gemjycn" />
-    <option name="REMEMBER_PASSWORDS" value="true" />
-    <option name="BUILD_TARGET_KEY" value="apk" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -173,45 +347,15 @@
       </map>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/OaidHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/H5Utils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/config/H5Config.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/SplashActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/dialog/DislikeDialog.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/H5Application.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/config/TTAdManagerHolder.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/TTAdUtils.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/util/ParamUtil.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/config/H5Config.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/BrowserActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/H5Application.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/ui/SplashActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/ui/BrowserActivity.java" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="83" />
-    <option name="y" value="38" />
-    <option name="width" value="1795" />
-    <option name="height" value="950" />
-  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,149 +366,17 @@
             <path>
               <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
               <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="h5sdk" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="xipu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="xipu" type="462c0819:PsiDirectoryNode" />
-              <item name="xmdmlrjh5" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="xipu" type="462c0819:PsiDirectoryNode" />
-              <item name="xmdmlrjh5" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="xipu" type="462c0819:PsiDirectoryNode" />
-              <item name="xmdmlrjh5" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="zhangyue" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="gradle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="gradle" type="462c0819:PsiDirectoryNode" />
-              <item name="wrapper" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="ExportApk.ApkPath" value="D:\git repository\xipuH5\xph5\app" />
-    <property name="ExportApk.BuildVariants" value="release" />
-    <property name="ExportApk.SignV1" value="true" />
-    <property name="device.picker.selection" value="127.0.0.1:62001" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/keystore/gemjy.keystore" />
-    <property name="not.eligible.for.single.variant.sync" value="true" />
-    <property name="show.do.not.ask.upgrade.gradle.plugin" value="3.1.4" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\git repository\xipuH5\xph5\app\libs" />
-      <recent name="D:\git repository\xipuH5\xph5\app\src\main\java\com\zhangyue\h5\config" />
-      <recent name="D:\git repository\xipuH5\xph5\app\src\main\res\layout" />
-      <recent name="D:\git repository\xipuH5\xph5\app\src\main\java\com\zhangyue\h5" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -453,66 +465,23 @@
     </task>
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
-    <frame x="83" y="38" width="1795" height="950" extended-state="0" />
+    <frame x="78" y="29" width="1795" height="1001" extended-state="0" />
     <layout>
-      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.329683" />
-      <window_info id="Structure" order="3" side_tool="true" />
-      <window_info id="Build Variants" order="4" side_tool="true" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Resources Explorer" order="7" />
-      <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="0" />
-      <window_info anchor="bottom" id="Debug" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.4997118" weight="0.93014705" />
-      <window_info anchor="bottom" id="TODO" order="3" weight="0.32965687" />
-      <window_info anchor="bottom" id="Android Profiler" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="5" />
-      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5002882" side_tool="true" weight="0.55514705" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.3272059" />
-      <window_info anchor="bottom" id="Find" order="8" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="9" sideWeight="0.4997118" visible="true" weight="0.48161766" />
-      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Gradle" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Preview" order="5" />
+      <window_info id="Captures" order="0" weight="0.25" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
+    <option name="RECENT_FILTERS">
       <map>
-        <entry key="MAIN">
+        <entry key="Branch">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>
@@ -535,63 +504,22 @@
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/soutil-20200302.aar/b6cca8b9efc72650e53441c4d545236c/jars/classes.jar!/com/startobj/util/check/SOEmulatorUtil.class" />
     <entry file="file://$PROJECT_DIR$/app/libs/soutil-20200302.aar">
-      <provider selected="true" editor-type-id="apk-viewer" />
       <provider editor-type-id="bundle-viewer" />
+      <provider selected="true" editor-type-id="apk-viewer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/ParamUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
-          <folding>
-            <element signature="e#4136#4137#0" expanded="true" />
-            <element signature="e#4165#4166#0" expanded="true" />
-            <element signature="e#4206#4207#0" expanded="true" />
-            <element signature="e#4239#4240#0" expanded="true" />
-            <element signature="e#4437#4438#0" expanded="true" />
-            <element signature="e#4468#4469#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/ParamUtil.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/splash.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="jar://$PROJECT_DIR$/app/libs/tbs_sdk_thirdapp_v4.3.0.1072_43646_sharewithdownloadwithfile_withoutGame_obfs_20190429_175122.jar!/com/tencent/smtt/export/external/interfaces/IX5WebSettings.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/app/libs/tbs_sdk_thirdapp_v4.3.0.1072_43646_sharewithdownloadwithfile_withoutGame_obfs_20190429_175122.jar!/com/tencent/smtt/sdk/WebSettings.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="819" column="48" selection-start-line="819" selection-start-column="48" selection-end-line="819" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/ZYJSONObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/libs/tbs_sdk_thirdapp_v4.3.0.1072_43646_sharewithdownloadwithfile_withoutGame_obfs_20190429_175122.jar!/com/tencent/smtt/export/external/interfaces/IX5WebSettings.class" />
+    <entry file="jar://$PROJECT_DIR$/app/libs/tbs_sdk_thirdapp_v4.3.0.1072_43646_sharewithdownloadwithfile_withoutGame_obfs_20190429_175122.jar!/com/tencent/smtt/sdk/WebSettings.class" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/ZYJSONObject.java" />
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/miit_mdid_1.0.13.aar/f3faab53e35729f55bf11dc5c39d7455/jars/classes.jar!/com/bun/miitmdid/core/JLibrary.class" />
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/miit_mdid_1.0.13.aar/f3faab53e35729f55bf11dc5c39d7455/jars/classes.jar!/com/bun/supplier/IdSupplier.class" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/OaidHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/OaidHelper.java" />
     <entry file="file://$PROJECT_DIR$/app/libs/open_ad_sdk.aar">
-      <provider selected="true" editor-type-id="apk-viewer" />
       <provider editor-type-id="bundle-viewer" />
+      <provider selected="true" editor-type-id="apk-viewer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -607,13 +535,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/zhangyue/h5/BuildConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/zhangyue/h5/BuildConfig.java" />
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/open_ad_sdk.aar/6d8714e1c71909171dfa128ec84e1ae1/jars/classes.jar!/com/bytedance/sdk/openadsdk/TTAdSdk.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
@@ -625,20 +547,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/app/libs/tbs_sdk_thirdapp_v4.3.0.1072_43646_sharewithdownloadwithfile_withoutGame_obfs_20190429_175122.jar!/com/tencent/smtt/sdk/WebView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="1328" column="38" selection-start-line="1328" selection-start-column="16" selection-end-line="1328" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/config/H5Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="11" column="75" lean-forward="true" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/libs/tbs_sdk_thirdapp_v4.3.0.1072_43646_sharewithdownloadwithfile_withoutGame_obfs_20190429_175122.jar!/com/tencent/smtt/sdk/WebView.class" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/config/H5Config.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/dialog/DislikeDialog.java" />
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/open_ad_sdk.aar/6d8714e1c71909171dfa128ec84e1ae1/jars/classes.jar!/com/bytedance/sdk/openadsdk/dislike/TTDislikeListView.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -655,23 +565,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/PermissionsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="53" column="61" lean-forward="true" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="89" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/permission/PermissionUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/PermissionsActivity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/permission/PermissionUtils.java" />
     <entry file="file://$PROJECT_DIR$/app/libs/mopub-sdk-rewardedvideo-5.8.0.aar" />
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -716,30 +611,9 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/TTAdUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="910">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/H5Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="34" column="47" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/config/TTAdManagerHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/TTAdUtils.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/H5Utils.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/config/TTAdManagerHolder.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-26/java/lang/StringBuffer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
@@ -768,13 +642,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/BrowserActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="101" column="22" lean-forward="true" selection-start-line="101" selection-start-column="22" selection-end-line="101" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/BrowserActivity.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-26/android/os/Build.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
@@ -789,27 +657,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/SplashActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/H5Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="72" column="19" lean-forward="true" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/ui/SplashActivity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/H5Application.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="650">
           <caret line="25" column="75" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="75" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -833,13 +689,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/GDTUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zhangyue/h5/util/GDTUtils.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/ui/BrowserActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
