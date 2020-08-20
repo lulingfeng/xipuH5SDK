@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <View
+        android:id="@+id/center"
+        android:layout_width="0.1dp"
+        android:layout_height="0.1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp" />
+
+    <RelativeLayout
+        android:id="@+id/o_google_login"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/center"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/center"
+        android:background="@mipmap/o_bg_google">
+
+        <ImageView
+            android:id="@+id/o_google_img"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/o_icon_google" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@id/o_google_img"
+            android:text="@string/o_google_login"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/o_line_login"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/center"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@id/o_google_login"
+        android:background="@mipmap/o_bg_line">
+
+        <ImageView
+            android:id="@+id/o_line_img"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/o_icon_line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/o_line_img"
+            android:text="@string/o_line_login"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/o_facebook_login"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/center"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/center"
+        android:background="@mipmap/o_bg_facebook">
+
+        <ImageView
+            android:id="@+id/o_facebook_img"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/o_icon_facebook" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/o_facebook_img"
+            android:text="@string/o_facebook_login"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/o_guest_login"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/center"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/o_facebook_login"
+        android:background="@mipmap/o_bg_guest">
+
+        <ImageView
+            android:id="@+id/o_guest_img"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/o_icon_guest" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/o_guest_img"
+            android:text="@string/o_guest_login"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

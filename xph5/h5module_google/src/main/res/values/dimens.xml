@@ -1,0 +1,8 @@
+<resources>
+
+
+<dimen name="font_btn">14sp</dimen>
+<dimen name="font_dialog">13sp</dimen>
+
+
+</resources>

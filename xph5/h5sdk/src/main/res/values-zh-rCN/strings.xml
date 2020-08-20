@@ -1,0 +1,11 @@
+<resources>
+    <string name="h5_tip_network">当前网络连接不可用，请检查网络设置后重试</string>
+    <string name="h5_tip_server_error">服务器开小差了,稍后再试吧</string>
+    <string name="h5_help">帮助</string>
+    <string name="h5_help_text">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。\n\n最后点击两次后退按钮，即可返回。</string>
+    <string name="h5_quit">退出</string>
+    <string name="h5_prompt">提示</string>
+    <string name="h5_is_exit">是否退出游戏？</string>
+    <string name="h5_confirm">确定</string>
+    <string name="h5_cancel">取消</string>
+</resources>

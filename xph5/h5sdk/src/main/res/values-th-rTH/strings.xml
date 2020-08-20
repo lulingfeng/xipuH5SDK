@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="h5_tip_network">การเชื่อมต่อเครือข่ายใช้งานไม่ได้</string>
+    <string name="h5_tip_server_error">การเชื่อมต่อเซิร์ฟเวอร์ล้มเหลว</string>
+    <string name="h5_help">ช่วยด้วย</string>
+    <string name="h5_help_text">แอปพลิเคชันปัจจุบันขาดการอนุญาตที่จำเป็น。\n\nกรุณาคลิก\"ติดตั้ง\"-\"อำนาจ\"-เปิดการอนุญาตที่จำเป็น。</string>
+    <string name="h5_quit">เลื่อนออก</string>
+    <string name="h5_prompt">รวดเร็ว</string>
+    <string name="h5_is_exit">ไม่ว่าจะออกจากเกม？</string>
+    <string name="h5_confirm">กำหนด</string>
+    <string name="h5_cancel">ยกเลิก</string>
+</resources>
