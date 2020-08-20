@@ -11,7 +11,7 @@ public interface BSDKApi {
 
     void onModuleInit(ConfigModule configModule);
 
-    void onActivate(Activity activity);
+    void onActivate(Activity activity,String values);
 
     void onLogin(Activity activity);
 

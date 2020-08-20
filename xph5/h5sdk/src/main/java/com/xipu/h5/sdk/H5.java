@@ -45,12 +45,12 @@ public class H5 {
         Log.d(H5Utils.TAG, "thirdSdk: " + thirdSdk.getClass());
     }
 
-    public void onActivate(Activity activity) {
+    public void onActivate(Activity activity,String values) {
         Log.d(H5Utils.TAG, "H5 onActivate()");
         if (thirdSdk != null) {
             try {
-                Method login = thirdSdk.getClass().getMethod("onActivate", Activity.class);
-                login.invoke(thirdSdk, activity);
+                Method login = thirdSdk.getClass().getMethod("onActivate", Activity.class,String.class);
+                login.invoke(thirdSdk, activity,values);
             } catch (Exception e) {
                 e.printStackTrace();
             }

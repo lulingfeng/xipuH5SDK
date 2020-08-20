@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/h5demo_google/h5demo_google.iml" filepath="$PROJECT_DIR$/h5demo_google/h5demo_google.iml" />
       <module fileurl="file://$PROJECT_DIR$/h5demo_h5/h5demo_h5.iml" filepath="$PROJECT_DIR$/h5demo_h5/h5demo_h5.iml" />
-      <module fileurl="file://$PROJECT_DIR$/h5demo_osdk/h5demo_osdk.iml" filepath="$PROJECT_DIR$/h5demo_osdk/h5demo_osdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/h5module_google/h5module_google.iml" filepath="$PROJECT_DIR$/h5module_google/h5module_google.iml" />
       <module fileurl="file://$PROJECT_DIR$/h5module_h5/h5module_h5.iml" filepath="$PROJECT_DIR$/h5module_h5/h5module_h5.iml" />
-      <module fileurl="file://$PROJECT_DIR$/h5module_osdk/h5module_osdk.iml" filepath="$PROJECT_DIR$/h5module_osdk/h5module_osdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/h5sdk/h5sdk.iml" filepath="$PROJECT_DIR$/h5sdk/h5sdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/soutil/soutil.iml" filepath="$PROJECT_DIR$/soutil/soutil.iml" />
       <module fileurl="file://$PROJECT_DIR$/xph5.iml" filepath="$PROJECT_DIR$/xph5.iml" />

@@ -32,6 +32,7 @@ import com.tencent.smtt.sdk.WebViewClient;
 import com.xipu.h5.sdk.H5;
 import com.xipu.h5.sdk.callback.OLoginApi;
 import com.xipu.h5.sdk.callback.OPayApi;
+import com.xipu.h5.sdk.util.ParamUtil;
 import com.xipu.h5.sdk.util.ReportTypeUtils;
 import com.xipu.h5_sdk.R;
 import com.xipu.h5.sdk.config.H5Config;
@@ -182,8 +183,8 @@ public class BrowserActivity extends Activity {
         //   StringBuffer sb = new StringBuffer(H5Config.GAME_URL);
         StringBuffer sb = new StringBuffer("http://testh5.xipu.com/play.php"); // demo
         //  StringBuffer sb = new StringBuffer("http://h5.xipu.com/play.php");
-        //   sb.append("?app_id=" + ParamUtil.getAppId() + "&");
-        sb.append("?app_id=38807b0c59747f0cb583c3a00a24a788&");
+        // sb.append("?app_id=" + ParamUtil.getAppId() + "&");
+         sb.append("?app_id=38807b0c59747f0cb583c3a00a24a788&");
         SORequestParams params = new SORequestParams(H5Config.GAME_URL, H5Utils.getCommonParams(this));
         sb.append(params.getParamsStr());
         Log.d(H5Utils.TAG, "generateUrl: " + sb.toString());
@@ -370,27 +371,28 @@ public class BrowserActivity extends Activity {
         // 海外激活
         @JavascriptInterface
         public void cpInit(String values) {
-            H5.getInstance().onActivate(BrowserActivity.this);
+            Log.d(H5Utils.TAG, "cpInit values: " + values);
+            H5.getInstance().onActivate(BrowserActivity.this,values);
         }
 
         // 海外创角
         @JavascriptInterface
         public void cpCRole(String values) {
-            Log.d(H5Utils.TAG, "values: " + values);
+            Log.d(H5Utils.TAG, "cpCRole values: " + values);
             H5.getInstance().onCreateRole(BrowserActivity.this, values);
         }
 
         // 海外角色登录
         @JavascriptInterface
         public void cpLRole(String values) {
-            Log.d(H5Utils.TAG, "values: " + values);
+            Log.d(H5Utils.TAG, "cpLRole values: " + values);
             H5.getInstance().onLoginRole(BrowserActivity.this, values);
         }
 
         // 海外角色升级
         @JavascriptInterface
         public void cpURole(String values) {
-            Log.d(H5Utils.TAG, "values: " + values);
+            Log.d(H5Utils.TAG, "cpURole values: " + values);
             H5.getInstance().onUpdateRole(BrowserActivity.this, values);
         }
 
@@ -426,7 +428,7 @@ public class BrowserActivity extends Activity {
         // 海外支付
         @JavascriptInterface
         public void cpPay(String values) {
-            Log.d(H5Utils.TAG, "values: " + values);
+            Log.d(H5Utils.TAG, "cpPay values: " + values);
             H5.getInstance().addOnPayListener(BrowserActivity.this, values, new OPayApi() {
                 @Override
                 public void onPaySuccess() {

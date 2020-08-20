@@ -21,6 +21,7 @@ import com.startobj.util.file.SOFileUtil;
 import com.startobj.util.http.SOCallBack;
 import com.startobj.util.http.SOHttpConnection;
 import com.startobj.util.http.SORequestParams;
+import com.startobj.util.lang.LocaleHelper;
 import com.startobj.util.log.SOLogUtil;
 import com.startobj.util.toast.SOToastUtil;
 import com.xipu.h5.sdk.config.H5Config;
@@ -32,12 +33,14 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 public class H5Utils {
 
     public static final String TAG = "H5SDK_TAG";
+    private static Activity mActivity;
     // 自定义对话框
     public static LoadingProgressDialogs mProgressDialog;
     // 设备信息
@@ -83,26 +86,27 @@ public class H5Utils {
     /**
      * 读取manifest配置
      */
-    public static void loadConfig(Activity context) {
-        if (!SOCommonUtil.hasContext(context))
+    public static void loadConfig(Activity activity) {
+        if (!SOCommonUtil.hasContext(activity))
             return;
+        mActivity = activity;
         try {
             //////// 动态打包使用--开始////////
-            mChannel = getChannel(context);
+            mChannel = getChannel(activity);
             if (TextUtils.isEmpty(mChannel))
-                mChannel = getChannelFromApk(context, "channel_");
+                mChannel = getChannelFromApk(activity, "channel_");
             if (TextUtils.isEmpty(mChannel)) {
                 mChannel = "demo";
                 SOToastUtil.showShort("此信息未配置[游戏渠道:mChannel]时提示，接入方请忽略");
             }
-            Bundle metaData = context.getPackageManager().getApplicationInfo(context.getPackageName(),
+            Bundle metaData = activity.getPackageManager().getApplicationInfo(activity.getPackageName(),
                     PackageManager.GET_META_DATA).metaData;
             mAppId = metaData.getString("xp_appid");
             mSDKType = metaData.getInt("xp_sdk_type");
             //////// 动态打包使用--结束///////
-            mIdentityToken = getChannelFromApk(context, "itoken_");
+            mIdentityToken = getChannelFromApk(activity, "itoken_");
             if (TextUtils.isEmpty(mIdentityToken))
-                mIdentityToken = SOFileUtil.getAssetsFile(context, "itoken.txt");
+                mIdentityToken = SOFileUtil.getAssetsFile(activity, "itoken.txt");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -139,7 +143,25 @@ public class H5Utils {
         paramsMap.put("platform", getPlatform());
         paramsMap.put("oaid", H5Utils.getOaid());
         paramsMap.put("is_suit", isVirtualMachine(context) ? "1" : "0");
+        paramsMap.put("lang", getLanguage());
+        if (!TextUtils.isEmpty(getDevice_id(context))) {
+            paramsMap.put("device_id", getDevice_id(context));
+        }
         return paramsMap;
+    }
+
+    /*
+     * 获取当前语言
+     *
+     * @return
+     */
+    public static String getLanguage() {
+        Locale locale = LocaleHelper.getInstance().getLocale(mActivity);
+        if (!TextUtils.isEmpty(locale.getCountry())) {
+            return locale.getLanguage() + "-" + locale.getCountry();
+        } else {
+            return locale.getLanguage();
+        }
     }
 
     /**
@@ -342,7 +364,7 @@ public class H5Utils {
         if (!SOCommonUtil.hasContext(context) && TextUtils.isEmpty(device_id))
             return;
         SharedPreferences.Editor userEditor = SharedPreferencesUtil.getInstance(context).edit();
-        userEditor.putString(H5Config.SP_DEVICE_ID, device_id);
+        userEditor.putString(getAppID() + "_" + H5Config.SP_DEVICE_ID, device_id);
         userEditor.commit();
     }
 

@@ -12,253 +12,93 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7933645d-277f-4f54-8267-edad984af8e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/h5demo_h5/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5demo_h5/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5demo_h5/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5demo_osdk/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5demo_osdk/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5demo_osdk/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_h5/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_h5/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_h5/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_h5/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_h5/src/main/java/com/xipu/h5/h5sdk/H5Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_h5/src/main/java/com/xipu/h5/h5sdk/H5SDK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_h5/src/main/java/com/xipu/h5/h5sdk/callback/H5SDKApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_h5/src/main/java/com/xipu/h5/h5sdk/manager/GDTManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_h5/src/main/java/com/xipu/h5/h5sdk/manager/JrttManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_h5/src/main/java/com/xipu/h5/h5sdk/manager/TuiaManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_h5/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/OSDK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/OSDKApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/adapter/OUserAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/callback/OBindAccountCallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/callback/OLoginCallBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/callback/OLoginUserCallBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/callback/OOverseaAccountLoginCallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/callback/ORandomAccountCallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/callback/OSDKApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/callback/OUserListCallBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/dialog/OBindAccountDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/dialog/OLoginDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/dialog/OXiPuLoginDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/OAppsFlyerUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/ONetWorkUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/OSDKUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/SystemUiUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/drawable/o_bg_oversea_dialog_account_list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/drawable/o_bg_oversea_login.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/drawable/o_bg_oversea_login_dialog_but.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/drawable/o_bg_oversea_login_dialog_text.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/drawable/o_bg_user_textcolor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/layout-port/o_layout_oversea_login.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/layout/o_layout_oversea_bind_account.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/layout/o_layout_oversea_login.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/layout/o_layout_oversea_user_list_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/layout/o_layout_oversea_xp_login.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_bg_facebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_bg_google.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_bg_guest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_bg_line.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_big_facebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_big_google.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_big_line.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_facebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_google.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_guest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_line.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/BApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/BSDK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/H5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/TFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/callback/BSDKApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/callback/OLoginApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/callback/OPayApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/callback/OQuerySkuApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/model/BaseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/model/ConfigModule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/model/OSkuDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/model/PayReportModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/model/RequestModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/model/UserModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/ui/BrowserActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/AppConfigUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/H5OrderFileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/ReportTypeUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/TTAdUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/ThreadManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/res/values-en/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/res/values-in-rID/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/res/values-th-rTH/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/res/values-zh-rCN/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/res/values-zh-rHK/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/res/values-zh-rMO/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/res/values-zh-rTW/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5sdk/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/build/generated/source/buildConfig/debug/com/startobj/util/BuildConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/build/intermediates/library_manifest/debug/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/build/intermediates/merged_manifests/debug/output.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/gen/com/startobj/util/BuildConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/gen/com/startobj/util/Manifest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/gen/com/startobj/util/R.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/check/SOCheckUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/check/SOEmulatorUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/common/SOCommonUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/config/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/date/DateUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/device/SODensityUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/device/SODeviceEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/device/SODeviceIdFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/device/SODeviceUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/device/SOTelephoneInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/file/SOFileUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/http/SOCallBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/http/SOContentEmptyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/http/SOHttpConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/http/SOHttpConnection2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/http/SOHttpConnection3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/http/SOJsonMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/http/SORequestParams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/http/SOServertReturnErrorException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/lang/LanguageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/lang/LocaleHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/log/SOLogUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/network/SONetworkUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/softInput/SOSoftInputUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/string/SOStringUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/thread/AppExecutors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/java/com/startobj/util/toast/SOToastUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/res/drawable/hc_toast_show.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/soutil/src/main/res/values/hc_color.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/jarAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskJars.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/h5demo_osdk/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/GDTActionSDK.min.1.6.4.aar" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_h5/libs/GDTActionSDK.min.1.6.4.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/RangersAppLog-Lite-cn-3.3.12.aar" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_h5/libs/RangersAppLog-Lite-cn-3.3.12.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/miit_mdid_1.0.13.aar" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/libs/miit_mdid_1.0.13.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/open_ad_sdk.aar" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_h5/libs/open_ad_sdk.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/tbs_sdk_thirdapp_v4.3.0.3_43903_sharewithdownloadwithfile_withoutGame_obfs_20200402_121309.jar" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/libs/tbs_sdk_thirdapp_v4.3.0.3_43903_sharewithdownloadwithfile_withoutGame_obfs_20200402_121309.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lint.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5demo_osdk/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/supplierconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/H5Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/config/H5Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/config/H5Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/custom/view/H5Dialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/dialog/H5Dialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/custom/view/LoadingProgressDialogs.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/dialog/LoadingProgressDialogs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/manager/TTAdManagerHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_h5/src/main/java/com/xipu/h5/h5sdk/manager/TTAdManagerHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/ui/BrowserActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/ui/PermissionsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/ui/PermissionsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/ui/SplashActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/ui/SplashActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/util/AdConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/model/AdConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/util/GDTUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/util/H5Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/H5Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/util/KeyBoardListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/KeyBoardListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/util/OaidHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/OaidHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/util/ParamUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/ParamUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/util/PermissionsChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/PermissionsChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/util/TTAdUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/util/ZYJSONObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/ZYJSONObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/util/permission/PermissionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/permission/PermissionUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/xipu/xmdmlrjh5/wxapi/WXPayEntryActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/wxapi/WXPayEntryActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libtbs.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libtbs.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/drawable-hdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-ldpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/drawable-ldpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/drawable-mdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/drawable-xhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/drawable-xhdpi/splash.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/welcome.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/drawable-xhdpi/welcome.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/drawable-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/bg_border_tv_red.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/drawable/bg_border_tv_red.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/round_bg_white.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/drawable/round_bg_white.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/round_border_tv_red.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/drawable/round_border_tv_red.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/round_border_tv_red_shadow.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/drawable/round_border_tv_red_shadow.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/round_title_red.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/drawable/round_title_red.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_permissions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/layout/activity_permissions.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/layout/activity_splash.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/layout/activity_splash2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/layout/layout_dialog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_empty.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/layout/layout_empty.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/loadingprogress.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/layout/loadingprogress.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/icon_logo_title.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/icon_logo_title.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/color.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/values/color.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/xml/file_paths.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/h5demo_h5/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/libs/soutil_20200721.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/h5demo_h5/proguard-rules.pro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/androidTest/java/com/xipu/h5/osdk/ExampleInstrumentedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/H5OSDK.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/callback/OBindAccountApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/callback/OLoginApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/callback/OPayApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/callback/OSDKApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/callback/OShareApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/callback/OShareApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/config/OSDKConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/config/OSDKConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/manager/FacebookManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/manager/FacebookManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/manager/GoogleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/manager/GoogleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/manager/LineManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/manager/LineManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/utils/OLoginCodeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/OLoginCodeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/utils/OLoginTypeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/OLoginTypeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/utils/OSDKUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/utils/OSharePlatform.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/OSharePlatform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/utils/OShareType.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/OShareType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/utils/SharedPreferencesUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/SharedPreferencesUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/utils/ThreadManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/ThreadManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/java/com/xipu/h5/osdk/view/OH5Dialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/dialog/OH5Dialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/res/drawable/bg_border_tv_red.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/drawable/bg_border_tv_red.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/res/drawable/round_bg_white.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/drawable/round_bg_white.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/res/drawable/round_title_red.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/drawable/round_title_red.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/res/layout/layout_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/layout/layout_dialog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/res/mipmap-xhdpi/icon_logo_title.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/mipmap-xhdpi/icon_logo_title.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/values-en/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/res/values-in-rID/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/values-in-rID/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/res/values-th-rTH/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/values-th-rTH/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/res/values-zh-rCN/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/values-zh-rCN/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/res/values-zh-rHK/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/values-zh-rHK/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/res/values-zh-rMO/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/values-zh-rTW/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/res/values-zh-rTW/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/values-zh-rMO/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/res/values/color.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/res/values/color.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5module_osdk/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5_osdk/src/test/java/com/xipu/h5/osdk/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5demo_osdk/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/h5demo_google/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5demo_osdk/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/h5demo_google/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5demo_osdk/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/h5demo_google/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5demo_osdk/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5demo_google/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5demo_osdk/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/h5demo_google/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/OSDK.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/OSDKApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/adapter/OUserAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/callback/OBindAccountCallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/callback/OLoginCallBack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/callback/OLoginUserCallBack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/callback/OOverseaAccountLoginCallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/callback/ORandomAccountCallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/callback/OSDKApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/callback/OShareApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/callback/OUserListCallBack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/config/OSDKConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/dialog/OBindAccountDialog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/dialog/OH5Dialog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/dialog/OLoginDialog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/dialog/OXiPuLoginDialog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/manager/FacebookManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/manager/GoogleManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/manager/LineManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/OAppsFlyerUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/OLoginCodeUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/OLoginTypeUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/ONetWorkUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/OSDKUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/OSharePlatform.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/OShareType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/SystemUiUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/ThreadManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/drawable/bg_border_tv_red.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/drawable/o_bg_oversea_dialog_account_list.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/drawable/o_bg_oversea_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/drawable/o_bg_oversea_login_dialog_but.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/drawable/o_bg_oversea_login_dialog_text.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/drawable/o_bg_user_textcolor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/drawable/round_bg_white.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/drawable/round_title_red.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/layout-port/o_layout_oversea_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/layout/layout_dialog.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/layout/o_layout_oversea_bind_account.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/layout/o_layout_oversea_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/layout/o_layout_oversea_user_list_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/layout/o_layout_oversea_xp_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/icon_logo_title.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_bg_facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_bg_google.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_bg_guest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_bg_line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_big_facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_big_google.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_big_line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_google.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_guest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/mipmap-xhdpi/o_icon_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/values-en/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/values-in-rID/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/values-th-rTH/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/values-zh-rCN/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/values-zh-rHK/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/values-zh-rMO/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/values-zh-rTW/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/values/color.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5module_osdk/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/BSDK.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/BSDK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/H5.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/H5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/callback/BSDKApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/callback/BSDKApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/config/H5Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/config/H5Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/ui/BrowserActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/ui/BrowserActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/H5Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/H5Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -300,12 +140,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/ui/BrowserActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="186" column="52" lean-forward="true" selection-start-line="186" selection-start-column="52" selection-end-line="186" selection-end-column="52" />
+            <state relative-caret-position="350">
+              <caret line="374" column="67" selection-start-line="374" selection-start-column="67" selection-end-line="374" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#13742#13743#0" expanded="true" />
-                <element signature="e#13815#13816#0" expanded="true" />
                 <element signature="e#14600#14601#0" expanded="true" />
                 <element signature="e#14658#14659#0" expanded="true" />
               </folding>
@@ -313,57 +151,71 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5demo_h5/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/manager/GoogleManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1695">
-              <caret line="412" column="35" selection-start-line="412" selection-start-column="35" selection-end-line="412" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/OSDK.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="527" column="62" selection-start-line="527" selection-start-column="55" selection-end-line="527" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/ONetWorkUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="287" column="40" lean-forward="true" selection-start-line="287" selection-start-column="40" selection-end-line="287" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5module_google/src/main/java/com/xipu/h5/osdk/OSDK.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="512" column="27" selection-start-line="512" selection-start-column="27" selection-end-line="512" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#7282#7624#0" expanded="true" />
+                <element signature="e#7623#7624#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/H5.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/AppConfigUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5module_google/src/main/java/com/xipu/h5/osdk/utils/ONetWorkUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2346">
+              <caret line="287" column="40" selection-start-line="287" selection-start-column="40" selection-end-line="287" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/BSDK.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="84" column="65" lean-forward="true" selection-start-line="84" selection-start-column="65" selection-end-line="84" selection-end-column="65" />
+            <state relative-caret-position="138">
+              <caret line="119" column="16" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3389#3390#0" expanded="true" />
+                <element signature="e#3438#3439#0" expanded="true" />
+                <element signature="e#3626#3627#0" expanded="true" />
+                <element signature="e#3668#3669#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/callback/BSDKApi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="13" column="51" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -371,8 +223,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/H5Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="340" column="29" selection-start-line="340" selection-start-column="29" selection-end-line="340" selection-end-column="29" />
+            <state relative-caret-position="3938">
+              <caret line="353" column="37" selection-start-line="353" selection-start-column="25" selection-end-line="353" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -381,29 +233,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5demo_osdk/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest" />
+        <entry file="file://$PROJECT_DIR$/h5demo_google/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="109" column="59" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="59" />
+            <state relative-caret-position="333">
+              <caret line="109" column="59" selection-start-line="109" selection-start-column="59" selection-end-line="109" selection-end-column="59" />
             </state>
           </provider>
+          <provider editor-type-id="android-manifest" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/config/H5Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2340">
-              <caret line="90" column="55" selection-start-line="90" selection-start-column="55" selection-end-line="90" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5sdk/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="18" column="27" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="27" />
+            <state relative-caret-position="624">
+              <caret line="30" column="77" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -421,14 +264,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tuiaActivate</find>
-      <find>onCrea</find>
-      <find>screenSizeCallback</find>
-      <find>mWebView</find>
-      <find>onLo</find>
-      <find>TTMultiProvider</find>
-      <find>han</find>
-      <find>IsQueryProductIDList</find>
       <find>pay()</find>
       <find>getAccesstoken</find>
       <find>onPay</find>
@@ -451,6 +286,14 @@
       <find>mLoginApi</find>
       <find>getLoginApi</find>
       <find>LOGIN_SUCCESS</find>
+      <find>mConfigModule</find>
+      <find>mChannel</find>
+      <find>getDevice_id</find>
+      <find>onLogin</find>
+      <find>init</find>
+      <find>JSONObject</find>
+      <find>THREAD_NAME_SEND_PAY_SUCCESS</find>
+      <find>onSwitchAccount</find>
     </findStrings>
     <replaceStrings>
       <replace>o_tip_network</replace>
@@ -477,10 +320,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/H5Application.java" />
-        <option value="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/OSDKApplication.java" />
-        <option value="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/SystemUiUtils.java" />
-        <option value="$PROJECT_DIR$/h5demo_osdk/build.gradle" />
         <option value="$PROJECT_DIR$/h5module_osdk/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/callback/H5SDKApi.java" />
         <option value="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/OSDKUtils.java" />
@@ -503,13 +342,10 @@
         <option value="$PROJECT_DIR$/h5module_h5/src/main/java/com/xipu/h5/h5sdk/manager/JrttManager.java" />
         <option value="$PROJECT_DIR$/h5module_h5/src/main/java/com/xipu/h5/h5sdk/manager/GDTManager.java" />
         <option value="$PROJECT_DIR$/h5module_h5/src/main/java/com/xipu/h5/h5sdk/manager/TTAdManager.java" />
-        <option value="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/H5.java" />
         <option value="$PROJECT_DIR$/h5module_h5/src/main/java/com/xipu/h5/h5sdk/callback/H5SDKApi.java" />
         <option value="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/BApplication.java" />
         <option value="$PROJECT_DIR$/h5demo_osdk/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/config/H5Config.java" />
         <option value="$PROJECT_DIR$/h5demo_h5/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/H5Utils.java" />
         <option value="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/OSDK.java" />
         <option value="$PROJECT_DIR$/h5module_h5/src/main/java/com/xipu/h5/h5sdk/H5SDK.java" />
         <option value="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/ui/PermissionsActivity.java" />
@@ -524,18 +360,25 @@
         <option value="$PROJECT_DIR$/h5sdk/src/main/res/values-zh-rHK/strings.xml" />
         <option value="$PROJECT_DIR$/h5sdk/src/main/res/values-zh-rMO/strings.xml" />
         <option value="$PROJECT_DIR$/h5sdk/src/main/res/values-zh-rTW/strings.xml" />
-        <option value="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/ui/BrowserActivity.java" />
         <option value="$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/manager/GoogleManager.java" />
         <option value="$PROJECT_DIR$/h5demo_h5/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/h5module_google/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/config/H5Config.java" />
+        <option value="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/H5Utils.java" />
+        <option value="$PROJECT_DIR$/h5demo_google/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/callback/BSDKApi.java" />
+        <option value="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/H5.java" />
+        <option value="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/ui/BrowserActivity.java" />
         <option value="$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/BSDK.java" />
+        <option value="$PROJECT_DIR$/h5module_google/src/main/java/com/xipu/h5/osdk/OSDK.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="72" />
-    <option name="y" value="32" />
+    <option name="x" value="61" />
+    <option name="y" value="39" />
     <option name="width" value="1795" />
-    <option name="height" value="957" />
+    <option name="height" value="1001" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -543,9 +386,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -556,70 +399,31 @@
             <path>
               <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
               <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5demo_h5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="h5demo_google" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
               <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5demo_h5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="h5demo_google" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="release" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="h5demo_google" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
               <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5demo_h5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5demo_h5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5demo_h5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5demo_h5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="xipu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5demo_osdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5demo_osdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5demo_osdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="h5demo_google" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
               <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5demo_osdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="h5demo_google" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -627,7 +431,7 @@
             <path>
               <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
               <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5demo_osdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="h5demo_google" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -636,7 +440,7 @@
             <path>
               <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
               <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5demo_osdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="h5demo_google" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -646,7 +450,7 @@
             <path>
               <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
               <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5demo_osdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="h5demo_google" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -657,88 +461,50 @@
             <path>
               <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
               <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5module_osdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="h5demo_google" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
               <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5module_osdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="h5demo_google" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="values" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="h5module_google" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="h5module_google" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
               <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5module_osdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="h5module_google" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
               <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5module_osdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5module_osdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5module_osdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="xipu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5module_osdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="h5module_google" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="xipu" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
               <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5module_osdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="xipu" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="osdk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5module_osdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="xipu" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="osdk" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xph5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xph5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="h5module_osdk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="h5module_google" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
@@ -919,11 +685,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="ExportApk.ApkPath" value="D:\git repository\xipuH5\xph5\h5demo_h5" />
+    <property name="ExportApk.ApkPath" value="D:\git repository\xipuH5\xph5\h5demo_google" />
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.SignV1" value="true" />
     <property name="device.picker.selection" value="E4J4C17415004940" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/h5demo_h5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/h5demo_google" />
     <property name="show.do.not.ask.upgrade.gradle.plugin" value="3.1.4" />
   </component>
   <component name="RecentsManager">
@@ -961,10 +727,63 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android App.h5demo_osdk">
+  <component name="RunManager" selected="Android App.h5demo_google">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="h5demo_google" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="h5demo_google" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -1022,62 +841,9 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="h5demo_osdk" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="h5demo_osdk" />
-      <option name="DEPLOY" value="true" />
-      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
-      <option name="DEPLOY_AS_INSTANT" value="false" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
-      <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Android App.h5demo_h5" />
-      <item itemvalue="Android App.h5demo_osdk" />
+      <item itemvalue="Android App.h5demo_google" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -1103,12 +869,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="72" y="32" width="1795" height="957" extended-state="0" />
+    <frame x="64" y="36" width="1795" height="1001" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.2334294" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.2334294" />
       <window_info id="Structure" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
@@ -1118,14 +884,14 @@
       <window_info anchor="bottom" id="Messages" order="0" />
       <window_info anchor="bottom" id="Run" order="1" weight="0.32965687" />
       <window_info anchor="bottom" id="Debug" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.4997118" weight="0.45752427" />
+      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.4997118" weight="0.45686513" />
       <window_info anchor="bottom" id="TODO" order="4" weight="0.32965687" />
-      <window_info anchor="bottom" id="Android Profiler" order="5" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.49913543" weight="0.22478737" />
+      <window_info anchor="bottom" id="Android Profiler" order="5" />
+      <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.49913543" weight="0.32685298" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50086457" side_tool="true" weight="0.5109223" />
-      <window_info anchor="bottom" id="Build" order="8" sideWeight="0.49913543" weight="0.2490887" />
+      <window_info anchor="bottom" id="Build" order="8" sideWeight="0.49913543" weight="0.24682814" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.3288835" />
-      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.49913543" weight="0.2381531" />
+      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.49913543" weight="0.42906573" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
@@ -1175,32 +941,7 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/manager/FacebookManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="223" column="54" selection-start-line="223" selection-start-column="54" selection-end-line="223" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6245#8642#0" expanded="true" />
-            <element signature="e#8641#8642#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/manager/LineManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="184" column="59" selection-start-line="184" selection-start-column="59" selection-end-line="184" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2627#3503#0" expanded="true" />
-            <element signature="e#3502#3503#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5module_h5/build/generated/source/buildConfig/debug/com/xipu/h5module_h5/BuildConfig.java" />
-    <entry file="file://$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/OAppsFlyerUtils.java">
+    <entry file="file://$PROJECT_DIR$/h5module_google/src/main/java/com/xipu/h5/osdk/utils/OAppsFlyerUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
@@ -1217,13 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/AppConfigUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5demo_h5/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1235,16 +969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/callback/OSDKApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1315,27 +1039,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/h5module_h5/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
           <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/h5module_h5/src/main/java/com/xipu/h5/h5sdk/H5Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-31">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/H5.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1404,12 +1118,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/h5sdk/src/main/res/layout/layout_empty.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="10" column="43" lean-forward="true" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/h5sdk/src/main/res/values-zh-rTW/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1460,14 +1174,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5demo_osdk/build.gradle">
+    <entry file="file://$PROJECT_DIR$/h5demo_google/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/OSDKApplication.java">
+    <entry file="file://$PROJECT_DIR$/h5module_google/src/main/java/com/xipu/h5/osdk/OSDKApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1768">
           <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
@@ -1487,7 +1201,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5module_osdk/build.gradle">
+    <entry file="file://$PROJECT_DIR$/h5module_google/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
           <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
@@ -1508,15 +1222,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/manager/GoogleManager.java">
+    <entry file="file://$PROJECT_DIR$/h5demo_h5/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1695">
-          <caret line="412" column="35" selection-start-line="412" selection-start-column="35" selection-end-line="412" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1976">
+          <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/h5sdk/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1525,76 +1237,132 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/h5module_google/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5demo_google/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5module_google/src/main/java/com/xipu/h5/osdk/manager/GoogleManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="428" column="23" selection-start-line="428" selection-start-column="23" selection-end-line="428" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#15164#17044#0" expanded="true" />
+            <element signature="e#17043#17044#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/config/H5Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2340">
-          <caret line="90" column="55" selection-start-line="90" selection-start-column="55" selection-end-line="90" selection-end-column="55" />
+        <state relative-caret-position="624">
+          <caret line="30" column="77" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5demo_osdk/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
+    <entry file="file://$PROJECT_DIR$/h5module_google/src/main/java/com/xipu/h5/osdk/utils/ONetWorkUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="109" column="59" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="59" />
+        <state relative-caret-position="2346">
+          <caret line="287" column="40" selection-start-line="287" selection-start-column="40" selection-end-line="287" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5demo_h5/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
+    <entry file="file://$PROJECT_DIR$/h5demo_google/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
+        <state relative-caret-position="333">
+          <caret line="109" column="59" selection-start-line="109" selection-start-column="59" selection-end-line="109" selection-end-column="59" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5module_google/src/main/java/com/xipu/h5/osdk/callback/OSDKApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/callback/BSDKApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="51" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/H5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/ui/BrowserActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="186" column="52" lean-forward="true" selection-start-line="186" selection-start-column="52" selection-end-line="186" selection-end-column="52" />
+        <state relative-caret-position="350">
+          <caret line="374" column="67" selection-start-line="374" selection-start-column="67" selection-end-line="374" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#13742#13743#0" expanded="true" />
-            <element signature="e#13815#13816#0" expanded="true" />
             <element signature="e#14600#14601#0" expanded="true" />
             <element signature="e#14658#14659#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/OSDK.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="527" column="62" selection-start-line="527" selection-start-column="55" selection-end-line="527" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5module_osdk/src/main/java/com/xipu/h5/osdk/utils/ONetWorkUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="287" column="40" lean-forward="true" selection-start-line="287" selection-start-column="40" selection-end-line="287" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/H5Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="340" column="29" selection-start-line="340" selection-start-column="29" selection-end-line="340" selection-end-column="29" />
+        <state relative-caret-position="3938">
+          <caret line="353" column="37" selection-start-line="353" selection-start-column="25" selection-end-line="353" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/util/AppConfigUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/h5sdk/src/main/java/com/xipu/h5/sdk/BSDK.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="84" column="65" lean-forward="true" selection-start-line="84" selection-start-column="65" selection-end-line="84" selection-end-column="65" />
+        <state relative-caret-position="138">
+          <caret line="119" column="16" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3389#3390#0" expanded="true" />
+            <element signature="e#3438#3439#0" expanded="true" />
+            <element signature="e#3626#3627#0" expanded="true" />
+            <element signature="e#3668#3669#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5module_google/src/main/java/com/xipu/h5/osdk/OSDK.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="512" column="27" selection-start-line="512" selection-start-column="27" selection-end-line="512" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7282#7624#0" expanded="true" />
+            <element signature="e#7623#7624#0" expanded="true" />
           </folding>
         </state>
       </provider>

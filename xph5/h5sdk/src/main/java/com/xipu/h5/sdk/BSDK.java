@@ -81,8 +81,8 @@ public abstract class BSDK implements BSDKApi {
             map.put("openid", userModel.getOpenid());
             map.put("timestamp", userModel.getTimes());
             map.put("is_newuser", userModel.getIs_newuser());
-            map.put("accesstoken",userModel.getAccesstoken());
-            map.put("device_id",H5Utils.getDevice_id(mActivity));
+            map.put("accesstoken", userModel.getAccesstoken());
+            map.put("device_id", H5Utils.getDevice_id(mActivity));
         }
         map.put("identity_status", H5Utils.getIdentityStatus());
 
@@ -91,6 +91,8 @@ public abstract class BSDK implements BSDKApi {
         Log.d(H5Utils.TAG, "openid: " + userModel.getOpenid());
         Log.d(H5Utils.TAG, "timestamp: " + userModel.getTimes());
         Log.d(H5Utils.TAG, "is_newuser: " + userModel.getIs_newuser());
+        Log.d(H5Utils.TAG, "accesstoken: " + userModel.getAccesstoken());
+        Log.d(H5Utils.TAG, "device_id: " + H5Utils.getDevice_id(mActivity));
         onLoginSuccess(map);
     }
 
@@ -100,8 +102,13 @@ public abstract class BSDK implements BSDKApi {
     }
 
     @Override
-    public void onActivate(Activity activity) {
-
+    public void onActivate(Activity activity, String values) {
+        try {
+            com.alibaba.fastjson.JSONObject jsonObject = JSON.parseObject(values);
+            H5Utils.setDevice_id(activity, jsonObject.getString("device_id"));
+        } catch (Exception e) {
+            Log.e(H5Utils.TAG, "onActivate() Exception: " + e.getMessage());
+        }
     }
 
     @Override
@@ -115,13 +122,13 @@ public abstract class BSDK implements BSDKApi {
     }
 
     @Override
-    public void onPay(final Activity activity,HashMap<String, String> paramsMap) {
+    public void onPay(final Activity activity, HashMap<String, String> paramsMap) {
         Log.d(H5Utils.TAG, "pay()");
         if (!SONetworkUtil.isNetworkAvailable(activity)) {
             SOToastUtil.showShort(SOCommonUtil.getRes4LocaleStr(activity, "o_tip_network"));
             return;
         }
-        if (!paramsMap.containsKey("role_id")||!paramsMap.containsKey("server_id")) {
+        if (!paramsMap.containsKey("role_id") || !paramsMap.containsKey("server_id")) {
             SOToastUtil.showShort("pay() roleModel is null");
             Log.d(H5Utils.TAG, "pay() roleModel is null");
             return;
