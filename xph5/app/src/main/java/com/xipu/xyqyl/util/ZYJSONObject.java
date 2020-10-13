@@ -1,4 +1,4 @@
-package com.xipu.xmdmlrjh5.util;
+package com.xipu.xyqyl.util;
 
 import org.json.JSONException;
 import org.json.JSONObject;

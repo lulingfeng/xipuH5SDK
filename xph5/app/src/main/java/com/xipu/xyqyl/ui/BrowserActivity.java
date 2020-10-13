@@ -1,4 +1,4 @@
-package com.xipu.xmdmlrjh5.ui;
+package com.xipu.xyqyl.ui;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -25,6 +25,7 @@ import android.webkit.JavascriptInterface;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import com.bytedance.applog.AppLog;
 import com.bytedance.applog.GameReportHelper;
 import com.bytedance.sdk.openadsdk.AdSlot;
 import com.bytedance.sdk.openadsdk.TTAdConstant;
@@ -35,27 +36,26 @@ import com.bytedance.sdk.openadsdk.TTAppDownloadListener;
 import com.bytedance.sdk.openadsdk.TTFullScreenVideoAd;
 import com.bytedance.sdk.openadsdk.TTNativeExpressAd;
 import com.bytedance.sdk.openadsdk.TTRewardVideoAd;
+import com.xipu.xyqyl.R;
 import com.qq.gdt.action.ActionType;
 import com.qq.gdt.action.GDTAction;
 import com.startobj.util.device.SODensityUtil;
 import com.startobj.util.http.SORequestParams;
 import com.tencent.smtt.export.external.interfaces.SslError;
 import com.tencent.smtt.export.external.interfaces.SslErrorHandler;
-import com.tencent.smtt.sdk.CookieManager;
 import com.tencent.smtt.sdk.ValueCallback;
 import com.tencent.smtt.sdk.WebChromeClient;
 import com.tencent.smtt.sdk.WebSettings;
 import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.WebViewClient;
-import com.xipu.xmdmlrjh5.R;
-import com.xipu.xmdmlrjh5.config.H5Config;
-import com.xipu.xmdmlrjh5.config.TTAdManagerHolder;
-import com.xipu.xmdmlrjh5.util.AdConfig;
-import com.xipu.xmdmlrjh5.util.H5Utils;
-import com.xipu.xmdmlrjh5.util.KeyBoardListener;
-import com.xipu.xmdmlrjh5.util.ParamUtil;
-import com.xipu.xmdmlrjh5.util.TTAdUtils;
-import com.xipu.xmdmlrjh5.util.ZYJSONObject;
+import com.xipu.xyqyl.config.H5Config;
+import com.xipu.xyqyl.config.TTAdManagerHolder;
+import com.xipu.xyqyl.util.AdConfig;
+import com.xipu.xyqyl.util.H5Utils;
+import com.xipu.xyqyl.util.KeyBoardListener;
+import com.xipu.xyqyl.util.ParamUtil;
+import com.xipu.xyqyl.util.TTAdUtils;
+import com.xipu.xyqyl.util.ZYJSONObject;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -276,7 +276,7 @@ public class BrowserActivity extends Activity {
      */
     private String generateUrl() {
         StringBuffer sb = new StringBuffer(H5Config.GAME_URL);
-        //    StringBuffer sb = new StringBuffer("http://testh5.xipu.com/play.php");
+        //  StringBuffer sb = new StringBuffer("http://testh5.xipu.com/play.php");
         //  StringBuffer sb = new StringBuffer("http://h5.xipu.com/play.php");
         sb.append("?app_id=" + ParamUtil.getAppId() + "&");
         SORequestParams params = new SORequestParams(H5Config.GAME_URL, H5Utils.getCommonParams(this));
@@ -359,11 +359,17 @@ public class BrowserActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+        if (ParamUtil.isUseJrtt()){
+            AppLog.onResume(this);
+        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        if (ParamUtil.isUseJrtt()){
+            AppLog.onPause(this);
+        }
     }
 
     private void loadBannerAd(AdConfig adConfig) {
@@ -873,7 +879,7 @@ public class BrowserActivity extends Activity {
     public void sendJrttPayInfo(boolean is_report, int amount, String out_trade_no) {
         if (ParamUtil.isUseJrtt() && is_report) {
             Log.e(H5Utils.TAG, "jrtt pay");
-            GameReportHelper.onEventPurchase("type", "钻石", "1", 1, "xipudemo", "人民币", true, amount / 100);
+            GameReportHelper.onEventPurchase("type", "钻石", "1", 1, "xipu", "人民币", true, amount / 100);
             HashMap<String, String> map = new HashMap<>();
             map.put("app_id", ParamUtil.getAppId());
             map.put("channel", H5Utils.getChannel());

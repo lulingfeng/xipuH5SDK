@@ -1,4 +1,4 @@
-package com.xipu.xmdmlrjh5.ui;
+package com.xipu.xyqyl.ui;
 
 import android.Manifest;
 import android.app.Activity;
@@ -9,6 +9,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 
+import com.xipu.xyqyl.R;
 import com.startobj.util.http.SOCallBack.SOCommonCallBack;
 import com.startobj.util.http.SOHttpConnection;
 import com.startobj.util.http.SOJsonMapper;
@@ -17,11 +18,11 @@ import com.startobj.util.http.SOServertReturnErrorException;
 import com.startobj.util.network.SONetworkUtil;
 
 import com.tencent.smtt.sdk.QbSdk;
-import com.xipu.xmdmlrjh5.R;
-import com.xipu.xmdmlrjh5.config.H5Config;
-import com.xipu.xmdmlrjh5.util.H5Utils;
-import com.xipu.xmdmlrjh5.util.ParamUtil;
-import com.xipu.xmdmlrjh5.util.PermissionsChecker;
+
+import com.xipu.xyqyl.config.H5Config;
+import com.xipu.xyqyl.util.H5Utils;
+import com.xipu.xyqyl.util.ParamUtil;
+import com.xipu.xyqyl.util.PermissionsChecker;
 
 import org.json.JSONObject;
 

@@ -1,4 +1,4 @@
-package com.xipu.xmdmlrjh5.config;
+package com.xipu.xyqyl.config;
 
 import android.content.Context;
 
@@ -6,7 +6,7 @@ import com.bytedance.sdk.openadsdk.TTAdConfig;
 import com.bytedance.sdk.openadsdk.TTAdConstant;
 import com.bytedance.sdk.openadsdk.TTAdManager;
 import com.bytedance.sdk.openadsdk.TTAdSdk;
-import com.xipu.xmdmlrjh5.util.TTAdUtils;
+import com.xipu.xyqyl.util.TTAdUtils;
 
 /**
  * 可以用一个单例来保存TTAdManager实例，在需要初始化sdk的时候调用

@@ -1,4 +1,4 @@
-package com.xipu.xmdmlrjh5.util;
+package com.xipu.xyqyl.util;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 
 import com.startobj.util.common.SOCommonUtil;
-import com.xipu.xmdmlrjh5.config.H5Config;
+import com.xipu.xyqyl.config.H5Config;
 
 public class ParamUtil {
 

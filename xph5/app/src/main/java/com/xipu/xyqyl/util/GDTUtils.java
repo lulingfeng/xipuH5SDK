@@ -1,4 +1,4 @@
-package com.xipu.xmdmlrjh5.util;
+package com.xipu.xyqyl.util;
 
 import android.content.Context;
 import android.content.pm.PackageManager;

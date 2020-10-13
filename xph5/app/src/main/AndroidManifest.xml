@@ -1,37 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xipu.xmdmlrjh5">
+    package="com.xipu.xyqyl">
 
     <!-- 允许网络连接 -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!-- 获取网络信息状态，如当前的网络连接是否有效 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!-- 改变网络状态如是否能联网 -->
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <!-- 允许读写存储卡 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!-- 允许读写手机状态和身份 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!-- 允许程序访问Wi-Fi网络状态信息 -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!-- 允许NFC通讯 -->
-    <uses-permission android:name="android.permission.NFC" />
-    <!-- 过滤所有你设备不支持的应用 -->
-    <uses-feature android:name="android.hardware.nfc.hce" />
-    <!-- 银联 -->
-    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
-    <!-- 允许使用振动 -->
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <!-- 允许程序可以读取设备外部存储空间 -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!-- 屏幕保持唤醒 不锁屏 -->
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.GET_TASKS"/>
-
     <application
         android:name=".H5Application"
         android:allowBackup="true"
@@ -67,15 +38,15 @@
         <!-- 喜扑游戏 客户端id  -->
         <meta-data
             android:name="xp_appid"
-            android:value="0723d02cec14fc2dd6ec725c344ef5c1" />
+            android:value="0009142c5c34a34d4c1ff77479196bce" />
         <!-- 喜扑游戏 今日头条统计SDK appname -->
         <meta-data
             android:name="xp_jrtt_appname"
-            android:value="" />
+            android:value="xipudemo" />
         <!-- 喜扑游戏 今日头条统计SDK channel -->
         <meta-data
             android:name="xp_jrtt_channel"
-            android:value="" />
+            android:value="xipudemo" />
         <!-- 喜扑游戏 今日头条统计SDK 是否启用 -->
         <meta-data
             android:name="xp_use_jrtt"
@@ -83,7 +54,7 @@
         <!-- 喜扑游戏 今日头条统计SDK aid -->
         <meta-data
             android:name="xp_jrtt_aid"
-            android:value="166643" />
+            android:value="173051" />
         <!-- 喜扑游戏 推啊 advertkey -->
         <meta-data
             android:name="xp_tuia_advertkey"
@@ -108,7 +79,7 @@
         <!-- 穿山甲 AD -->
         <provider
             android:name="com.bytedance.sdk.openadsdk.TTFileProvider"
-            android:authorities="com.xipu.xmdmlrjh5.TTFileProvider"
+            android:authorities="com.xipu.xyqyl.TTFileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -118,10 +89,38 @@
 
         <provider
             android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
-            android:authorities="com.xipu.xmdmlrjh5.TTMultiProvider"
-            android:exported="false" >
-        </provider>
+            android:authorities="com.xipu.xyqyl.TTMultiProvider"
+            android:exported="false"></provider>
 
     </application>
+    <!-- 获取网络信息状态，如当前的网络连接是否有效 -->
+    <uses-feature android:name="android.hardware.nfc.hce" />
+    <!-- 改变网络状态如是否能联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许读写存储卡 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 允许程序访问Wi-Fi网络状态信息 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许NFC通讯 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 过滤所有你设备不支持的应用 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 银联 -->
+    <uses-permission android:name="android.permission.NFC" />
+    <!-- 允许使用振动 -->
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    <!-- 允许程序可以读取设备外部存储空间 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 屏幕保持唤醒 不锁屏 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
 
 </manifest>
