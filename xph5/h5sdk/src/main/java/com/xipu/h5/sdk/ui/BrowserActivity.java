@@ -180,11 +180,11 @@ public class BrowserActivity extends Activity {
      * @return
      */
     private String generateUrl() {
-        //   StringBuffer sb = new StringBuffer(H5Config.GAME_URL);
-        StringBuffer sb = new StringBuffer("http://testh5.xipu.com/play.php"); // demo
+           StringBuffer sb = new StringBuffer(H5Config.GAME_URL);
+      //  StringBuffer sb = new StringBuffer("http://testh5.xipu.com/play.php"); // demo
         //  StringBuffer sb = new StringBuffer("http://h5.xipu.com/play.php");
-        // sb.append("?app_id=" + ParamUtil.getAppId() + "&");
-         sb.append("?app_id=38807b0c59747f0cb583c3a00a24a788&");
+         sb.append("?app_id=" + ParamUtil.getAppId() + "&");
+      //   sb.append("?app_id=38807b0c59747f0cb583c3a00a24a788&");
         SORequestParams params = new SORequestParams(H5Config.GAME_URL, H5Utils.getCommonParams(this));
         sb.append(params.getParamsStr());
         Log.d(H5Utils.TAG, "generateUrl: " + sb.toString());

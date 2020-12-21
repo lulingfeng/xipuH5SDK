@@ -12,8 +12,8 @@ public class H5Config {
     public final static String SP_ISACTIVATE = "h5_activate";
     public final static String SP_PAYSUCCESS_DATA = "h5_paysuccess_data";
 
-    public final static String API_URL = "http://testapi.kuaigames.com/"+SDK_VERSION+"/";
-    //public final static String API_URL = "http://api.kuaigames.com/" + SDK_VERSION + "/";
+   // public final static String API_URL = "http://testapi.kuaigames.com/"+SDK_VERSION+"/";
+    public final static String API_URL = "http://api.kuaigames.com/" + SDK_VERSION + "/";
 
     //  public static String GAME_BASE_URL = "http://testh5.xipu.com";
     public static String GAME_BASE_URL = "https://h5.zhangyueyx.com";

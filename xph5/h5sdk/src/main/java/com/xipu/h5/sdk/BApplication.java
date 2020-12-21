@@ -7,8 +7,8 @@ import android.util.Log;
 import com.bun.miitmdid.core.JLibrary;
 import com.startobj.util.toast.SOToastUtil;
 import com.xipu.h5.sdk.util.H5Utils;
+import com.xipu.h5.sdk.util.OaidHelper;
 import com.xipu.h5.sdk.util.ParamUtil;
-import com.xipu.xmdmlrjh5.util.OaidHelper;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

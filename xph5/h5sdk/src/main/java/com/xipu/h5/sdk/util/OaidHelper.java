@@ -1,4 +1,4 @@
-package com.xipu.xmdmlrjh5.util;
+package com.xipu.h5.sdk.util;
 
 import android.content.Context;
 import android.util.Log;
@@ -8,7 +8,6 @@ import com.bun.miitmdid.core.ErrorCode;
 import com.bun.miitmdid.core.MdidSdkHelper;
 import com.bun.supplier.IIdentifierListener;
 import com.bun.supplier.IdSupplier;
-import com.xipu.h5.sdk.util.H5Utils;
 
 
 /**
