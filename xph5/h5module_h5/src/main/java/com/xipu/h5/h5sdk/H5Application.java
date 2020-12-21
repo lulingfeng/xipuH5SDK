@@ -3,8 +3,9 @@ package com.xipu.h5.h5sdk;
 import android.util.Log;
 
 import com.bytedance.applog.AppLog;
+import com.bytedance.applog.ILogger;
 import com.bytedance.applog.InitConfig;
-import com.bytedance.applog.util.UriConfig;
+import com.bytedance.applog.util.UriConstants;
 import com.qq.gdt.action.GDTAction;
 import com.tencent.bugly.crashreport.CrashReport;
 import com.xipu.h5.sdk.BApplication;
@@ -17,7 +18,7 @@ public class H5Application extends BApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-          if (!BuildConfig.DEBUG) {
+        if (!BuildConfig.DEBUG) {
             Log.d(H5Utils.TAG, "Bugly始化");
             CrashReport.initCrashReport(getApplicationContext(), "592580b3cc", false);
         }
@@ -39,8 +40,13 @@ public class H5Application extends BApplication {
     private void initRangersAppLog() {
         try {
             final InitConfig config = new InitConfig(String.valueOf(ParamUtil.getJrttAid()), ParamUtil.getJrttChannel());
-            config.setUriConfig(UriConfig.DEFAULT);
-            AppLog.setEnableLog(false);  // 是否在控制台输出日志上报情况
+            config.setUriConfig(UriConstants.DEFAULT);
+            config.setLogger(new ILogger() {  // 是否在控制台输出日志上报情况
+                @Override
+                public void log(String s, Throwable throwable) {
+                    Log.d("JJTT", s);
+                }
+            });
             config.setEnablePlay(true);  // 时长统计  每隔一分钟上报心跳日志
             AppLog.init(this, config);
         } catch (Exception e) {

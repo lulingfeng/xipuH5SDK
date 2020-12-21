@@ -148,14 +148,14 @@ public class H5SDK extends BSDK implements H5SDKApi {
         Log.d(H5Utils.TAG,"onReportGDT: "+reportType);
         try {
             ZYJSONObject dataResult = new ZYJSONObject(values);
-            boolean is_ysdk_report = dataResult.getInt("is_ysdk_report") == 1 ? true : false; // 广点通标识
-            boolean ysdk_report = dataResult.getInt("ysdk_report") == 1 ? true : false; // 广点通全局标识
+            boolean is_ysdk_report = dataResult.getIntDef("is_ysdk_report") == 1 ? true : false; // 广点通标识
+            boolean ysdk_report = dataResult.getIntDef("ysdk_report") == 1 ? true : false; // 广点通全局标识
             if (reportType.equals(ReportTypeUtils.LOGIN)) {
                 H5Utils.setOpenID(dataResult.getString("open_id"));
                 boolean is_newuser = dataResult.getInt("is_newuser") == 1 ? true : false; // 新用户标识
                 GDTManager.getInstance().sendGDTRegister(activity,is_newuser,is_ysdk_report,ysdk_report,H5Utils.getOpenID());
             } else if (reportType.equals(ReportTypeUtils.PAY)) {
-                int ysdk_report_amount = dataResult.getInt("ysdk_report_amount");
+                int ysdk_report_amount = dataResult.getIntDef("ysdk_report_amount");
                 GDTManager.getInstance().sendGDTPayInfo(is_ysdk_report, ysdk_report, ysdk_report_amount);
             }
 
