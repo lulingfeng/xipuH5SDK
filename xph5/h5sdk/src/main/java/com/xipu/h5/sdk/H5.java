@@ -4,9 +4,9 @@ package com.xipu.h5.sdk;
 import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
+import android.webkit.WebView;
 import android.widget.FrameLayout;
 
-import com.tencent.smtt.sdk.WebView;
 import com.xipu.h5.sdk.callback.OQuerySkuApi;
 import com.xipu.h5.sdk.callback.OLoginApi;
 import com.xipu.h5.sdk.callback.OPayApi;

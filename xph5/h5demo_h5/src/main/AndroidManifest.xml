@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.xipu.xmdmlrjh5"
+    package="com.zhangyue.ylyhhgswjgdt"
     tools:ignore="MissingLeanbackLauncher">
 
     <!-- 允许网络连接 -->
@@ -73,7 +73,7 @@
         <!-- 喜扑游戏 客户端id  -->
         <meta-data
             android:name="xp_appid"
-            android:value="65b5f457b9b342d0d807b23195c12345" />
+            android:value="2860855b38efff276d90a71d5c808bb8" />
         <!--喜扑游戏 SDK TYPE -->
         <meta-data
             android:name="xp_sdk_type"
@@ -109,7 +109,7 @@
         <!--喜扑游戏 穿山甲 appId -->
         <meta-data
             android:name="xp_ttad_appid"
-            android:value="" />
+            android:value="5074406" />
         <!-- 喜扑游戏 穿山甲 appName -->
         <meta-data
             android:name="xp_ttad_appname"

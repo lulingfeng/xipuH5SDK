@@ -6,10 +6,10 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.webkit.WebView;
 import android.widget.FrameLayout;
 
 import com.startobj.util.device.SODensityUtil;
-import com.tencent.smtt.sdk.WebView;
 
 /**
  * 解决webView键盘遮挡问题的类 Created by zqy on 2016/11/14.

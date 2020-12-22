@@ -3,11 +3,11 @@ package com.xipu.h5.h5sdk;
 import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
+import android.webkit.WebView;
 import android.widget.FrameLayout;
 
 import com.bytedance.sdk.openadsdk.TTAdNative;
 import com.startobj.util.device.SODensityUtil;
-import com.tencent.smtt.sdk.WebView;
 import com.xipu.h5.h5sdk.callback.H5SDKApi;
 import com.xipu.h5.h5sdk.manager.GDTManager;
 import com.xipu.h5.h5sdk.manager.JrttManager;
@@ -123,18 +123,18 @@ public class H5SDK extends BSDK implements H5SDKApi {
 
     @Override
     public void onReportJRTT(Activity activity, String reportType, String values) {
-        Log.d(H5Utils.TAG,"onReportJRTT: "+reportType);
+        Log.d(H5Utils.TAG, "onReportJRTT: " + reportType);
         try {
             ZYJSONObject dataResult = new ZYJSONObject(values);
-            boolean is_report = dataResult.getInt("is_report") == 1 ? true : false; // 今日头条标识
-            boolean is_newuser = dataResult.getInt("is_newuser") == 1 ? true : false; // 新用户标识
-            if(reportType.equals(ReportTypeUtils.LOGIN)){
+            boolean is_report = dataResult.getIntDef("is_report") == 1 ? true : false; // 今日头条标识
+            boolean is_newuser = dataResult.getIntDef("is_newuser") == 1 ? true : false; // 新用户标识
+            if (reportType.equals(ReportTypeUtils.LOGIN)) {
                 H5Utils.setOpenID(dataResult.getString("open_id"));
-                JrttManager.getInstance().sendJrttUserInfo(activity, is_report, is_newuser,H5Utils.getOpenID());
-            }else if(reportType.equals(ReportTypeUtils.PAY)){
-                int amount = dataResult.getInt("report_amount");
+                JrttManager.getInstance().sendJrttUserInfo(activity, is_report, is_newuser, H5Utils.getOpenID());
+            } else if (reportType.equals(ReportTypeUtils.PAY)) {
+                int amount = dataResult.getIntDef("report_amount");
                 String out_trade_no = dataResult.getString("out_trade_no");
-                JrttManager.getInstance().sendJrttPayInfo(activity, is_report, amount, out_trade_no,H5Utils.getOpenID());
+                JrttManager.getInstance().sendJrttPayInfo(activity, is_report, amount, out_trade_no, H5Utils.getOpenID());
             }
 
         } catch (Exception e) {
@@ -145,15 +145,15 @@ public class H5SDK extends BSDK implements H5SDKApi {
 
     @Override
     public void onReportGDT(Activity activity, String reportType, String values) {
-        Log.d(H5Utils.TAG,"onReportGDT: "+reportType);
+        Log.d(H5Utils.TAG, "onReportGDT: " + reportType);
         try {
             ZYJSONObject dataResult = new ZYJSONObject(values);
             boolean is_ysdk_report = dataResult.getIntDef("is_ysdk_report") == 1 ? true : false; // 广点通标识
             boolean ysdk_report = dataResult.getIntDef("ysdk_report") == 1 ? true : false; // 广点通全局标识
             if (reportType.equals(ReportTypeUtils.LOGIN)) {
                 H5Utils.setOpenID(dataResult.getString("open_id"));
-                boolean is_newuser = dataResult.getInt("is_newuser") == 1 ? true : false; // 新用户标识
-                GDTManager.getInstance().sendGDTRegister(activity,is_newuser,is_ysdk_report,ysdk_report,H5Utils.getOpenID());
+                boolean is_newuser = dataResult.getIntDef("is_newuser") == 1 ? true : false; // 新用户标识
+                GDTManager.getInstance().sendGDTRegister(activity, is_newuser, is_ysdk_report, ysdk_report, H5Utils.getOpenID());
             } else if (reportType.equals(ReportTypeUtils.PAY)) {
                 int ysdk_report_amount = dataResult.getIntDef("ysdk_report_amount");
                 GDTManager.getInstance().sendGDTPayInfo(is_ysdk_report, ysdk_report, ysdk_report_amount);
@@ -191,9 +191,9 @@ public class H5SDK extends BSDK implements H5SDKApi {
     public void onOpenTTBannerAd(Activity activity, String values) {
         try {
             TTAdManagerHolder.getInstance().loadBannerAd(activity, mTTAdNative, TTAdManagerHolder.getInstance().getAdParams(values));
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            Log.e(H5Utils.TAG,"onOpenTTBannerAd() Exception: "+e.getMessage());
+            Log.e(H5Utils.TAG, "onOpenTTBannerAd() Exception: " + e.getMessage());
         }
     }
 
@@ -201,9 +201,9 @@ public class H5SDK extends BSDK implements H5SDKApi {
     public void onCloseTTBannerAd(String values) {
         try {
             TTAdManagerHolder.getInstance().closeBanner();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            Log.e(H5Utils.TAG,"onCloseTTBannerAd() Exception: "+e.getMessage());
+            Log.e(H5Utils.TAG, "onCloseTTBannerAd() Exception: " + e.getMessage());
         }
     }
 
@@ -211,9 +211,9 @@ public class H5SDK extends BSDK implements H5SDKApi {
     public void onOpenTTInteractionAd(Activity activity, String values) {
         try {
             TTAdManagerHolder.getInstance().loadInteractionAd(activity, mTTAdNative, TTAdManagerHolder.getInstance().getAdParams(values));
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            Log.e(H5Utils.TAG,"onOpenTTInteractionAd() Exception: "+e.getMessage());
+            Log.e(H5Utils.TAG, "onOpenTTInteractionAd() Exception: " + e.getMessage());
         }
     }
 
@@ -221,9 +221,9 @@ public class H5SDK extends BSDK implements H5SDKApi {
     public void onOpenTTRewardVideoAd(Activity activity, String values) {
         try {
             TTAdManagerHolder.getInstance().loadRewardAd(activity, mTTAdNative, TTAdManagerHolder.getInstance().getAdParams(values));
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            Log.e(H5Utils.TAG,"onOpenTTRewardVideoAd() Exception: "+e.getMessage());
+            Log.e(H5Utils.TAG, "onOpenTTRewardVideoAd() Exception: " + e.getMessage());
         }
     }
 
@@ -231,9 +231,9 @@ public class H5SDK extends BSDK implements H5SDKApi {
     public void onOpenTTFullScreenVideoAd(Activity activity, String values) {
         try {
             TTAdManagerHolder.getInstance().loadFullScreenVideoAd(activity, mTTAdNative, TTAdManagerHolder.getInstance().getAdParams(values));
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            Log.e(H5Utils.TAG,"onOpenTTFullScreenVideoAd() Exception: "+e.getMessage());
+            Log.e(H5Utils.TAG, "onOpenTTFullScreenVideoAd() Exception: " + e.getMessage());
         }
     }
 
@@ -241,9 +241,9 @@ public class H5SDK extends BSDK implements H5SDKApi {
     public void onGetScreenSize(Activity activity, String values) {
         try {
             TTAdManagerHolder.getInstance().screenSizeCallback(activity, TTAdManagerHolder.getInstance().setTTCallBackParams(SODensityUtil.getScreenWidth(activity), SODensityUtil.getScreenHeight(activity)));
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            Log.e(H5Utils.TAG,"onGetScreenSize() Exception: "+e.getMessage());
+            Log.e(H5Utils.TAG, "onGetScreenSize() Exception: " + e.getMessage());
         }
     }
 }

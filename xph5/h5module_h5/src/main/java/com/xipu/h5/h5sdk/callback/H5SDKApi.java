@@ -1,9 +1,9 @@
 package com.xipu.h5.h5sdk.callback;
 
 import android.app.Activity;
+import android.webkit.WebView;
 import android.widget.FrameLayout;
 
-import com.tencent.smtt.sdk.WebView;
 
 public interface H5SDKApi {
 

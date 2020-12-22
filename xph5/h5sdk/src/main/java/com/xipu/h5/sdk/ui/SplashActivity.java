@@ -16,7 +16,6 @@ import com.startobj.util.http.SOServertReturnErrorException;
 import com.startobj.util.network.SONetworkUtil;
 
 import com.startobj.util.toast.SOToastUtil;
-import com.tencent.smtt.sdk.QbSdk;
 import com.xipu.h5_sdk.R;
 import com.xipu.h5.sdk.config.H5Config;
 import com.xipu.h5.sdk.util.H5Utils;
@@ -49,20 +48,7 @@ public class SplashActivity extends Activity {
             startPermissionsActivity(this);
         } else {
             startLoading();
-            QbSdk.initX5Environment(this, new QbSdk.PreInitCallback() {
-                @Override
-                public void onCoreInitFinished() {
-
-                }
-
-                @Override
-                public void onViewInitFinished(boolean b) {
-                    Log.d(H5Utils.TAG, "onViewInitFinished()" + b);
-                    // 获取数据
-                    obtainData();
-                    // loading结束
-                }
-            });
+            obtainData();
         }
     }
 
@@ -142,8 +128,6 @@ public class SplashActivity extends Activity {
                 }, 300);
             }
         });
-
-
         H5Utils.getIP();
     }
 

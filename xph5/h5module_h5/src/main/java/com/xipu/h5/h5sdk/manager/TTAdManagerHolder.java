@@ -2,11 +2,14 @@ package com.xipu.h5.h5sdk.manager;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.ValueCallback;
+import android.webkit.WebView;
 import android.widget.FrameLayout;
 
 import com.bytedance.sdk.openadsdk.AdSlot;
@@ -19,8 +22,6 @@ import com.bytedance.sdk.openadsdk.TTAppDownloadListener;
 import com.bytedance.sdk.openadsdk.TTFullScreenVideoAd;
 import com.bytedance.sdk.openadsdk.TTNativeExpressAd;
 import com.bytedance.sdk.openadsdk.TTRewardVideoAd;
-import com.tencent.smtt.sdk.ValueCallback;
-import com.tencent.smtt.sdk.WebView;
 import com.xipu.h5.sdk.model.AdConfig;
 import com.xipu.h5.sdk.util.H5Utils;
 import com.xipu.h5.sdk.util.TTAdUtils;
@@ -126,7 +127,7 @@ public class TTAdManagerHolder {
         this.mExpressContainer = mFrameLayout;
     }
 
-    public void closeBanner(){
+    public void closeBanner() {
         if (mExpressContainer != null) {
             mExpressContainer.removeAllViews();
         }
@@ -139,7 +140,7 @@ public class TTAdManagerHolder {
      * @param mTTAdNative
      * @param adConfig
      */
-    public void loadBannerAd(Activity activity,TTAdNative mTTAdNative, AdConfig adConfig) {
+    public void loadBannerAd(Activity activity, TTAdNative mTTAdNative, AdConfig adConfig) {
         this.mActivity = activity;
         this.mAdConfig = adConfig;
         mLoadCount = 1;
@@ -205,11 +206,11 @@ public class TTAdManagerHolder {
             public void onRenderSuccess(View view, float width, float height) {
                 Log.d(H5Utils.TAG, "render suc:" + (System.currentTimeMillis() - startTime));
                 onTTCallback(mActivity, setTTCallBackParams("bannerLoadSuccess", null, null, null, width, height, null, null));
-                Log.d(H5Utils.TAG,"mExpressContainer: "+mExpressContainer);
-                        mExpressContainer.removeAllViews();
-                        FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                        layoutParams.setMargins(mAdConfig.getLeft(), mAdConfig.getTop(), 0, 0);
-                        mExpressContainer.addView(view, layoutParams);
+                Log.d(H5Utils.TAG, "mExpressContainer: " + mExpressContainer);
+                mExpressContainer.removeAllViews();
+                FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                layoutParams.setMargins(mAdConfig.getLeft(), mAdConfig.getTop(), 0, 0);
+                mExpressContainer.addView(view, layoutParams);
             }
         });
         //dislike设置
@@ -635,7 +636,7 @@ public class TTAdManagerHolder {
     }
 
     //宽高参数回调 H5
-    public void screenSizeCallback(Activity activity,final String json) {
+    public void screenSizeCallback(Activity activity, final String json) {
         if (mWebView != null) {
             activity.runOnUiThread(new Runnable() {
                 @Override
@@ -643,7 +644,7 @@ public class TTAdManagerHolder {
                     mWebView.evaluateJavascript("XipuSDK.screenSizeCallback(" + json + ")", new ValueCallback<String>() {
                         @Override
                         public void onReceiveValue(String s) {
-                              Log.d(H5Utils.TAG, "screenSizeCallback onReceiveValue:" + s);
+                            Log.d(H5Utils.TAG, "screenSizeCallback onReceiveValue:" + s);
                         }
                     });
                 }
@@ -669,12 +670,16 @@ public class TTAdManagerHolder {
             activity.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    mWebView.evaluateJavascript("XipuSDK.onTTCallback(" + json + ")", new ValueCallback<String>() {
-                        @Override
-                        public void onReceiveValue(String s) {
-                               Log.d(H5Utils.TAG, "onTTCallback onReceiveValue:" + s);
-                        }
-                    });
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                        mWebView.evaluateJavascript("XipuSDK.onTTCallback(" + json + ")", new ValueCallback<String>() {
+                            @Override
+                            public void onReceiveValue(String s) {
+                                Log.d(H5Utils.TAG, "onTTCallback onReceiveValue:" + s);
+                            }
+                        });
+                    } else {
+                        mWebView.loadUrl("XipuSDK.onTTCallback(" + json + ")");
+                    }
                 }
             });
         }
@@ -713,7 +718,7 @@ public class TTAdManagerHolder {
         return adConfig;
     }
 
-    public void destroy(){
+    public void destroy() {
         if (mTTAd != null) {
             mTTAd.destroy();
         }
