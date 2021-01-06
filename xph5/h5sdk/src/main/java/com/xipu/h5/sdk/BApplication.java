@@ -5,6 +5,10 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.bun.miitmdid.core.JLibrary;
+import com.startobj.andserver.AndServer;
+import com.startobj.andserver.Server;
+import com.startobj.andserver.website.AssetsWebsite;
+import com.startobj.andserver.website.WebSite;
 import com.startobj.util.toast.SOToastUtil;
 import com.xipu.h5.sdk.util.H5Utils;
 import com.xipu.h5.sdk.util.OaidHelper;
@@ -30,6 +34,7 @@ public class BApplication extends Application {
         }
         Log.d(H5Utils.TAG, "onCreate: " + H5Utils.getOaid());
         initOaid();
+        initAndServer();
     }
 
     /*
@@ -73,4 +78,30 @@ public class BApplication extends Application {
         }
     }
 
+    private void initAndServer() {
+        WebSite webSite = new AssetsWebsite(getAssets(), "");
+        AndServer andServer = new AndServer.Build()
+                .timeout(10)
+                .port(8888)
+                .listener(new Server.Listener() {
+                    @Override
+                    public void onStarted() {
+                        Log.d(H5Utils.TAG, "server onStarted");
+                    }
+
+                    @Override
+                    public void onStopped() {
+                        Log.d(H5Utils.TAG, "server onStopped");
+                    }
+
+                    @Override
+                    public void onError(Exception e) {
+                        Log.d(H5Utils.TAG, "server onError"+e.getMessage());
+                    }
+                })
+                .website(webSite)
+                .build();
+        Server server = andServer.createServer();
+        server.start();
+    }
 }

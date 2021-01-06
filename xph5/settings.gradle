@@ -1,1 +1,1 @@
-include ':h5module_google', ':h5sdk', ':soutil', ':h5demo_h5', ':h5demo_google', ':h5module_h5'
+include ':h5module_google', ':h5sdk', ':soutil', ':h5demo_h5', ':h5demo_google', ':h5module_h5', 'andserver'

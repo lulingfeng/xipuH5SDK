@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/andserver/andserver.iml" filepath="$PROJECT_DIR$/andserver/andserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/h5demo_google/h5demo_google.iml" filepath="$PROJECT_DIR$/h5demo_google/h5demo_google.iml" />
       <module fileurl="file://$PROJECT_DIR$/h5demo_h5/h5demo_h5.iml" filepath="$PROJECT_DIR$/h5demo_h5/h5demo_h5.iml" />
       <module fileurl="file://$PROJECT_DIR$/h5module_google/h5module_google.iml" filepath="$PROJECT_DIR$/h5module_google/h5module_google.iml" />

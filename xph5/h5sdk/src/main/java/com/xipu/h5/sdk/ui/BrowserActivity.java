@@ -84,6 +84,11 @@ public class BrowserActivity extends Activity {
             mWebView.getSettings().setMediaPlaybackRequiresUserGesture(false);
         }
 
+        //http https 跨域
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            mWebView.getSettings().setMixedContentMode(0);
+        }
+
         mWebView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -180,11 +185,11 @@ public class BrowserActivity extends Activity {
      * @return
      */
     private String generateUrl() {
-           StringBuffer sb = new StringBuffer(H5Config.GAME_URL);
-      //  StringBuffer sb = new StringBuffer("http://testh5.xipu.com/play.php"); // demo
+        //     StringBuffer sb = new StringBuffer(H5Config.GAME_URL);
+        StringBuffer sb = new StringBuffer("https://testh5.xipu.com/play.php"); // demo
         //  StringBuffer sb = new StringBuffer("http://h5.xipu.com/play.php");
-         sb.append("?app_id=" + ParamUtil.getAppId() + "&");
-      //   sb.append("?app_id=38807b0c59747f0cb583c3a00a24a788&");
+   //     sb.append("?app_id=" + ParamUtil.getAppId() + "&");
+        sb.append("?app_id=38807b0c59747f0cb583c3a00a24a788&");
         SORequestParams params = new SORequestParams(H5Config.GAME_URL, H5Utils.getCommonParams(this));
         sb.append(params.getParamsStr());
         Log.d(H5Utils.TAG, "generateUrl: " + sb.toString());
@@ -372,7 +377,7 @@ public class BrowserActivity extends Activity {
         @JavascriptInterface
         public void cpInit(String values) {
             Log.d(H5Utils.TAG, "cpInit values: " + values);
-            H5.getInstance().onActivate(BrowserActivity.this,values);
+            H5.getInstance().onActivate(BrowserActivity.this, values);
         }
 
         // 海外创角
