@@ -134,14 +134,14 @@ public class H5SDK extends BSDK implements H5SDKApi {
         Log.d(H5Utils.TAG,"onReportJRTT: "+reportType);
         try {
             ZYJSONObject dataResult = new ZYJSONObject(values);
-            boolean is_report = dataResult.getInt("is_report") == 1 ? true : false; // 今日头条标识
-            boolean is_newuser = dataResult.getInt("is_newuser") == 1 ? true : false; // 新用户标识
+            boolean is_report = dataResult.getIntDef("is_report") == 1 ? true : false; // 今日头条标识
+            boolean is_newuser = dataResult.getIntDef("is_newuser") == 1 ? true : false; // 新用户标识
             if(reportType.equals(ReportTypeUtils.LOGIN)){
-                H5Utils.setOpenID(dataResult.getString("open_id"));
+                H5Utils.setOpenID(dataResult.getStringDef("open_id"));
                 JrttManager.getInstance().sendJrttUserInfo(activity, is_report, is_newuser,H5Utils.getOpenID());
             }else if(reportType.equals(ReportTypeUtils.PAY)){
-                int amount = dataResult.getInt("report_amount");
-                String out_trade_no = dataResult.getString("out_trade_no");
+                int amount = dataResult.getIntDef("report_amount");
+                String out_trade_no = dataResult.getStringDef("out_trade_no");
                 JrttManager.getInstance().sendJrttPayInfo(activity, is_report, amount, out_trade_no,H5Utils.getOpenID());
             }
 
@@ -159,8 +159,8 @@ public class H5SDK extends BSDK implements H5SDKApi {
             boolean is_ysdk_report = dataResult.getIntDef("is_ysdk_report") == 1 ? true : false; // 广点通标识
             boolean ysdk_report = dataResult.getIntDef("ysdk_report") == 1 ? true : false; // 广点通全局标识
             if (reportType.equals(ReportTypeUtils.LOGIN)) {
-                H5Utils.setOpenID(dataResult.getString("open_id"));
-                boolean is_newuser = dataResult.getInt("is_newuser") == 1 ? true : false; // 新用户标识
+                H5Utils.setOpenID(dataResult.getStringDef("open_id"));
+                boolean is_newuser = dataResult.getIntDef("is_newuser") == 1 ? true : false; // 新用户标识
                 GDTManager.getInstance().sendGDTRegister(activity,is_newuser,is_ysdk_report,ysdk_report,H5Utils.getOpenID());
             } else if (reportType.equals(ReportTypeUtils.PAY)) {
                 int ysdk_report_amount = dataResult.getIntDef("ysdk_report_amount");
