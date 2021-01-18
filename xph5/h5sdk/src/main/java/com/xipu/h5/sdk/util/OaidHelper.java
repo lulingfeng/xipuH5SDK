@@ -1,6 +1,7 @@
 package com.xipu.h5.sdk.util;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.bun.miitmdid.core.ErrorCode;
@@ -30,6 +31,11 @@ public class OaidHelper implements IIdentifierListener {
         if (idSupplier.isSupported()) {
             oaid = idSupplier.getOAID();
             Log.d(H5Utils.TAG, "支持的oaid设备类型: " + oaid);
+            // 关闭广告开关后，获取不到oaid的情况(返回null或全是0)
+            if (TextUtils.isEmpty(oaid) || oaid.equals("00000000-0000-0000-0000-000000000000")) {
+                Log.d(H5Utils.TAG, "oaid 不合法");
+                oaid = "";
+            }
         }
         H5Utils.setOaid(oaid);
     }

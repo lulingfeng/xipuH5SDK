@@ -131,7 +131,7 @@ public class H5Utils {
         paramsMap.put("screen", mDeviceEntity.getScreen());
         paramsMap.put("android_id", mDeviceEntity.getAndroidID());
         paramsMap.put("phone", mDeviceEntity.getPhone());
-        paramsMap.put("kid", getKid(context));
+        paramsMap.put("kid", TextUtils.isEmpty(getOaid()) ? getKid(context) : getOaid());
         paramsMap.put("channel", getChannel());
         paramsMap.put("identity_token", getIdentityToken());
         paramsMap.put("sdk_version", H5Config.SDK_VERSION);
@@ -541,7 +541,7 @@ public class H5Utils {
     }
 
     public static String getOaid() {
-        return TextUtils.isEmpty(oaid) ? "" : oaid;
+        return oaid;
     }
 
     public static void setOaid(String oaid) {

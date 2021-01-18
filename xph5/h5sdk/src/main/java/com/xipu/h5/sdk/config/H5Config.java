@@ -4,7 +4,7 @@ public class H5Config {
     // 服务端版本
     public final static String SDK_VERSION = "v1";
     // 客户端版本
-    public final static String SDK_CODE = "7";
+    public final static String SDK_CODE = "8";
     public final static String H5SDK_URL = "";
     // 第一次使用标示位
     public final static String SP_ISFIRST = "h5_isfirst";
