@@ -79,7 +79,7 @@ public class BApplication extends Application {
     }
 
     private void initAndServer() {
-        WebSite webSite = new AssetsWebsite(getAssets(), "");
+        WebSite webSite = new AssetsWebsite(getAssets(), "resources");
         AndServer andServer = new AndServer.Build()
                 .timeout(10)
                 .port(8888)

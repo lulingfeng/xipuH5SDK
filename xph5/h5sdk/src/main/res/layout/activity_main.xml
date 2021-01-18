@@ -6,7 +6,7 @@
     android:paddingTop="10dp"
     android:paddingBottom="10dp">
 
-    <com.tencent.smtt.sdk.WebView
+    <WebView
         android:id="@+id/main_wv"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

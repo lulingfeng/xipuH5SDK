@@ -4,10 +4,11 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
+import android.content.ClipData;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
+import android.net.http.SslError;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -15,20 +16,20 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.WindowManager;
 import android.webkit.JavascriptInterface;
+import android.webkit.SslErrorHandler;
+import android.webkit.ValueCallback;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.startobj.util.common.SOCommonUtil;
 import com.startobj.util.http.SORequestParams;
 import com.startobj.util.toast.SOToastUtil;
-import com.tencent.smtt.export.external.interfaces.SslError;
-import com.tencent.smtt.export.external.interfaces.SslErrorHandler;
-import com.tencent.smtt.sdk.ValueCallback;
-import com.tencent.smtt.sdk.WebChromeClient;
-import com.tencent.smtt.sdk.WebSettings;
-import com.tencent.smtt.sdk.WebView;
-import com.tencent.smtt.sdk.WebViewClient;
 import com.xipu.h5.sdk.H5;
 import com.xipu.h5.sdk.callback.OLoginApi;
 import com.xipu.h5.sdk.callback.OPayApi;
@@ -39,8 +40,10 @@ import com.xipu.h5.sdk.config.H5Config;
 import com.xipu.h5.sdk.util.H5Utils;
 import com.xipu.h5.sdk.util.KeyBoardListener;
 
+import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.HashMap;
+
 
 @SuppressLint("NewApi")
 public class BrowserActivity extends Activity {
@@ -52,6 +55,7 @@ public class BrowserActivity extends Activity {
 
     private String mUrl;
     private ValueCallback<Uri> uploadFile;
+    private ValueCallback<Uri[]> uploadFileList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,16 +87,15 @@ public class BrowserActivity extends Activity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
             mWebView.getSettings().setMediaPlaybackRequiresUserGesture(false);
         }
-
-        //http https 跨域
+        //混合加载模式
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            mWebView.getSettings().setMixedContentMode(0);
+            mWebView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         }
-
         mWebView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 Uri uri = Uri.parse(url);
+                Log.d(H5Utils.TAG,"shouldOverrideUrlLoading: "+uri);
                 if (url.startsWith("http") || url.startsWith("https")) {
                     if (uri.getPath().contains("h5pay/return_game"))
                         return true;
@@ -138,11 +141,7 @@ public class BrowserActivity extends Activity {
             }
 
             @Override
-            public void onPageStarted(WebView view, String url, Bitmap favicon) {
-            }
-
-            @Override
-            public void onPageFinished(WebView view, String url) {
+            public void onPageFinished(final WebView view, final String url) {
                 H5Utils.cancelProgress();
             }
 
@@ -152,9 +151,20 @@ public class BrowserActivity extends Activity {
             }
 
         });
-
         mWebView.setWebChromeClient(new WebChromeClient() {
+
+            // Android >=5.0 文件上传、5.0以后支持多文件上传
             @Override
+            public boolean onShowFileChooser(WebView webView, ValueCallback<Uri[]> filePathCallback, FileChooserParams fileChooserParams) {
+                BrowserActivity.this.uploadFileList = filePathCallback;
+                Intent i = new Intent(Intent.ACTION_GET_CONTENT);
+                i.addCategory(Intent.CATEGORY_OPENABLE);
+                i.setType("*/*");
+                startActivityForResult(Intent.createChooser(i, "test"), 0);
+                return true;
+            }
+
+            // Android >=4.1
             public void openFileChooser(ValueCallback<Uri> uploadFile, String acceptType, String captureType) {
 
                 BrowserActivity.this.uploadFile = uploadFile;
@@ -185,12 +195,21 @@ public class BrowserActivity extends Activity {
      * @return
      */
     private String generateUrl() {
-        //     StringBuffer sb = new StringBuffer(H5Config.GAME_URL);
-        StringBuffer sb = new StringBuffer("https://testh5.xipu.com/play.php"); // demo
+            StringBuffer sb = new StringBuffer(H5Config.GAME_URL);
+        //StringBuffer sb = new StringBuffer("https://testh5.xipu.com/play.php"); // demo
         //  StringBuffer sb = new StringBuffer("http://h5.xipu.com/play.php");
-   //     sb.append("?app_id=" + ParamUtil.getAppId() + "&");
-        sb.append("?app_id=38807b0c59747f0cb583c3a00a24a788&");
-        SORequestParams params = new SORequestParams(H5Config.GAME_URL, H5Utils.getCommonParams(this));
+            sb.append("?app_id=" + ParamUtil.getAppId() + "&");
+       // sb.append("?app_id=38807b0c59747f0cb583c3a00a24a788&");
+        HashMap<String, String> commonParams = H5Utils.getCommonParams(this);
+        try {
+            String[] list = getAssets().list("resources");
+            String resources = JSONObject.toJSONString(list);
+            Log.d(H5Utils.TAG,"resources: "+resources);
+            commonParams.put("resources",resources);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        SORequestParams params = new SORequestParams(H5Config.GAME_URL, commonParams);
         sb.append(params.getParamsStr());
         Log.d(H5Utils.TAG, "generateUrl: " + sb.toString());
         return sb.toString();
@@ -274,6 +293,7 @@ public class BrowserActivity extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         H5.getInstance().onActivityResult(requestCode, resultCode, data);
+        Uri[] results = null;
         if (resultCode == RESULT_OK) {
             switch (requestCode) {
                 case 0:
@@ -281,6 +301,24 @@ public class BrowserActivity extends Activity {
                         Uri result = data == null || resultCode != RESULT_OK ? null : data.getData();
                         uploadFile.onReceiveValue(result);
                         uploadFile = null;
+                    }
+                    if (null != uploadFileList) {
+                        if (data != null) {
+                            String dataString = data.getDataString();
+                            ClipData clipData = data.getClipData();
+                            if (clipData != null) {
+                                results = new Uri[clipData.getItemCount()];
+                                for (int i = 0; i < clipData.getItemCount(); i++) {
+                                    ClipData.Item item = clipData.getItemAt(i);
+                                    results[i] = item.getUri();
+                                }
+                            }
+                            if (results != null) {
+                                results = new Uri[]{Uri.parse(dataString)};
+                            }
+                        }
+                        uploadFileList.onReceiveValue(results);
+                        uploadFileList = null;
                     }
                     break;
                 case 1:

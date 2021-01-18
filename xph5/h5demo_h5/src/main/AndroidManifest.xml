@@ -73,7 +73,7 @@
         <!-- 喜扑游戏 客户端id  -->
         <meta-data
             android:name="xp_appid"
-            android:value="65b5f457b9b342d0d807b23195c12345" />
+            android:value="ff8b86ba82a982c2d1fdacbff0efd22c" />
         <!--喜扑游戏 SDK TYPE -->
         <meta-data
             android:name="xp_sdk_type"

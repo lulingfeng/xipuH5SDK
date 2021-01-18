@@ -3,12 +3,12 @@ package com.xipu.h5.h5sdk;
 import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
+import android.webkit.WebView;
 import android.widget.FrameLayout;
 
 import com.bytedance.applog.AppLog;
 import com.bytedance.sdk.openadsdk.TTAdNative;
 import com.startobj.util.device.SODensityUtil;
-import com.tencent.smtt.sdk.WebView;
 import com.xipu.h5.h5sdk.callback.H5SDKApi;
 import com.xipu.h5.h5sdk.manager.GDTManager;
 import com.xipu.h5.h5sdk.manager.JrttManager;

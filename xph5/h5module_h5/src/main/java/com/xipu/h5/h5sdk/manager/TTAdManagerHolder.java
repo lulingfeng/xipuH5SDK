@@ -2,11 +2,14 @@ package com.xipu.h5.h5sdk.manager;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.ValueCallback;
+import android.webkit.WebView;
 import android.widget.FrameLayout;
 
 import com.bytedance.sdk.openadsdk.AdSlot;
@@ -19,8 +22,6 @@ import com.bytedance.sdk.openadsdk.TTAppDownloadListener;
 import com.bytedance.sdk.openadsdk.TTFullScreenVideoAd;
 import com.bytedance.sdk.openadsdk.TTNativeExpressAd;
 import com.bytedance.sdk.openadsdk.TTRewardVideoAd;
-import com.tencent.smtt.sdk.ValueCallback;
-import com.tencent.smtt.sdk.WebView;
 import com.xipu.h5.sdk.model.AdConfig;
 import com.xipu.h5.sdk.util.H5Utils;
 import com.xipu.h5.sdk.util.TTAdUtils;
@@ -669,12 +670,16 @@ public class TTAdManagerHolder {
             activity.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    mWebView.evaluateJavascript("XipuSDK.onTTCallback(" + json + ")", new ValueCallback<String>() {
-                        @Override
-                        public void onReceiveValue(String s) {
-                               Log.d(H5Utils.TAG, "onTTCallback onReceiveValue:" + s);
-                        }
-                    });
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                        mWebView.evaluateJavascript("XipuSDK.onTTCallback(" + json + ")", new ValueCallback<String>() {
+                            @Override
+                            public void onReceiveValue(String s) {
+                                Log.d(H5Utils.TAG, "onTTCallback onReceiveValue:" + s);
+                            }
+                        });
+                    } else {
+                        mWebView.loadUrl("XipuSDK.onTTCallback(" + json + ")");
+                    }
                 }
             });
         }
