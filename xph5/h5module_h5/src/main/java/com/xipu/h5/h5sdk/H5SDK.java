@@ -6,6 +6,7 @@ import android.util.Log;
 import android.webkit.WebView;
 import android.widget.FrameLayout;
 
+import com.bytedance.applog.AppLog;
 import com.bytedance.sdk.openadsdk.TTAdNative;
 import com.startobj.util.device.SODensityUtil;
 import com.xipu.h5.h5sdk.callback.H5SDKApi;
@@ -16,6 +17,7 @@ import com.xipu.h5.h5sdk.manager.TuiaManager;
 import com.xipu.h5.sdk.BSDK;
 import com.xipu.h5.sdk.model.PayReportModel;
 import com.xipu.h5.sdk.util.H5Utils;
+import com.xipu.h5.sdk.util.ParamUtil;
 import com.xipu.h5.sdk.util.ReportTypeUtils;
 import com.xipu.h5.sdk.util.ZYJSONObject;
 
@@ -87,12 +89,18 @@ public class H5SDK extends BSDK implements H5SDKApi {
     @Override
     public void onResume(Activity activity) {
         Log.d(H5Utils.TAG, "onResume()");
+        if (ParamUtil.isUseJrtt()) {
+            AppLog.onResume(activity);
+        }
         super.onResume(activity);
     }
 
     @Override
     public void onPause(Activity activity) {
         Log.d(H5Utils.TAG, "onPause()");
+        if (ParamUtil.isUseJrtt()) {
+            AppLog.onPause(activity);
+        }
         super.onPause(activity);
     }
 
